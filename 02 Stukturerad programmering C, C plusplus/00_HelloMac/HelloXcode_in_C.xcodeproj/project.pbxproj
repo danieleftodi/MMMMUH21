@@ -47,19 +47,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5505964426F0CA24003CE0BE /* HelloWorld */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HelloWorld;
-			sourceTree = "<group>";
-		};
 		55DA96F826F0BBF800C431A8 = {
 			isa = PBXGroup;
 			children = (
 				5505963D26F0C8BE003CE0BE /* HelloWorld.cpp */,
 				55DA96FF26F0BC2300C431A8 /* HelloWorld.h */,
-				5505964426F0CA24003CE0BE /* HelloWorld */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
