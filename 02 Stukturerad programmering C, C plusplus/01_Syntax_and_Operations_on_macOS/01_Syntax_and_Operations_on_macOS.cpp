@@ -1,8 +1,8 @@
 //
-//  HelloWorld.c
-//  HelloXcode_in_C
+//  01_Syntax_and_Operations_on_macOS.c
+//  01_Syntax_and_Operations_on_macOS
 //
-//  Created by Daniel Eftodi on 2021-09-14.
+//  Created by Daniel Eftodi on 2021-09-15.
 //
 
 #include "01_Syntax_and_Operations_on_macOS.h"
@@ -32,7 +32,7 @@ int main(){
     int x = 22;
     printf("\nx är lika med %d.\n", x);
     
-    // 
+    //
     
     // Endnig with an extra new line
     cout << "\n";
