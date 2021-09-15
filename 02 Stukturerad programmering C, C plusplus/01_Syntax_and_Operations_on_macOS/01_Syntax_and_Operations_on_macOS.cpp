@@ -79,7 +79,7 @@ int main(){
         printf("I'm not true - !x\n\n");
     }
     
-    if (!0) {
+    if ((!0)) {
         printf("I'm true - !x\n\n");
     } else {
         printf("I'm not true - !x\n\n");
