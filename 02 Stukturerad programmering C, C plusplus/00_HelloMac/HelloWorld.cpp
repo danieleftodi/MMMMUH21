@@ -18,4 +18,6 @@ int main(){
 
     //Endnig with an extra new line
     std::cout << "\n";
+    
+    return 0;
 }
