@@ -32,7 +32,58 @@ int main(){
     int x = 22;
     printf("\nx är lika med %d.\n", x);
     
-    //
+    // Logical operators - example from slides (page 26 / 40)
+    x = 5;
+    printf("\nx is: %d\n\n", x);
+    
+    if (x < 8 && x < 16) {
+        printf("I'm true - (x is less then 8) AND (less then 16)\n\n");
+    } else {
+        printf("I'm not true - (x is not less then 8) AND (not less then 16)\n\n");
+    }
+
+    if (x < 5 && x < 10) {
+        printf("I'm true - (x is less then 5) AND (less then 10)\n\n");
+    } else {
+        printf("I'm not true - (x is not less then 5) AND (not less then 10)\n\n");
+    }
+    
+    if (x > 3 && x > 5) {
+        printf("I'm true - (x is more then 3) AND (more then 5)\n\n");
+    } else {
+        printf("I'm not true - (x is not more then 3) AND (not more then 5)\n\n");
+    }
+    
+    
+    if (x || 0 ) {
+        printf("I'm true - ( %d ) OR ( 0 )\n\n", x);
+    } else {
+        printf("I'm not true - ( %d ) OR ( 0 )\n\n", x);
+    }
+
+    if (x == 6 || x > 6 ) {
+        printf("I'm true - (x is equal to 6) OR (x is greater than 6)\n\n");
+    } else {
+        printf("I'm not true - (x is not equal to 6) OR (x is not greater than 6)\n\n");
+    }
+    
+    if (x - 5 || x > 1 ) {
+        printf("I'm true - (x minus 5 = %d) OR (x is greater than 1)\n\n", (x - 5));
+    } else {
+        printf("I'm not true - (x minus 5 = %d) OR (x is not greater than 1)\n\n", (x - 5));
+    }
+    
+    if (!x) {
+        printf("I'm true - !x\n\n");
+    } else {
+        printf("I'm not true - !x\n\n");
+    }
+    
+    if (!0) {
+        printf("I'm true - !x\n\n");
+    } else {
+        printf("I'm not true - !x\n\n");
+    }
     
     // Endnig with an extra new line
     cout << "\n";
