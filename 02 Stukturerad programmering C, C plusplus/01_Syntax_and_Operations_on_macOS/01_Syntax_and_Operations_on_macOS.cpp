@@ -10,13 +10,31 @@
 using namespace std;
 
 int main(){
-    //Maknig the HelloWorld print example with the printf()-command ... 
+    // Maknig the HelloWorld print example with the printf()-command ...
     printf("Hello Syntax\n");
 
-    //Making the HelloWorld print example with the std::cout-command ...
-    cout << "\nHello cout Syntax\n";
+    // Making the HelloWorld print example with the std::cout-command ...
+    cout << "\nHello cout Syntax\n\n";
+    
+    // cout without end-line chars ...
+    cout << "Hello cout Line 2";
+    cout << "Hello cout Line 3";
+    
+    // cout with end-line chars ...
+    cout << endl << "Hello cout Line 4" << endl;
+    cout << "Hello cout Line 5" << endl;
+    
+    // Printing a CHAR varibale with printf ...
+    char ch = 'N';
+    printf("\nVi har valt bokstaven %c.\n", ch);
 
-    //Endnig with an extra new line
+    // Printing a INT varibale with printf ...
+    int x = 22;
+    printf("\nx är lika med %d.\n", x);
+    
+    // 
+    
+    // Endnig with an extra new line
     cout << "\n";
     
     return 0;
