@@ -36,20 +36,20 @@ void function_two_argc_argv_main (int f_argc, char ** f_argv) {
         
         switch ( cf_argv ) {
             case '-':
-                printf("Input is: %s\n", f_argv[i]);
+//                printf("Input is: %s\n", f_argv[i]);
                 ia = (i + 1);
 //                printf("DBG_LOG:  i: %d %c\n", i, cf_argv);
 //                printf("DBG_LOG:  i: %d %s\n", i, f_argv[i]);
 //                printf("DBG_LOG: ia: %d %c\n", i, f_argv[i][1]);
                 switch ( f_argv[i][1] ) {
                     case 'p':
-                        printf("00_Jag känner igen variable p med värdet: %s\n", f_argv[i+1]);
+                        printf("00_Jag känner igen variable %c (Port Nummer) med värdet: %s\n", f_argv[i][1], f_argv[i+1]);
                         break;
                     case 'h':
-                        printf("00_Jag känner igen variable h med värdet: %s\n", f_argv[i+1]);
+                        printf("00_Jag känner igen variable %c (Hjälp): Att du söker hjälp\n", f_argv[i][1]);
                         break;
                     case 'n':
-                        printf("00_Jag känner igen variable n med värdet: %s\n", f_argv[i+1]);
+                        printf("00_Jag känner igen variable %c (Host name) med värdet: %s\n", f_argv[i][1], f_argv[i+1]);
                         break;
                     default:
                         printf("03_Nothing\n");
