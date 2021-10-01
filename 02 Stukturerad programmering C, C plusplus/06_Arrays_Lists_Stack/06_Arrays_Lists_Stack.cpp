@@ -24,27 +24,35 @@ void function_two_argc_argv_main (int f_argc, char ** f_argv) {
     char cf_argv;
     std::string sf_argv;
     
+    int ia = 0;
+    
     for (int i = 1; i < f_argc; i++) {
         
         // Felmeddelande:
 //        cf_argv = f_argv[i];
         // Lösning:
-        cf_argv = *f_argv[i];
-//        cf_argv = f_argv[i][0];
+//        cf_argv = *f_argv[i];
+        cf_argv = f_argv[i][0];
         
         switch ( cf_argv ) {
             case '-':
                 printf("Input is: %s\n", f_argv[i]);
-//                i++;
-                switch ( *f_argv[i+1] ) {
+                ia = (i + 1);
+//                printf("DBG_LOG:  i: %d %c\n", i, cf_argv);
+//                printf("DBG_LOG:  i: %d %s\n", i, f_argv[i]);
+//                printf("DBG_LOG: ia: %d %c\n", i, f_argv[i][1]);
+                switch ( f_argv[i][1] ) {
                     case 'p':
-                        printf("00_Jag känner igen variable %c", *f_argv[i+1]);
+                        printf("00_Jag känner igen variable p med värdet: %s\n", f_argv[i+1]);
                         break;
                     case 'h':
-                        printf("01_Jag känner igen variable %c", *f_argv[i+1]);
+                        printf("00_Jag känner igen variable h med värdet: %s\n", f_argv[i+1]);
                         break;
                     case 'n':
-                        printf("02_Jag känner igen variable %c", *f_argv[i+1]);
+                        printf("00_Jag känner igen variable n med värdet: %s\n", f_argv[i+1]);
+                        break;
+                    default:
+                        printf("03_Nothing\n");
                         break;
                 }
                 break;
@@ -54,9 +62,10 @@ void function_two_argc_argv_main (int f_argc, char ** f_argv) {
         }
         
 //        printf("f_argv[%d]: %s\n", i, f_argv[i]);
-    }
     // reset cf_argv to NULL
     cf_argv = '\0';
+    }
+
     
 }
 
