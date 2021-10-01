@@ -35,18 +35,18 @@ void function_two_argc_argv_main (int f_argc, char ** f_argv) {
         switch ( cf_argv ) {
             case '-':
                 printf("Input is: %s\n", f_argv[i]);
-                break;
-            case 'i':
-                printf("f_argv[%d]: %s\n", i, f_argv[i+1]);
-                break;
-            case 'e':
-                printf("f_argv[%d]: %s\n", i, f_argv[i+1]);
-                break;
-            case 'c':
-                printf("f_argv[%d]: %s\n", i, f_argv[i+1]);
-                break;
-            case 'h':
-                printf("f_argv[%d]: %s\n", i, f_argv[i+1]);
+//                i++;
+                switch ( *f_argv[i+1] ) {
+                    case 'p':
+                        printf("00_Jag känner igen variable %c", *f_argv[i+1]);
+                        break;
+                    case 'h':
+                        printf("01_Jag känner igen variable %c", *f_argv[i+1]);
+                        break;
+                    case 'n':
+                        printf("02_Jag känner igen variable %c", *f_argv[i+1]);
+                        break;
+                }
                 break;
             default:
 //                printf("f_argv[%d]: %s\n", i, f_argv[i]);
@@ -54,10 +54,9 @@ void function_two_argc_argv_main (int f_argc, char ** f_argv) {
         }
         
 //        printf("f_argv[%d]: %s\n", i, f_argv[i]);
-        
-        // reset cf_argv to NULL
-        cf_argv = '\0';
     }
+    // reset cf_argv to NULL
+    cf_argv = '\0';
     
 }
 

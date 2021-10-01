@@ -54,6 +54,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-i Hello_ArgV_One.c -e Hello_ArgV_One.exe -c brute_force_comple -h now"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-p 8080 -h -n hemma_server.se"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
