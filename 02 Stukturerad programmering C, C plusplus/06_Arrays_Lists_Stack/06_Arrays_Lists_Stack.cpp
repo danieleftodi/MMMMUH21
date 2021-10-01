@@ -228,7 +228,7 @@ void function_four_playing_with_arrays (void) {
      */
     
     // clear the screen
-//    system("clear");
+    system("clear");
     
     // Way one :: Using the string class
 //    std::string words_one[2];   // let's just make an empty array of two
@@ -236,8 +236,8 @@ void function_four_playing_with_arrays (void) {
 //    words_one[1] = "World";     // add second word to array
 //
 //    printf("First word is: %s\nSecond word is: %s\n", words_one[0].c_str(), words_one[1].c_str());
-//    printf("Size of the arary is: %lu\n", ( sizeof(words_one) / sizeof(std::string) ) );
-//    printf("Size of first word is: %lu\n", words_one[0].size());
+//    printf("Number of words in the array is: %lu\n", ( sizeof(words_one) / sizeof(std::string) ) ); // Plain C
+//    printf("Size of first word is: %lu\n", words_one[0].size());                                    // C++
 //    printf("Size of second word is: %lu\n\n", words_one[1].size());
     
     // Way one :: Using the string class - at defenition
@@ -272,8 +272,8 @@ void function_four_playing_with_arrays (void) {
 //#include <vector>
 //    std::vector<std::string> words_three;
 //
-//    words_three.push_back("Zoro");
-//    words_three.push_back("Rulez");
+//    words_three.push_back("Zoro");               // Read this as: Append!
+//    words_three.push_back("Rulez");              // Read this as: Append!
 //
 //    printf("First word is: %s\nSecond word is: %s\n", words_three[0].c_str(), words_three[1].c_str());
 //    printf("Size of the arary is: %lu\n", words_three.size());
@@ -286,10 +286,10 @@ void function_four_playing_with_arrays (void) {
 //                            { 1, 2 },
 //                            { 3, 4 }
 //                        };
-//    printf("Size of array22: %lu\n", (sizeof(array22) / sizeof(int)) );
+//    printf("Size of array22: %lu\n", (sizeof(array22) / sizeof(int)) );                 // Plain C
 //    int i=0;
-//    for (int x=0; x < std::extent<decltype(array22), 0>::value; x++){
-//    for (int y=0; y < std::extent<decltype(array22), 1>::value; y++, i++) {
+//    for (int x=0; x < std::extent<decltype(array22), 0>::value; x++){                   // Rows
+//    for (int y=0; y < std::extent<decltype(array22), 1>::value; y++, i++) {             // Colums
 //
 //            if ( i < 10 ) {
 //                printf("0%d: size: %lu x:%d y:%d value: %d\n", i, (sizeof(array22) / sizeof(int)), x , y , array22[x][y] );
@@ -309,8 +309,8 @@ void function_four_playing_with_arrays (void) {
 //                            { {7,8}, {9,10}, {11,12} }
 //                        };
 //    printf("Size of array232: %lu\n", (sizeof(array232) / sizeof(int)) );
-//
-//    i=0;
+//    int i=0;
+////    i=0;
 //    for (int x=0; x < std::extent<decltype(array232), 0>::value; x++) {
 //    for (int y=0; y < std::extent<decltype(array232), 1>::value; y++) {
 //    for (int z=0; z < std::extent<decltype(array232), 2>::value; z++, i++) {
@@ -324,23 +324,23 @@ void function_four_playing_with_arrays (void) {
 
     
     // Three (3D) Dimensional Integer Arrays - 2 x 3 x 3
-//    int array233[2][3][3] = {
-//                            { { 1, 2, 3}, { 4, 5, 6}, { 7, 8, 9} },
-//                            { {10,11,12}, {13,14,15}, {16,17,18} }
-//                        };
-//    printf("Size of array232: %lu\n", (sizeof(array232) / sizeof(int)) );
-//
+    int array233[2][3][3] = {
+                            { { 1, 2, 3}, { 4, 5, 6}, { 7, 8, 9} },             // Row 0
+                            { {10,11,12}, {13,14,15}, {16,17,18} }              // Row 1
+                        };
+    printf("Size of array233: %lu\n", (sizeof(array233) / sizeof(int)) );
+    int i=0;
 //    i=0;
-//    for (int x=0; x < std::extent<decltype(array233), 0>::value; x++) {
-//    for (int y=0; y < std::extent<decltype(array233), 1>::value; y++) {
-//    for (int z=0; z < std::extent<decltype(array233), 2>::value; z++, i++) {
-//        if ( i < 10 ) {
-//            printf("0%d: size: %lu a:%d b:%d c:%d value: %d\n", i, (sizeof(array233) / sizeof(int)), x , y , z , array233[x][y][z] );
-//        } else {
-//            printf("%d: size: %lu a:%d b:%d c:%d value: %d\n", i, (sizeof(array233) / sizeof(int)), x , y , z , array233[x][y][z] );
-//        }
-//    }}}
-//    std::cout << "\n";  // We want to make a newline before next example
+    for (int x=0; x < std::extent<decltype(array233), 0>::value; x++) {
+    for (int y=0; y < std::extent<decltype(array233), 1>::value; y++) {
+    for (int z=0; z < std::extent<decltype(array233), 2>::value; z++, i++) {
+        if ( i < 10 ) {
+            printf("0%d: size: %lu a:%d b:%d c:%d value: %d\n", i, (sizeof(array233) / sizeof(int)), x , y , z , array233[x][y][z] );
+        } else {
+            printf("%d: size: %lu a:%d b:%d c:%d value: %d\n", i, (sizeof(array233) / sizeof(int)), x , y , z , array233[x][y][z] );
+        }
+    }}}
+    std::cout << "\n";  // We want to make a newline before next example
 }
 
 void function_five_possible_roads_a_frog_can_jump_to_rome (int iNumRequireSteps) {
@@ -373,10 +373,10 @@ int main(int argc, char ** argv){
 //    function_one_size_of_datatype ();
 
     // Call :: function_two_argc_argv_main ()
-    function_two_argc_argv_main (argc, argv);
+//    function_two_argc_argv_main (argc, argv);
     
     // Call :: function_three_exercise_five ()
-//    function_three_exercise_five ();
+    function_three_exercise_five ();
     
     // Call :: function_four_playing_with_arrays ()
 //    function_four_playing_with_arrays();
