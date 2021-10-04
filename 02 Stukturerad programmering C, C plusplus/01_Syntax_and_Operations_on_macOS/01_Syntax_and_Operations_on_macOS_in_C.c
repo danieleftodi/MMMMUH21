@@ -1,36 +1,30 @@
 //
-//  01_Syntax_and_Operations_on_macOS.c
-//  01_Syntax_and_Operations_on_macOS
+//  01_Syntax_and_Operations_on_macOS_in_C.c
+//  01_Syntax_and_Operations_on_macOS_in_Cpp
 //
 //  Created by Daniel Eftodi on 2021-09-15.
 //
 
-#include "01_Syntax_and_Operations_on_macOS.h"
-#include <iostream>
-using namespace std;
+#include "01_Syntax_and_Operations_on_macOS_in_C.h"
 
 int function_eleven(int a, int b) {
     // 11
-    cout << "Inside function_eleven:\n\n";
+    printf("Inside function_eleven:\n\n");
     printf("Den här funktionen tar två variabler, %d och %d och räknar\nut vad %d multiplicerat med %d blir och returnerar det.\n\n", a, b, a, b);
     return (a * b);
 }
 
 int main(){
-    // Maknig the HelloWorld print example with the printf()-command ...
+    // Maknig the HelloWorld print example ...
     printf("Hello Syntax\n");
 
-    // Making the HelloWorld print example with the std::cout-command ...
-    cout << "\nHello cout Syntax\n\n";
+    // Making the HelloWorld print example ...
+    printf("\nHello cout Syntax\n\n");
     
-    // cout without end-line chars ...
-    cout << "Hello cout Line 2";
-    cout << "Hello cout Line 3";
-    
-    // cout with end-line chars ...
-    cout << endl << "Hello cout Line 4" << endl;
-    cout << "Hello cout Line 5" << endl;
-    
+    // printf without new-line chars ...
+    printf("Hello cout Line 2");
+    printf("Hello cout Line 3");
+        
     // Printing a CHAR varibale with printf ...
     char ch = 'N';
     printf("\nVi har valt bokstaven %c.\n", ch);
@@ -143,7 +137,7 @@ int main(){
     printf("9c Result is: %d\n\n", 144 - 4 * yval > 800 % (15 - yval) );
     
     // 10
-    cout << "10:";
+    printf("10:\n");
     printf("\n\
     Would you like to play a game?\n\
         A game of war and peace?\n\
@@ -156,12 +150,12 @@ int main(){
         Chess it is then, my old friend!\n\n");
 
     // call funktion eleven
-    cout << "11:\n";
+    printf("11:\n");
     int result_func_eleven = function_eleven(10, 20);
     printf("Result is: %d\n", result_func_eleven);
     
     // Endnig with an extra new line
-    cout << "\n";
+    printf("\n");
     
     return 0;
 }
