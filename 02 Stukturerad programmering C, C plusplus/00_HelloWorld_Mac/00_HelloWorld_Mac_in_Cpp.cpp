@@ -1,12 +1,11 @@
 //
-//  HelloWorld.c
-//  HelloXcode_in_C
+//  00_HelloWorld_Mac.c
+//  00_HelloWorld_Mac
 //
 //  Created by Daniel Eftodi on 2021-09-14.
 //
 
-#include "HelloWorld.h"
-#include <iostream>
+#include "00_HelloWorld_Mac_in_Cpp.h"
 
 int main(){
     //Maknig the HelloWorld print example with the printf()-command ... 

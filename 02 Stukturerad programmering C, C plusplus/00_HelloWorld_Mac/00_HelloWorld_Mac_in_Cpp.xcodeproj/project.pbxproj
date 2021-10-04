@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55BFE88E26F0D0F80042BF4A /* HelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5505963D26F0C8BE003CE0BE /* HelloWorld.cpp */; };
+		551459CA270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551459C9270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5505963D26F0C8BE003CE0BE /* HelloWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorld.cpp; sourceTree = "<group>"; };
-		5505964226F0CA24003CE0BE /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
-		55DA96FF26F0BC2300C431A8 /* HelloWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorld.h; sourceTree = "<group>"; };
+		5505964226F0CA24003CE0BE /* 00_HelloWorld_Mac_in_Cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 00_HelloWorld_Mac_in_Cpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		551459C8270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 00_HelloWorld_Mac_in_Cpp.h; sourceTree = "<group>"; };
+		551459C9270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 00_HelloWorld_Mac_in_Cpp.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		5505964326F0CA24003CE0BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5505964226F0CA24003CE0BE /* HelloWorld */,
+				5505964226F0CA24003CE0BE /* 00_HelloWorld_Mac_in_Cpp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,8 +50,8 @@
 		55DA96F826F0BBF800C431A8 = {
 			isa = PBXGroup;
 			children = (
-				5505963D26F0C8BE003CE0BE /* HelloWorld.cpp */,
-				55DA96FF26F0BC2300C431A8 /* HelloWorld.h */,
+				551459C9270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.cpp */,
+				551459C8270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.h */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +59,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5505964126F0CA24003CE0BE /* HelloWorld */ = {
+		5505964126F0CA24003CE0BE /* 00_HelloWorld_Mac_in_Cpp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "HelloWorld" */;
+			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "00_HelloWorld_Mac_in_Cpp" */;
 			buildPhases = (
 				5505963E26F0CA24003CE0BE /* Sources */,
 				5505963F26F0CA24003CE0BE /* Frameworks */,
@@ -71,9 +71,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWorld;
+			name = 00_HelloWorld_Mac_in_Cpp;
 			productName = HelloWorld;
-			productReference = 5505964226F0CA24003CE0BE /* HelloWorld */;
+			productReference = 5505964226F0CA24003CE0BE /* 00_HelloWorld_Mac_in_Cpp */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -89,7 +89,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "HelloXcode_in_C" */;
+			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "00_HelloWorld_Mac_in_Cpp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -102,7 +102,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5505964126F0CA24003CE0BE /* HelloWorld */,
+				5505964126F0CA24003CE0BE /* 00_HelloWorld_Mac_in_Cpp */,
 			);
 		};
 /* End PBXProject section */
@@ -112,7 +112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55BFE88E26F0D0F80042BF4A /* HelloWorld.cpp in Sources */,
+				551459CA270B893E00B9F12B /* 00_HelloWorld_Mac_in_Cpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +152,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -172,7 +174,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -214,10 +216,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -228,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -239,35 +243,37 @@
 		55DA96FD26F0BBF800C431A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 			};
 			name = Debug;
 		};
 		55DA96FE26F0BBF800C431A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
+		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "00_HelloWorld_Mac_in_Cpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5505964626F0CA24003CE0BE /* Debug */,
 				5505964726F0CA24003CE0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "HelloXcode_in_C" */ = {
+		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "00_HelloWorld_Mac_in_Cpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DA96FD26F0BBF800C431A8 /* Debug */,
 				55DA96FE26F0BBF800C431A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -32,9 +32,9 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
-      launchStyle = "1"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       customWorkingDirectory = "/Users/seludeft/gits/MMMMUH21/02 Stukturerad programmering C, C plusplus/HelloXcode_in_C/build"
       ignoresPersistentStateOnLaunch = "NO"
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "HelloWorld"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:HelloXcode_in_C.xcodeproj">
+            BuildableName = "00_HelloWorld_Mac_in_Cpp"
+            BlueprintName = "00_HelloWorld_Mac_in_Cpp"
+            ReferencedContainer = "container:00_HelloWorld_Mac_in_Cpp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
