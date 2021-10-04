@@ -1,12 +1,11 @@
 //
-//  03_Structures_selections_and_iterations.c
-//  03_Structures_selections_and_iterations
+//  03_Structures_selections_and_iterations_in_Cpp.cpp
+//  03_Structures_selections_and_iterations_in_Cpp
 //
 //  Created by Daniel Eftodi on 2021-09-22.
 //
 
-#include "03_Structures_selections_and_iterations.h"
-#include <iostream>
+#include "03_Structures_selections_and_iterations_in_Cpp.h"
 
 const bool bAlwaysTrue = true;
 const bool bAlwaysFalse = false;
@@ -38,6 +37,8 @@ int main(){
     int iReturnedThirdIf = 0;
     char cInput = '\0';
     
+    char phrase[] = "Charater Phrase";
+    printf("\nCharater Phrase: %s\n", phrase);
     
     std::cout << "Press any key: ";
     std::cin >> cInput;

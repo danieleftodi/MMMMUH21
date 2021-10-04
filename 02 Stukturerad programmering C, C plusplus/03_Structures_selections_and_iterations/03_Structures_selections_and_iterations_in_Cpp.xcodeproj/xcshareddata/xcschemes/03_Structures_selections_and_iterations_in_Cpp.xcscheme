@@ -32,9 +32,9 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
-      launchStyle = "1"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       customWorkingDirectory = "/Users/seludeft/gits/MMMMUH21/02 Stukturerad programmering C, C plusplus/HelloXcode_in_C/build"
       ignoresPersistentStateOnLaunch = "NO"
@@ -46,20 +46,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "03_Structures_selections_and_iterations"
-            BlueprintName = "03_Structures_selections_and_iterations"
-            ReferencedContainer = "container:03_Structures_selections_and_iterations.xcodeproj">
+            BuildableName = "03_Structures_selections_and_iterations_in_Cpp"
+            BlueprintName = "03_Structures_selections_and_iterations_in_Cpp"
+            ReferencedContainer = "container:03_Structures_selections_and_iterations_in_Cpp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "HelloWorld"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:HelloXcode_in_C.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <LocationScenarioReference
          identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
          referenceType = "1">
