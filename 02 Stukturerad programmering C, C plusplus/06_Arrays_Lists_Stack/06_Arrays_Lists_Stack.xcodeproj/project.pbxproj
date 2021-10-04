@@ -262,7 +262,7 @@
 				5505964726F0CA24003CE0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "06_Arrays_Lists_Stack" */ = {
 			isa = XCConfigurationList;
@@ -271,7 +271,7 @@
 				55DA96FE26F0BBF800C431A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
