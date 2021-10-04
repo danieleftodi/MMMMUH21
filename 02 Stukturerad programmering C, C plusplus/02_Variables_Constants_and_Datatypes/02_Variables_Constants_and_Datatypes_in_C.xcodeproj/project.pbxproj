@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5558E94126F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5558E93F26F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.cpp */; };
+		556061AB270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 556061AA270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 02_Variables_Constants_and_Datatypes; sourceTree = BUILT_PRODUCTS_DIR; };
-		5558E93F26F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 02_Variables_Constants_and_Datatypes.cpp; sourceTree = "<group>"; };
-		5558E94026F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 02_Variables_Constants_and_Datatypes.h; sourceTree = "<group>"; };
+		5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes_in_C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 02_Variables_Constants_and_Datatypes_in_C; sourceTree = BUILT_PRODUCTS_DIR; };
+		556061A9270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 02_Variables_Constants_and_Datatypes_in_C.h; sourceTree = "<group>"; };
+		556061AA270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 02_Variables_Constants_and_Datatypes_in_C.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		5505964326F0CA24003CE0BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes */,
+				5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes_in_C */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,8 +50,8 @@
 		55DA96F826F0BBF800C431A8 = {
 			isa = PBXGroup;
 			children = (
-				5558E93F26F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.cpp */,
-				5558E94026F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.h */,
+				556061AA270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.c */,
+				556061A9270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.h */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +59,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5505964126F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes */ = {
+		5505964126F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes_in_C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "02_Variables_Constants_and_Datatypes" */;
+			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "02_Variables_Constants_and_Datatypes_in_C" */;
 			buildPhases = (
 				5505963E26F0CA24003CE0BE /* Sources */,
 				5505963F26F0CA24003CE0BE /* Frameworks */,
@@ -71,9 +71,9 @@
 			);
 			dependencies = (
 			);
-			name = 02_Variables_Constants_and_Datatypes;
+			name = 02_Variables_Constants_and_Datatypes_in_C;
 			productName = HelloWorld;
-			productReference = 5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes */;
+			productReference = 5505964226F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes_in_C */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -89,7 +89,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "02_Variables_Constants_and_Datatypes" */;
+			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "02_Variables_Constants_and_Datatypes_in_C" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -102,7 +102,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5505964126F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes */,
+				5505964126F0CA24003CE0BE /* 02_Variables_Constants_and_Datatypes_in_C */,
 			);
 		};
 /* End PBXProject section */
@@ -112,7 +112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5558E94126F9C7DA008B5A15 /* 02_Variables_Constants_and_Datatypes.cpp in Sources */,
+				556061AB270B9BDB002BC976 /* 02_Variables_Constants_and_Datatypes_in_C.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +172,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -228,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -241,6 +241,7 @@
 			buildSettings = {
 				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 			};
 			name = Debug;
 		};
@@ -249,29 +250,30 @@
 			buildSettings = {
 				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "02_Variables_Constants_and_Datatypes" */ = {
+		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "02_Variables_Constants_and_Datatypes_in_C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5505964626F0CA24003CE0BE /* Debug */,
 				5505964726F0CA24003CE0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "02_Variables_Constants_and_Datatypes" */ = {
+		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "02_Variables_Constants_and_Datatypes_in_C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DA96FD26F0BBF800C431A8 /* Debug */,
 				55DA96FE26F0BBF800C431A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,9 +5,7 @@
 //  Created by Daniel Eftodi on 2021-09-14.
 //
 
-#include "02_Variables_Constants_and_Datatypes.h"
-#include <iostream>
-#include <unistd.h>
+#include "02_Variables_Constants_and_Datatypes_in_Cpp.h"
 
 void func_excersize_week_two_part_one () {
 /*
@@ -104,7 +102,7 @@ void func_excersize_week_two_part_three () {
         std::cout << "  (3) - \n";
         std::cout << "  (Q) - Quit\n";
         std::cout << "\n";
-        std::cout << "  Press any key: ";''''
+        std::cout << "  Press any key: ";
         std::cin >> cInput;
 
         switch (cInput) {
@@ -355,7 +353,7 @@ void func_slides (){
 int main(){
     
     // call function: func_slides()
-//    func_slides ();
+    func_slides ();
     
     // call function: func_excersize_week_two_part_one()
 //    func_excersize_week_two_part_one();
@@ -364,7 +362,7 @@ int main(){
 //    func_excersize_week_two_part_two();
     
     // call function: func_excersize_week_two_part_three()
-    func_excersize_week_two_part_three();
+//    func_excersize_week_two_part_three();
     
     //Endnig with an extra new line
     std::cout << "\n";
