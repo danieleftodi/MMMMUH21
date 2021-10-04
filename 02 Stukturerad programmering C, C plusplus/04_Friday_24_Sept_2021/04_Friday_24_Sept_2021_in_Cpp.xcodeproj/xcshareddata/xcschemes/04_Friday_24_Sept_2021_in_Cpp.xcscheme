@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "04_Friday_24_Sept_2021"
-            BlueprintName = "04_Friday_24_Sept_2021"
-            ReferencedContainer = "container:04_Friday_24_Sept_2021.xcodeproj">
+            BuildableName = "04_Friday_24_Sept_2021_in_Cpp"
+            BlueprintName = "04_Friday_24_Sept_2021_in_Cpp"
+            ReferencedContainer = "container:04_Friday_24_Sept_2021_in_Cpp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

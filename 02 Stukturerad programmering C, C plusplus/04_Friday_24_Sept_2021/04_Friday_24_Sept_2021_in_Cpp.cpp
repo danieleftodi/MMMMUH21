@@ -1,20 +1,12 @@
 //
-//  05_Friday.c
-//  05_Friday
+//  04_Friday_24_Sept_2021_in_Cpp.cpp
+//  04_Friday_24_Sept_2021_in_Cpp
 //
 //  Created by Daniel Eftodi on 2021-09-24.
 //
 
-#include "04_Friday_24_Sept_2021.h" 
-#include <iostream>
-#include <stdio.h>
-#include <climits>          // CHAR_BIT
-//#include <stdlib.h>         // rand
-#include <unistd.h>         // system(clear);
-#include <random>           // random
-#include <limits>           // This is important!
-#include <string>           // stoi
-#include <sstream>          // stringstream
+#include "04_Friday_24_Sept_2021_in_Cpp.h" 
+
 
 void function_one_size_of_datatype () {
     unsigned int usDataSize = 128;
@@ -225,10 +217,10 @@ void function_three_exercise_five_gameOne_guess_number () {
 int main(int argc, char ** argv){
 
     // Call :: function_one_size_of_datatype ()
-//    function_one_size_of_datatype ();
+    function_one_size_of_datatype ();
 
     // Call :: function_two_argc_argv_main ()
-//    function_two_argc_argv_main (argc, argv);
+    function_two_argc_argv_main (argc, argv);
     
     // Call :: function_three_exercise_five ()
     function_three_exercise_five ();
@@ -238,4 +230,3 @@ int main(int argc, char ** argv){
     
     return 0;
 }
-

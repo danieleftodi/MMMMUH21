@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5595E2AD2702F924009B46E8 /* 04_Friday_24_Sept_2021.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5595E2AB2702F924009B46E8 /* 04_Friday_24_Sept_2021.cpp */; };
+		55454F7C270BABE2000098D1 /* 04_Friday_24_Sept_2021_in_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 55454F7A270BABA8000098D1 /* 04_Friday_24_Sept_2021_in_C.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,10 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 04_Friday_24_Sept_2021; sourceTree = BUILT_PRODUCTS_DIR; };
-		5595E2AB2702F924009B46E8 /* 04_Friday_24_Sept_2021.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 04_Friday_24_Sept_2021.cpp; sourceTree = "<group>"; };
-		5595E2AC2702F924009B46E8 /* 04_Friday_24_Sept_2021.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 04_Friday_24_Sept_2021.h; sourceTree = "<group>"; };
-		5595E2AE2702FD31009B46E8 /* 04_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 04_Snippets.h; sourceTree = "<group>"; };
+		5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021_in_C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 04_Friday_24_Sept_2021_in_C; sourceTree = BUILT_PRODUCTS_DIR; };
+		55454F73270BAAF4000098D1 /* 04_Friday_24_Sept_2021_in_C_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 04_Friday_24_Sept_2021_in_C_Snippets.h; sourceTree = "<group>"; };
+		55454F75270BAAF4000098D1 /* 04_Friday_24_Sept_2021_in_C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 04_Friday_24_Sept_2021_in_C.h; sourceTree = "<group>"; };
+		55454F7A270BABA8000098D1 /* 04_Friday_24_Sept_2021_in_C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 04_Friday_24_Sept_2021_in_C.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 		5505964326F0CA24003CE0BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021 */,
+				5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021_in_C */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +51,9 @@
 		55DA96F826F0BBF800C431A8 = {
 			isa = PBXGroup;
 			children = (
-				5595E2AB2702F924009B46E8 /* 04_Friday_24_Sept_2021.cpp */,
-				5595E2AC2702F924009B46E8 /* 04_Friday_24_Sept_2021.h */,
-				5595E2AE2702FD31009B46E8 /* 04_Snippets.h */,
+				55454F7A270BABA8000098D1 /* 04_Friday_24_Sept_2021_in_C.c */,
+				55454F75270BAAF4000098D1 /* 04_Friday_24_Sept_2021_in_C.h */,
+				55454F73270BAAF4000098D1 /* 04_Friday_24_Sept_2021_in_C_Snippets.h */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5505964126F0CA24003CE0BE /* 04_Friday_24_Sept_2021 */ = {
+		5505964126F0CA24003CE0BE /* 04_Friday_24_Sept_2021_in_C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "04_Friday_24_Sept_2021" */;
+			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "04_Friday_24_Sept_2021_in_C" */;
 			buildPhases = (
 				5505963E26F0CA24003CE0BE /* Sources */,
 				5505963F26F0CA24003CE0BE /* Frameworks */,
@@ -73,9 +73,9 @@
 			);
 			dependencies = (
 			);
-			name = 04_Friday_24_Sept_2021;
+			name = 04_Friday_24_Sept_2021_in_C;
 			productName = HelloWorld;
-			productReference = 5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021 */;
+			productReference = 5505964226F0CA24003CE0BE /* 04_Friday_24_Sept_2021_in_C */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "04_Friday_24_Sept_2021" */;
+			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "04_Friday_24_Sept_2021_in_C" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,7 +104,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5505964126F0CA24003CE0BE /* 04_Friday_24_Sept_2021 */,
+				5505964126F0CA24003CE0BE /* 04_Friday_24_Sept_2021_in_C */,
 			);
 		};
 /* End PBXProject section */
@@ -114,7 +114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5595E2AD2702F924009B46E8 /* 04_Friday_24_Sept_2021.cpp in Sources */,
+				55454F7C270BABE2000098D1 /* 04_Friday_24_Sept_2021_in_C.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,23 +255,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "04_Friday_24_Sept_2021" */ = {
+		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "04_Friday_24_Sept_2021_in_C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5505964626F0CA24003CE0BE /* Debug */,
 				5505964726F0CA24003CE0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "04_Friday_24_Sept_2021" */ = {
+		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "04_Friday_24_Sept_2021_in_C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DA96FD26F0BBF800C431A8 /* Debug */,
 				55DA96FE26F0BBF800C431A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

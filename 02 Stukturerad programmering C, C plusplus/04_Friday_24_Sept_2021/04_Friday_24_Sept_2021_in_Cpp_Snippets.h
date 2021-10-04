@@ -1,12 +1,12 @@
 //
-//  04_Snippets.h
-//  04_Friday_24_Sept_2021
+//  04_Friday_24_Sept_2021_in_Cpp_Snippets.h
+//  04_Friday_24_Sept_2021_in_Cpp
 //
 //  Created by DEft on 21-09-24.
 //
 
-#ifndef Friday_24_Sept_2021_h
-#define Friday_24_Sept_2021_h
+#ifndef Friday_24_Sept_2021_in_Cpp_Snippets_h
+#define Friday_24_Sept_2021_in_Cpp_Snippets_h
 
 //        sf_argv = f_argv[i];
 
@@ -33,4 +33,4 @@
 //        }
 
 
-#endif /* Friday_24_Sept_2021_h */
+#endif /* Friday_24_Sept_2021_in_Cpp_Snippets_h */
