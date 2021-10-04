@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "06_Arrays_Lists_Stack"
-            BlueprintName = "06_Arrays_Lists_Stack"
-            ReferencedContainer = "container:06_Arrays_Lists_Stack.xcodeproj">
+            BuildableName = "06_Arrays_Lists_Stack_in_C"
+            BlueprintName = "06_Arrays_Lists_Stack_in_C"
+            ReferencedContainer = "container:06_Arrays_Lists_Stack_in_C.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

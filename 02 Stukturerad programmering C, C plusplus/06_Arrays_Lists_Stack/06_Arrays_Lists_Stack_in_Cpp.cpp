@@ -1,11 +1,11 @@
 //
-//  06_Arrays_Lists_Stack.c
-//  06_Arrays_Lists_Stack
+//  06_Arrays_Lists_Stack_in_Cpp.cpp
+//  06_Arrays_Lists_Stack_in_Cpp
 //
 //  Created by Daniel Eftodi on 2021-09-29.
 //
 
-#include "06_Arrays_Lists_Stack.h"
+#include "06_Arrays_Lists_Stack_in_Cpp.h"
 
 void function_one_size_of_datatype () {
     unsigned int usDataSize = 128;
@@ -367,22 +367,22 @@ void function_five_possible_roads_a_frog_can_jump_to_rome (int iNumRequireSteps)
 int main(int argc, char ** argv){
 
     // Being a dick, obfuscating code writing
-//    std::cout << "Hello" << std::endl;std::cout << "World" << "\n";
+    std::cout << "Hello" << std::endl;std::cout << "World" << "\n";
     
     // Call :: function_one_size_of_datatype ()
-//    function_one_size_of_datatype ();
+    function_one_size_of_datatype ();
 
     // Call :: function_two_argc_argv_main ()
-//    function_two_argc_argv_main (argc, argv);
+    function_two_argc_argv_main (argc, argv);
     
     // Call :: function_three_exercise_five ()
     function_three_exercise_five ();
     
     // Call :: function_four_playing_with_arrays ()
-//    function_four_playing_with_arrays();
+    function_four_playing_with_arrays();
     
     // Call :: function_five_possible_roads_a_frog_can_jump_to_rome ()
-//    function_five_possible_roads_a_frog_can_jump_to_rome(50);
+    function_five_possible_roads_a_frog_can_jump_to_rome(50);
     
     //Endnig with an extra new line
     std::cout << "\n";

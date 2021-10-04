@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		553904342704605400BF43E4 /* 06_Arrays_Lists_Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 553904332704605400BF43E4 /* 06_Arrays_Lists_Stack.cpp */; };
+		55454F8F270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55454F8C270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,10 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 06_Arrays_Lists_Stack; sourceTree = BUILT_PRODUCTS_DIR; };
-		5539042B2704528A00BF43E4 /* 06_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 06_Snippets.h; sourceTree = "<group>"; };
-		553904322704605400BF43E4 /* 06_Arrays_Lists_Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 06_Arrays_Lists_Stack.h; sourceTree = "<group>"; };
-		553904332704605400BF43E4 /* 06_Arrays_Lists_Stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 06_Arrays_Lists_Stack.cpp; sourceTree = "<group>"; };
+		5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack_in_Cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 06_Arrays_Lists_Stack_in_Cpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		55454F8C270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 06_Arrays_Lists_Stack_in_Cpp.cpp; sourceTree = "<group>"; };
+		55454F8D270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 06_Arrays_Lists_Stack_in_Cpp.h; sourceTree = "<group>"; };
+		55454F8E270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 06_Arrays_Lists_Stack_in_Cpp_Snippets.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 		5505964326F0CA24003CE0BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack */,
+				5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack_in_Cpp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +51,9 @@
 		55DA96F826F0BBF800C431A8 = {
 			isa = PBXGroup;
 			children = (
-				553904332704605400BF43E4 /* 06_Arrays_Lists_Stack.cpp */,
-				553904322704605400BF43E4 /* 06_Arrays_Lists_Stack.h */,
-				5539042B2704528A00BF43E4 /* 06_Snippets.h */,
+				55454F8C270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.cpp */,
+				55454F8D270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.h */,
+				55454F8E270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp_Snippets.h */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5505964126F0CA24003CE0BE /* 06_Arrays_Lists_Stack */ = {
+		5505964126F0CA24003CE0BE /* 06_Arrays_Lists_Stack_in_Cpp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "06_Arrays_Lists_Stack" */;
+			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "06_Arrays_Lists_Stack_in_Cpp" */;
 			buildPhases = (
 				5505963E26F0CA24003CE0BE /* Sources */,
 				5505963F26F0CA24003CE0BE /* Frameworks */,
@@ -73,9 +73,9 @@
 			);
 			dependencies = (
 			);
-			name = 06_Arrays_Lists_Stack;
+			name = 06_Arrays_Lists_Stack_in_Cpp;
 			productName = HelloWorld;
-			productReference = 5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack */;
+			productReference = 5505964226F0CA24003CE0BE /* 06_Arrays_Lists_Stack_in_Cpp */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "06_Arrays_Lists_Stack" */;
+			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "06_Arrays_Lists_Stack_in_Cpp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,7 +104,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5505964126F0CA24003CE0BE /* 06_Arrays_Lists_Stack */,
+				5505964126F0CA24003CE0BE /* 06_Arrays_Lists_Stack_in_Cpp */,
 			);
 		};
 /* End PBXProject section */
@@ -114,7 +114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553904342704605400BF43E4 /* 06_Arrays_Lists_Stack.cpp in Sources */,
+				55454F8F270BBD98000098D1 /* 06_Arrays_Lists_Stack_in_Cpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "06_Arrays_Lists_Stack" */ = {
+		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "06_Arrays_Lists_Stack_in_Cpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5505964626F0CA24003CE0BE /* Debug */,
@@ -264,7 +264,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "06_Arrays_Lists_Stack" */ = {
+		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "06_Arrays_Lists_Stack_in_Cpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DA96FD26F0BBF800C431A8 /* Debug */,

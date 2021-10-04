@@ -1,12 +1,12 @@
 //
-//  05_Snippets.h
-//  05_Functions_part_one
+//  Arrays_Lists_Stack_in_Cpp_Snippets.h
+//  Arrays_Lists_Stack_in_Cpp_Snippets
 //
 //  Created by DEft on 2021-09-28.
 //
 
-#ifndef Functions_part_one_h
-#define Functions_part_one_h
+#ifndef Arrays_Lists_Stack_in_Cpp_Snippets_h
+#define Arrays_Lists_Stack_in_Cpp_Snippets_h
 
 //        sf_argv = f_argv[i];
 
@@ -33,4 +33,4 @@
 //        }
 
 
-#endif /* Functions_part_one_h */
+#endif /* Arrays_Lists_Stack_in_Cpp_Snippets_h */
