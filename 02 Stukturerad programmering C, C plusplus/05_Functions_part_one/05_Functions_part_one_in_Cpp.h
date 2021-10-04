@@ -1,12 +1,12 @@
 //
-//  05_Functions_part_one.h
-//  05_Functions_part_one
+//  05_Functions_part_one_in_Cpp.h
+//  05_Functions_part_one_in_Cpp
 //
 //  Created by Daniel Eftodi on 2021-09-14.
 //
 
-#ifndef Functions_part_one_h
-#define Functions_part_one_h
+#ifndef Functions_part_one_in_Cpp_h
+#define Functions_part_one_in_Cpp_h
 
 #include <stdio.h>
 #include <iostream>
@@ -36,4 +36,4 @@ void function_five_possible_roads_a_frog_can_jump_to_rome (int iNumRequireSteps)
 
 int main (int argc, char ** argv);
 
-#endif /* Functions_part_one_h */
+#endif /* Functions_part_one_in_Cpp_h */

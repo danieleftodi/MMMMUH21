@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5505964126F0CA24003CE0BE"
-            BuildableName = "05_Functions_part_one"
-            BlueprintName = "05_Functions_part_one"
-            ReferencedContainer = "container:05_Functions_part_one.xcodeproj">
+            BuildableName = "05_Functions_part_one_in_Cpp"
+            BlueprintName = "05_Functions_part_one_in_Cpp"
+            ReferencedContainer = "container:05_Functions_part_one_in_Cpp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

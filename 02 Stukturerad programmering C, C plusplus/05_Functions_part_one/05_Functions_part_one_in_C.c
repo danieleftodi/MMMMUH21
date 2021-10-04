@@ -1,11 +1,11 @@
 //
-//  05_Functions_part_one.c
-//  05_Functions_part_one
+//  05_Functions_part_one_in_C.cpp
+//  05_Functions_part_one_in_C
 //
 //  Created by Daniel Eftodi on 2021-09-28.
 //
 
-#include "05_Functions_part_one.h"
+#include "05_Functions_part_one_in_C.h"
 
 void function_one_size_of_datatype () {
     unsigned int usDataSize = 128;
@@ -298,22 +298,22 @@ void function_five_possible_roads_a_frog_can_jump_to_rome (int iNumRequireSteps)
 int main(int argc, char ** argv){
 
     // Being a dick, obfuscating code writing
-//    std::cout << "Hello" << std::endl;std::cout << "World" << "\n";
+    std::cout << "Hello" << std::endl;std::cout << "World" << "\n";
     
     // Call :: function_one_size_of_datatype ()
-//    function_one_size_of_datatype ();
+    function_one_size_of_datatype ();
 
     // Call :: function_two_argc_argv_main ()
-//    function_two_argc_argv_main (argc, argv);
+    function_two_argc_argv_main (argc, argv);
     
     // Call :: function_three_exercise_five ()
-//    function_three_exercise_five ();
+    function_three_exercise_five ();
     
     // Call :: function_four_playing_with_arrays ()
     function_four_playing_with_arrays();
     
     // Call :: function_five_possible_roads_a_frog_can_jump_to_rome ()
-//    function_five_possible_roads_a_frog_can_jump_to_rome(50);
+    function_five_possible_roads_a_frog_can_jump_to_rome(50);
     
     //Endnig with an extra new line
     std::cout << "\n";

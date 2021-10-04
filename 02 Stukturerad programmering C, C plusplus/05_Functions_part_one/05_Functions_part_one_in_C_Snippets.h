@@ -1,12 +1,12 @@
 //
-//  05_Snippets.h
-//  05_Functions_part_one
+//  05_Functions_part_one_in_C_Snippets.h
+//  05_Functions_part_one_in_C
 //
 //  Created by DEft on 2021-09-28.
 //
 
-#ifndef Functions_part_one_h
-#define Functions_part_one_h
+#ifndef Functions_part_one_in_C_Snippets_h
+#define Functions_part_one_in_C_Snippets_h
 
 //        sf_argv = f_argv[i];
 
@@ -33,4 +33,4 @@
 //        }
 
 
-#endif /* Functions_part_one_h */
+#endif /* Functions_part_one_in_C_Snippets_h */
