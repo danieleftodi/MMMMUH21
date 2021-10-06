@@ -1,0 +1,5 @@
+﻿  miniraknare.cpp
+C:\Users\nikla\source\repos\miniraknare\miniraknare\miniraknare.cpp(90,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\nikla\source\repos\miniraknare\miniraknare\miniraknare.cpp(55,16): warning C4101: 'number1': unreferenced local variable
+C:\Users\nikla\source\repos\miniraknare\miniraknare\miniraknare.cpp(56,16): warning C4101: 'number2': unreferenced local variable
+  miniraknare.vcxproj -> C:\Users\nikla\source\repos\miniraknare\Debug\miniraknare.exe
