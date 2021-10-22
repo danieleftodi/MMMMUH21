@@ -9,7 +9,6 @@
 
 void menu_place_backyard(void) {
     char cInputExploreBackyard                  = '\0';
-    bool bMainMenuValidSelection                = false;
     bool bMainMenuExploreBackyardValidSelection = false;
 
     do {
@@ -22,7 +21,7 @@ void menu_place_backyard(void) {
         std::cout << "############################################\n";
         std::cout << "\n";
         std::cout << "  (1) - Chairs\n";
-        std::cout << "  (R) - Return to Main Menu\n";
+        std::cout << "  (R) - Return to Explore Menu\n";
         std::cout << "\n";
         std::cout << "\nWhat do you want to explore?: ";
         std::cin >> cInputExploreBackyard;

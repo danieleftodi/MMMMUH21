@@ -40,11 +40,11 @@ Having played a lot of games, I would say the main inspiration to this games is 
 #Definitions
 
 * Exploration &emsp;&emsp;&emsp; => Places
-* Fight &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; => Activities
-* Enemy &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; => Frenemies
-* Health &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; => Food
-* Potion &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; => Water
-* Candy &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; => Milk
+* Fight &emsp;&emsp;&emsp; => Activities
+* Enemy &emsp;&emsp;&emsp; => Frenemies
+* Health &emsp;&emsp;&emsp; => Food
+* Potion &emsp;&emsp;&emsp; => Water
+* Candy &emsp;&emsp;&emsp; => Milk
  
 
 #Structure
@@ -87,12 +87,12 @@ Having played a lot of games, I would say the main inspiration to this games is 
 
 **Frenemies** <br>
 * Masters (Mom & Dad)&emsp;&emsp;&emsp;// Friend! <br>
-* Children&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Enemy || Friend  <br>
-* Masters Friend: Erik&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// ENEMY!!! 😹🐈 <br>
-* Other cats&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Enemy || Friend <br>
-* Adults&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Friend <br>
-* Dogs&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Enemy <br>
-* Birds&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;// Enemy <p>
+* Children &emsp;&emsp;&emsp;// Enemy || Friend  <br>
+* Masters Friend: Erik &emsp;&emsp;&emsp;// ENEMY!!! 😹🐈 <br>
+* Other cats &emsp;&emsp;&emsp;// Enemy || Friend <br>
+* Adults &emsp;&emsp;&emsp;// Friend <br>
+* Dogs &emsp;&emsp;&emsp;// Enemy <br>
+* Birds &emsp;&emsp;&emsp;// Enemy <p>
 
 #File structure
 
@@ -171,7 +171,7 @@ Most of the code files (.cpp & .h) are placeholders for future development. But 
 |-->places <br>
 &emsp;&emsp;&emsp;|-- place\_backyard.cpp <br>
 &emsp;&emsp;&emsp;|-- place\_bed.cpp <br>
-&emsp;&emsp;&emsp;|-- place\_cardboard\_box.cpp
+&emsp;&emsp;&emsp;|-- place\_cardboard\_box.cpp <br>
 &emsp;&emsp;&emsp;|-- place\_cat\_tree.cpp <br>
 &emsp;&emsp;&emsp;|-- place\_closet.cpp <br>
 &emsp;&emsp;&emsp;|-- place\_litter\_box.cpp <br>

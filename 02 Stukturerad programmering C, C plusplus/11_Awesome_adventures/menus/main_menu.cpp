@@ -71,7 +71,7 @@ void main_menu (void){
                             printf("\nYou are entering: The Backyard\n");
                             sleep(3);
                             menu_place_backyard();
-                            bMainMenuExploreValidSelection = true;
+                            bMainMenuExploreValidSelection = false;
                             break;
                         case '2':
                         case '3':
@@ -101,9 +101,6 @@ void main_menu (void){
                     }
                 } while (!bMainMenuExploreValidSelection);
                 
-                
-                printf("\nThis is not completed, play something else in the mean while.\n");
-                sleep(3);
                 bMainMenuValidSelection = false;
                 break;
             case 'a':
