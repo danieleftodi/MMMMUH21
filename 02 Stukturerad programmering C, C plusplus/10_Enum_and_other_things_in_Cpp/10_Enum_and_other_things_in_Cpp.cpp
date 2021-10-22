@@ -302,9 +302,9 @@ void function_enumeration_example_one (void) {
 void function_enumeration_example_two (void) {
     
 //    enum suit cards = diamonds;
-    int iWhatToCheckFor = 3;
+    int iWantToCheckFor = 3;
     cards = clubs;
-    if (cards == iWhatToCheckFor){
+    if (cards == iWantToCheckFor){
         printf("Yes: it is 3\n");
     } else {
         printf("No: it is not 3\n");

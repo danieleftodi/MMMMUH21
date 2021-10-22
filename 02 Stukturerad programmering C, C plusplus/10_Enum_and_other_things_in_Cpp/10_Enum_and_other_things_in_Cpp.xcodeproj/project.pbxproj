@@ -24,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		5505964226F0CA24003CE0BE /* 10_Enum_and_other_things_in_Cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 10_Enum_and_other_things_in_Cpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		55854F552721EEB300AA873A /* Dag_14_Missat_enu_my_bool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Dag_14_Missat_enu_my_bool.c; sourceTree = "<group>"; };
+		55854F562721EEB300AA873A /* Dag_14_Missat_enu_cards.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Dag_14_Missat_enu_cards.c; sourceTree = "<group>"; };
 		55ED9C6827157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 10_Enum_and_other_things_in_Cpp_Snippets.h; sourceTree = "<group>"; };
 		55ED9C6927157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 10_Enum_and_other_things_in_Cpp.cpp; sourceTree = "<group>"; };
 		55ED9C6A27157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 10_Enum_and_other_things_in_Cpp.h; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 				55ED9C6927157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp.cpp */,
 				55ED9C6A27157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp.h */,
 				55ED9C6827157A8700D6C9A6 /* 10_Enum_and_other_things_in_Cpp_Snippets.h */,
+				55854F562721EEB300AA873A /* Dag_14_Missat_enu_cards.c */,
+				55854F552721EEB300AA873A /* Dag_14_Missat_enu_my_bool.c */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
