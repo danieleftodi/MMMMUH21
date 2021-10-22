@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55C68D492722E05600E2468C /* 11_Awesome_adventures_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D432722E05600E2468C /* 11_Awesome_adventures_main.cpp */; };
+		55C68DE42722E2BF00E2468C /* menu_place_window_sill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D582722E2BE00E2468C /* menu_place_window_sill.cpp */; };
+		55C68DE52722E2BF00E2468C /* menu_activity_eat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D5C2722E2BE00E2468C /* menu_activity_eat.cpp */; };
+		55C68DE62722E2BF00E2468C /* menu_activity_run.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D5E2722E2BE00E2468C /* menu_activity_run.cpp */; };
+		55C68DE72722E2BF00E2468C /* menu_place_bed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D612722E2BE00E2468C /* menu_place_bed.cpp */; };
+		55C68DE82722E2BF00E2468C /* menu_place_cardboard_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D622722E2BE00E2468C /* menu_place_cardboard_box.cpp */; };
+		55C68DE92722E2BF00E2468C /* menu_activity_sit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D632722E2BE00E2468C /* menu_activity_sit.cpp */; };
+		55C68DEA2722E2BF00E2468C /* menu_activity_pee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D652722E2BE00E2468C /* menu_activity_pee.cpp */; };
+		55C68DEB2722E2BF00E2468C /* menu_activity_scratch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D672722E2BE00E2468C /* menu_activity_scratch.cpp */; };
+		55C68DEC2722E2BF00E2468C /* menu_place_litter_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D682722E2BE00E2468C /* menu_place_litter_box.cpp */; };
+		55C68DED2722E2BF00E2468C /* menu_activity_walk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D692722E2BE00E2468C /* menu_activity_walk.cpp */; };
+		55C68DEE2722E2BF00E2468C /* menu_activity_climb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D6A2722E2BE00E2468C /* menu_activity_climb.cpp */; };
+		55C68DEF2722E2BF00E2468C /* menu_place_neighbours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D6C2722E2BE00E2468C /* menu_place_neighbours.cpp */; };
+		55C68DF02722E2BF00E2468C /* main_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D6D2722E2BE00E2468C /* main_menu.cpp */; };
+		55C68DF12722E2BF00E2468C /* menu_activity_poop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D6F2722E2BE00E2468C /* menu_activity_poop.cpp */; };
+		55C68DF22722E2BF00E2468C /* menu_activity_knead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D702722E2BE00E2468C /* menu_activity_knead.cpp */; };
+		55C68DF32722E2BF00E2468C /* menu_place_backyard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D732722E2BE00E2468C /* menu_place_backyard.cpp */; };
+		55C68DF42722E2BF00E2468C /* menu_place_closet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D762722E2BE00E2468C /* menu_place_closet.cpp */; };
+		55C68DF52722E2BF00E2468C /* menu_activity_stretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D772722E2BE00E2468C /* menu_activity_stretch.cpp */; };
+		55C68DF62722E2BF00E2468C /* menu_activity_purr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D7D2722E2BE00E2468C /* menu_activity_purr.cpp */; };
+		55C68DF72722E2BF00E2468C /* menu_activity_sniff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D812722E2BE00E2468C /* menu_activity_sniff.cpp */; };
+		55C68DF82722E2BF00E2468C /* menu_activity_jump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D822722E2BE00E2468C /* menu_activity_jump.cpp */; };
+		55C68DF92722E2BF00E2468C /* menu_activity_sleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D842722E2BE00E2468C /* menu_activity_sleep.cpp */; };
+		55C68DFA2722E2BF00E2468C /* menu_place_masters_shoes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D862722E2BE00E2468C /* menu_place_masters_shoes.cpp */; };
+		55C68DFB2722E2BF00E2468C /* menu_place_cat_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D882722E2BE00E2468C /* menu_place_cat_tree.cpp */; };
+		55C68DFC2722E2BF00E2468C /* menu_place_sofa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D892722E2BF00E2468C /* menu_place_sofa.cpp */; };
+		55C68DFD2722E2BF00E2468C /* menu_activity_hiss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D8A2722E2BF00E2468C /* menu_activity_hiss.cpp */; };
+		55C68DFE2722E2BF00E2468C /* character_stig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D8C2722E2BF00E2468C /* character_stig.cpp */; };
+		55C68DFF2722E2BF00E2468C /* character_cindy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D8E2722E2BF00E2468C /* character_cindy.cpp */; };
+		55C68E002722E2BF00E2468C /* character_jerry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D902722E2BF00E2468C /* character_jerry.cpp */; };
+		55C68E012722E2BF00E2468C /* character_ulf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D942722E2BF00E2468C /* character_ulf.cpp */; };
+		55C68E022722E2BF00E2468C /* character_sebastian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D952722E2BF00E2468C /* character_sebastian.cpp */; };
+		55C68E032722E2BF00E2468C /* place_bed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D9D2722E2BF00E2468C /* place_bed.cpp */; };
+		55C68E042722E2BF00E2468C /* place_masters_shoes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D9E2722E2BF00E2468C /* place_masters_shoes.cpp */; };
+		55C68E052722E2BF00E2468C /* place_litter_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D9F2722E2BF00E2468C /* place_litter_box.cpp */; };
+		55C68E062722E2BF00E2468C /* place_window_sill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA02722E2BF00E2468C /* place_window_sill.cpp */; };
+		55C68E072722E2BF00E2468C /* place_cardboard_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA32722E2BF00E2468C /* place_cardboard_box.cpp */; };
+		55C68E082722E2BF00E2468C /* place_neighbours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA42722E2BF00E2468C /* place_neighbours.cpp */; };
+		55C68E092722E2BF00E2468C /* place_backyard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA52722E2BF00E2468C /* place_backyard.cpp */; };
+		55C68E0A2722E2BF00E2468C /* place_cat_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA72722E2BF00E2468C /* place_cat_tree.cpp */; };
+		55C68E0B2722E2BF00E2468C /* place_closet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DA92722E2BF00E2468C /* place_closet.cpp */; };
+		55C68E0C2722E2BF00E2468C /* place_sofa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DAA2722E2BF00E2468C /* place_sofa.cpp */; };
+		55C68E0E2722E2BF00E2468C /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DAE2722E2BF00E2468C /* common.cpp */; };
+		55C68E0F2722E2BF00E2468C /* activity_pee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DB32722E2BF00E2468C /* activity_pee.cpp */; };
+		55C68E102722E2BF00E2468C /* activity_hiss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DB42722E2BF00E2468C /* activity_hiss.cpp */; };
+		55C68E112722E2BF00E2468C /* activity_jump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DBA2722E2BF00E2468C /* activity_jump.cpp */; };
+		55C68E122722E2BF00E2468C /* activity_purr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DBC2722E2BF00E2468C /* activity_purr.cpp */; };
+		55C68E132722E2BF00E2468C /* activity_eat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DBE2722E2BF00E2468C /* activity_eat.cpp */; };
+		55C68E142722E2BF00E2468C /* activity_run.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DBF2722E2BF00E2468C /* activity_run.cpp */; };
+		55C68E152722E2BF00E2468C /* activity_stretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC02722E2BF00E2468C /* activity_stretch.cpp */; };
+		55C68E162722E2BF00E2468C /* activity_climb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC12722E2BF00E2468C /* activity_climb.cpp */; };
+		55C68E172722E2BF00E2468C /* activity_sit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC22722E2BF00E2468C /* activity_sit.cpp */; };
+		55C68E182722E2BF00E2468C /* activity_scratch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC42722E2BF00E2468C /* activity_scratch.cpp */; };
+		55C68E192722E2BF00E2468C /* activity_poop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC52722E2BF00E2468C /* activity_poop.cpp */; };
+		55C68E1A2722E2BF00E2468C /* activity_knead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC62722E2BF00E2468C /* activity_knead.cpp */; };
+		55C68E1B2722E2BF00E2468C /* activity_walk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DC72722E2BF00E2468C /* activity_walk.cpp */; };
+		55C68E1C2722E2BF00E2468C /* activity_sleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DCB2722E2BF00E2468C /* activity_sleep.cpp */; };
+		55C68E1D2722E2BF00E2468C /* activity_sniff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD02722E2BF00E2468C /* activity_sniff.cpp */; };
+		55C68E1E2722E2BF00E2468C /* enemy_birds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD22722E2BF00E2468C /* enemy_birds.cpp */; };
+		55C68E1F2722E2BF00E2468C /* friend_masters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD32722E2BF00E2468C /* friend_masters.cpp */; };
+		55C68E202722E2BF00E2468C /* enemy_dogs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD42722E2BF00E2468C /* enemy_dogs.cpp */; };
+		55C68E212722E2BF00E2468C /* friend_other_cats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD72722E2BF00E2468C /* friend_other_cats.cpp */; };
+		55C68E222722E2BF00E2468C /* enemy_masters_friend_erik.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DD92722E2BF00E2468C /* enemy_masters_friend_erik.cpp */; };
+		55C68E232722E2BF00E2468C /* enemy_children.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DDC2722E2BF00E2468C /* enemy_children.cpp */; };
+		55C68E242722E2BF00E2468C /* friend_adults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DDE2722E2BF00E2468C /* friend_adults.cpp */; };
+		55C68E252722E2BF00E2468C /* enemy_other_cats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DE02722E2BF00E2468C /* enemy_other_cats.cpp */; };
+		55C68E262722E2BF00E2468C /* friend_children.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68DE22722E2BF00E2468C /* friend_children.cpp */; };
+		55C68E2F2722FDB200E2468C /* activity_play.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68E2D2722FDB200E2468C /* activity_play.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5505964026F0CA24003CE0BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5505964226F0CA24003CE0BE /* 11_Awesome_adventures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 11_Awesome_adventures; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C68D432722E05600E2468C /* 11_Awesome_adventures_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 11_Awesome_adventures_main.cpp; sourceTree = "<group>"; };
+		55C68D462722E05600E2468C /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		55C68D572722E2BE00E2468C /* menu_activity_run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_run.h; sourceTree = "<group>"; };
+		55C68D582722E2BE00E2468C /* menu_place_window_sill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_window_sill.cpp; sourceTree = "<group>"; };
+		55C68D592722E2BE00E2468C /* menu_place_sofa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_sofa.h; sourceTree = "<group>"; };
+		55C68D5A2722E2BE00E2468C /* menu_place_litter_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_litter_box.h; sourceTree = "<group>"; };
+		55C68D5B2722E2BE00E2468C /* menu_activity_stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_stretch.h; sourceTree = "<group>"; };
+		55C68D5C2722E2BE00E2468C /* menu_activity_eat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_eat.cpp; sourceTree = "<group>"; };
+		55C68D5D2722E2BE00E2468C /* menu_activity_scratch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_scratch.h; sourceTree = "<group>"; };
+		55C68D5E2722E2BE00E2468C /* menu_activity_run.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_run.cpp; sourceTree = "<group>"; };
+		55C68D5F2722E2BE00E2468C /* menu_place_cat_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_cat_tree.h; sourceTree = "<group>"; };
+		55C68D602722E2BE00E2468C /* menu_activity_eat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_eat.h; sourceTree = "<group>"; };
+		55C68D612722E2BE00E2468C /* menu_place_bed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_bed.cpp; sourceTree = "<group>"; };
+		55C68D622722E2BE00E2468C /* menu_place_cardboard_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_cardboard_box.cpp; sourceTree = "<group>"; };
+		55C68D632722E2BE00E2468C /* menu_activity_sit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_sit.cpp; sourceTree = "<group>"; };
+		55C68D642722E2BE00E2468C /* menu_activity_pee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_pee.h; sourceTree = "<group>"; };
+		55C68D652722E2BE00E2468C /* menu_activity_pee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_pee.cpp; sourceTree = "<group>"; };
+		55C68D662722E2BE00E2468C /* menu_activity_knead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_knead.h; sourceTree = "<group>"; };
+		55C68D672722E2BE00E2468C /* menu_activity_scratch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_scratch.cpp; sourceTree = "<group>"; };
+		55C68D682722E2BE00E2468C /* menu_place_litter_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_litter_box.cpp; sourceTree = "<group>"; };
+		55C68D692722E2BE00E2468C /* menu_activity_walk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_walk.cpp; sourceTree = "<group>"; };
+		55C68D6A2722E2BE00E2468C /* menu_activity_climb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_climb.cpp; sourceTree = "<group>"; };
+		55C68D6B2722E2BE00E2468C /* menu_activity_sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_sleep.h; sourceTree = "<group>"; };
+		55C68D6C2722E2BE00E2468C /* menu_place_neighbours.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_neighbours.cpp; sourceTree = "<group>"; };
+		55C68D6D2722E2BE00E2468C /* main_menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_menu.cpp; sourceTree = "<group>"; };
+		55C68D6E2722E2BE00E2468C /* menu_activity_jump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_jump.h; sourceTree = "<group>"; };
+		55C68D6F2722E2BE00E2468C /* menu_activity_poop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_poop.cpp; sourceTree = "<group>"; };
+		55C68D702722E2BE00E2468C /* menu_activity_knead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_knead.cpp; sourceTree = "<group>"; };
+		55C68D712722E2BE00E2468C /* menu_activity_sniff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_sniff.h; sourceTree = "<group>"; };
+		55C68D722722E2BE00E2468C /* menu_place_closet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_closet.h; sourceTree = "<group>"; };
+		55C68D732722E2BE00E2468C /* menu_place_backyard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_backyard.cpp; sourceTree = "<group>"; };
+		55C68D742722E2BE00E2468C /* menu_place_neighbours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_neighbours.h; sourceTree = "<group>"; };
+		55C68D752722E2BE00E2468C /* menu_place_backyard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_backyard.h; sourceTree = "<group>"; };
+		55C68D762722E2BE00E2468C /* menu_place_closet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_closet.cpp; sourceTree = "<group>"; };
+		55C68D772722E2BE00E2468C /* menu_activity_stretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_stretch.cpp; sourceTree = "<group>"; };
+		55C68D782722E2BE00E2468C /* menu_place_masters_shoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_masters_shoes.h; sourceTree = "<group>"; };
+		55C68D792722E2BE00E2468C /* menu_activity_climb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_climb.h; sourceTree = "<group>"; };
+		55C68D7A2722E2BE00E2468C /* menu_place_window_sill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_window_sill.h; sourceTree = "<group>"; };
+		55C68D7B2722E2BE00E2468C /* menu_place_cardboard_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_cardboard_box.h; sourceTree = "<group>"; };
+		55C68D7C2722E2BE00E2468C /* menu_place_bed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_place_bed.h; sourceTree = "<group>"; };
+		55C68D7D2722E2BE00E2468C /* menu_activity_purr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_purr.cpp; sourceTree = "<group>"; };
+		55C68D7E2722E2BE00E2468C /* menu_activity_walk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_walk.h; sourceTree = "<group>"; };
+		55C68D7F2722E2BE00E2468C /* menu_activity_sit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_sit.h; sourceTree = "<group>"; };
+		55C68D802722E2BE00E2468C /* menu_activity_poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_poop.h; sourceTree = "<group>"; };
+		55C68D812722E2BE00E2468C /* menu_activity_sniff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_sniff.cpp; sourceTree = "<group>"; };
+		55C68D822722E2BE00E2468C /* menu_activity_jump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_jump.cpp; sourceTree = "<group>"; };
+		55C68D832722E2BE00E2468C /* menu_activity_hiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_hiss.h; sourceTree = "<group>"; };
+		55C68D842722E2BE00E2468C /* menu_activity_sleep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_sleep.cpp; sourceTree = "<group>"; };
+		55C68D852722E2BE00E2468C /* main_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_menu.h; sourceTree = "<group>"; };
+		55C68D862722E2BE00E2468C /* menu_place_masters_shoes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_masters_shoes.cpp; sourceTree = "<group>"; };
+		55C68D872722E2BE00E2468C /* menu_activity_purr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_purr.h; sourceTree = "<group>"; };
+		55C68D882722E2BE00E2468C /* menu_place_cat_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_cat_tree.cpp; sourceTree = "<group>"; };
+		55C68D892722E2BF00E2468C /* menu_place_sofa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_place_sofa.cpp; sourceTree = "<group>"; };
+		55C68D8A2722E2BF00E2468C /* menu_activity_hiss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_activity_hiss.cpp; sourceTree = "<group>"; };
+		55C68D8C2722E2BF00E2468C /* character_stig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character_stig.cpp; sourceTree = "<group>"; };
+		55C68D8D2722E2BF00E2468C /* character_ulf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_ulf.h; sourceTree = "<group>"; };
+		55C68D8E2722E2BF00E2468C /* character_cindy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character_cindy.cpp; sourceTree = "<group>"; };
+		55C68D8F2722E2BF00E2468C /* character_sebastian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_sebastian.h; sourceTree = "<group>"; };
+		55C68D902722E2BF00E2468C /* character_jerry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character_jerry.cpp; sourceTree = "<group>"; };
+		55C68D912722E2BF00E2468C /* character_jerry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_jerry.h; sourceTree = "<group>"; };
+		55C68D922722E2BF00E2468C /* character_cindy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_cindy.h; sourceTree = "<group>"; };
+		55C68D932722E2BF00E2468C /* character_stig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = character_stig.h; sourceTree = "<group>"; };
+		55C68D942722E2BF00E2468C /* character_ulf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character_ulf.cpp; sourceTree = "<group>"; };
+		55C68D952722E2BF00E2468C /* character_sebastian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character_sebastian.cpp; sourceTree = "<group>"; };
+		55C68D972722E2BF00E2468C /* place_window_sill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_window_sill.h; sourceTree = "<group>"; };
+		55C68D982722E2BF00E2468C /* place_bed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_bed.h; sourceTree = "<group>"; };
+		55C68D992722E2BF00E2468C /* place_cardboard_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_cardboard_box.h; sourceTree = "<group>"; };
+		55C68D9A2722E2BF00E2468C /* place_litter_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_litter_box.h; sourceTree = "<group>"; };
+		55C68D9B2722E2BF00E2468C /* place_masters_shoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_masters_shoes.h; sourceTree = "<group>"; };
+		55C68D9C2722E2BF00E2468C /* place_cat_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_cat_tree.h; sourceTree = "<group>"; };
+		55C68D9D2722E2BF00E2468C /* place_bed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_bed.cpp; sourceTree = "<group>"; };
+		55C68D9E2722E2BF00E2468C /* place_masters_shoes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_masters_shoes.cpp; sourceTree = "<group>"; };
+		55C68D9F2722E2BF00E2468C /* place_litter_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_litter_box.cpp; sourceTree = "<group>"; };
+		55C68DA02722E2BF00E2468C /* place_window_sill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_window_sill.cpp; sourceTree = "<group>"; };
+		55C68DA12722E2BF00E2468C /* place_sofa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_sofa.h; sourceTree = "<group>"; };
+		55C68DA22722E2BF00E2468C /* place_closet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_closet.h; sourceTree = "<group>"; };
+		55C68DA32722E2BF00E2468C /* place_cardboard_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_cardboard_box.cpp; sourceTree = "<group>"; };
+		55C68DA42722E2BF00E2468C /* place_neighbours.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_neighbours.cpp; sourceTree = "<group>"; };
+		55C68DA52722E2BF00E2468C /* place_backyard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_backyard.cpp; sourceTree = "<group>"; };
+		55C68DA62722E2BF00E2468C /* place_neighbours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_neighbours.h; sourceTree = "<group>"; };
+		55C68DA72722E2BF00E2468C /* place_cat_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_cat_tree.cpp; sourceTree = "<group>"; };
+		55C68DA82722E2BF00E2468C /* place_backyard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = place_backyard.h; sourceTree = "<group>"; };
+		55C68DA92722E2BF00E2468C /* place_closet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_closet.cpp; sourceTree = "<group>"; };
+		55C68DAA2722E2BF00E2468C /* place_sofa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = place_sofa.cpp; sourceTree = "<group>"; };
+		55C68DAC2722E2BF00E2468C /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		55C68DAD2722E2BF00E2468C /* template.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = template.cpp; sourceTree = "<group>"; };
+		55C68DAE2722E2BF00E2468C /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		55C68DAF2722E2BF00E2468C /* snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snippets.h; sourceTree = "<group>"; };
+		55C68DB02722E2BF00E2468C /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		55C68DB12722E2BF00E2468C /* template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template.h; sourceTree = "<group>"; };
+		55C68DB32722E2BF00E2468C /* activity_pee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_pee.cpp; sourceTree = "<group>"; };
+		55C68DB42722E2BF00E2468C /* activity_hiss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_hiss.cpp; sourceTree = "<group>"; };
+		55C68DB52722E2BF00E2468C /* activity_scratch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_scratch.h; sourceTree = "<group>"; };
+		55C68DB62722E2BF00E2468C /* activity_run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_run.h; sourceTree = "<group>"; };
+		55C68DB72722E2BF00E2468C /* activity_knead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_knead.h; sourceTree = "<group>"; };
+		55C68DB82722E2BF00E2468C /* activity_sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_sleep.h; sourceTree = "<group>"; };
+		55C68DB92722E2BF00E2468C /* activity_eat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_eat.h; sourceTree = "<group>"; };
+		55C68DBA2722E2BF00E2468C /* activity_jump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_jump.cpp; sourceTree = "<group>"; };
+		55C68DBB2722E2BF00E2468C /* activity_stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_stretch.h; sourceTree = "<group>"; };
+		55C68DBC2722E2BF00E2468C /* activity_purr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_purr.cpp; sourceTree = "<group>"; };
+		55C68DBD2722E2BF00E2468C /* activity_pee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_pee.h; sourceTree = "<group>"; };
+		55C68DBE2722E2BF00E2468C /* activity_eat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_eat.cpp; sourceTree = "<group>"; };
+		55C68DBF2722E2BF00E2468C /* activity_run.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_run.cpp; sourceTree = "<group>"; };
+		55C68DC02722E2BF00E2468C /* activity_stretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_stretch.cpp; sourceTree = "<group>"; };
+		55C68DC12722E2BF00E2468C /* activity_climb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_climb.cpp; sourceTree = "<group>"; };
+		55C68DC22722E2BF00E2468C /* activity_sit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_sit.cpp; sourceTree = "<group>"; };
+		55C68DC32722E2BF00E2468C /* activity_jump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_jump.h; sourceTree = "<group>"; };
+		55C68DC42722E2BF00E2468C /* activity_scratch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_scratch.cpp; sourceTree = "<group>"; };
+		55C68DC52722E2BF00E2468C /* activity_poop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_poop.cpp; sourceTree = "<group>"; };
+		55C68DC62722E2BF00E2468C /* activity_knead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_knead.cpp; sourceTree = "<group>"; };
+		55C68DC72722E2BF00E2468C /* activity_walk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_walk.cpp; sourceTree = "<group>"; };
+		55C68DC82722E2BF00E2468C /* activity_walk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_walk.h; sourceTree = "<group>"; };
+		55C68DC92722E2BF00E2468C /* activity_sit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_sit.h; sourceTree = "<group>"; };
+		55C68DCA2722E2BF00E2468C /* activity_poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_poop.h; sourceTree = "<group>"; };
+		55C68DCB2722E2BF00E2468C /* activity_sleep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_sleep.cpp; sourceTree = "<group>"; };
+		55C68DCC2722E2BF00E2468C /* activity_sniff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_sniff.h; sourceTree = "<group>"; };
+		55C68DCD2722E2BF00E2468C /* activity_purr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_purr.h; sourceTree = "<group>"; };
+		55C68DCE2722E2BF00E2468C /* activity_climb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_climb.h; sourceTree = "<group>"; };
+		55C68DCF2722E2BF00E2468C /* activity_hiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_hiss.h; sourceTree = "<group>"; };
+		55C68DD02722E2BF00E2468C /* activity_sniff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_sniff.cpp; sourceTree = "<group>"; };
+		55C68DD22722E2BF00E2468C /* enemy_birds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy_birds.cpp; sourceTree = "<group>"; };
+		55C68DD32722E2BF00E2468C /* friend_masters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = friend_masters.cpp; sourceTree = "<group>"; };
+		55C68DD42722E2BF00E2468C /* enemy_dogs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy_dogs.cpp; sourceTree = "<group>"; };
+		55C68DD52722E2BF00E2468C /* enemy_dogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enemy_dogs.h; sourceTree = "<group>"; };
+		55C68DD62722E2BF00E2468C /* enemy_children.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enemy_children.h; sourceTree = "<group>"; };
+		55C68DD72722E2BF00E2468C /* friend_other_cats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = friend_other_cats.cpp; sourceTree = "<group>"; };
+		55C68DD82722E2BF00E2468C /* enemy_other_cats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enemy_other_cats.h; sourceTree = "<group>"; };
+		55C68DD92722E2BF00E2468C /* enemy_masters_friend_erik.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy_masters_friend_erik.cpp; sourceTree = "<group>"; };
+		55C68DDA2722E2BF00E2468C /* friend_children.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_children.h; sourceTree = "<group>"; };
+		55C68DDB2722E2BF00E2468C /* friend_masters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_masters.h; sourceTree = "<group>"; };
+		55C68DDC2722E2BF00E2468C /* enemy_children.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy_children.cpp; sourceTree = "<group>"; };
+		55C68DDD2722E2BF00E2468C /* enemy_masters_friend_erik.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enemy_masters_friend_erik.h; sourceTree = "<group>"; };
+		55C68DDE2722E2BF00E2468C /* friend_adults.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = friend_adults.cpp; sourceTree = "<group>"; };
+		55C68DDF2722E2BF00E2468C /* enemy_birds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enemy_birds.h; sourceTree = "<group>"; };
+		55C68DE02722E2BF00E2468C /* enemy_other_cats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy_other_cats.cpp; sourceTree = "<group>"; };
+		55C68DE12722E2BF00E2468C /* friend_adults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_adults.h; sourceTree = "<group>"; };
+		55C68DE22722E2BF00E2468C /* friend_children.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = friend_children.cpp; sourceTree = "<group>"; };
+		55C68DE32722E2BF00E2468C /* friend_other_cats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_other_cats.h; sourceTree = "<group>"; };
+		55C68E2D2722FDB200E2468C /* activity_play.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_play.cpp; sourceTree = "<group>"; };
+		55C68E2E2722FDB200E2468C /* activity_play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_play.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5505963F26F0CA24003CE0BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5505964326F0CA24003CE0BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5505964226F0CA24003CE0BE /* 11_Awesome_adventures */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55C68D562722E2BE00E2468C /* menus */ = {
+			isa = PBXGroup;
+			children = (
+				55C68D6D2722E2BE00E2468C /* main_menu.cpp */,
+				55C68D852722E2BE00E2468C /* main_menu.h */,
+				55C68D6A2722E2BE00E2468C /* menu_activity_climb.cpp */,
+				55C68D792722E2BE00E2468C /* menu_activity_climb.h */,
+				55C68D5C2722E2BE00E2468C /* menu_activity_eat.cpp */,
+				55C68D602722E2BE00E2468C /* menu_activity_eat.h */,
+				55C68D8A2722E2BF00E2468C /* menu_activity_hiss.cpp */,
+				55C68D832722E2BE00E2468C /* menu_activity_hiss.h */,
+				55C68D822722E2BE00E2468C /* menu_activity_jump.cpp */,
+				55C68D6E2722E2BE00E2468C /* menu_activity_jump.h */,
+				55C68D702722E2BE00E2468C /* menu_activity_knead.cpp */,
+				55C68D662722E2BE00E2468C /* menu_activity_knead.h */,
+				55C68D652722E2BE00E2468C /* menu_activity_pee.cpp */,
+				55C68D642722E2BE00E2468C /* menu_activity_pee.h */,
+				55C68D6F2722E2BE00E2468C /* menu_activity_poop.cpp */,
+				55C68D802722E2BE00E2468C /* menu_activity_poop.h */,
+				55C68D7D2722E2BE00E2468C /* menu_activity_purr.cpp */,
+				55C68D872722E2BE00E2468C /* menu_activity_purr.h */,
+				55C68D5E2722E2BE00E2468C /* menu_activity_run.cpp */,
+				55C68D572722E2BE00E2468C /* menu_activity_run.h */,
+				55C68D672722E2BE00E2468C /* menu_activity_scratch.cpp */,
+				55C68D5D2722E2BE00E2468C /* menu_activity_scratch.h */,
+				55C68D632722E2BE00E2468C /* menu_activity_sit.cpp */,
+				55C68D7F2722E2BE00E2468C /* menu_activity_sit.h */,
+				55C68D842722E2BE00E2468C /* menu_activity_sleep.cpp */,
+				55C68D6B2722E2BE00E2468C /* menu_activity_sleep.h */,
+				55C68D812722E2BE00E2468C /* menu_activity_sniff.cpp */,
+				55C68D712722E2BE00E2468C /* menu_activity_sniff.h */,
+				55C68D772722E2BE00E2468C /* menu_activity_stretch.cpp */,
+				55C68D5B2722E2BE00E2468C /* menu_activity_stretch.h */,
+				55C68D692722E2BE00E2468C /* menu_activity_walk.cpp */,
+				55C68D7E2722E2BE00E2468C /* menu_activity_walk.h */,
+				55C68D732722E2BE00E2468C /* menu_place_backyard.cpp */,
+				55C68D752722E2BE00E2468C /* menu_place_backyard.h */,
+				55C68D612722E2BE00E2468C /* menu_place_bed.cpp */,
+				55C68D7C2722E2BE00E2468C /* menu_place_bed.h */,
+				55C68D622722E2BE00E2468C /* menu_place_cardboard_box.cpp */,
+				55C68D7B2722E2BE00E2468C /* menu_place_cardboard_box.h */,
+				55C68D882722E2BE00E2468C /* menu_place_cat_tree.cpp */,
+				55C68D5F2722E2BE00E2468C /* menu_place_cat_tree.h */,
+				55C68D762722E2BE00E2468C /* menu_place_closet.cpp */,
+				55C68D722722E2BE00E2468C /* menu_place_closet.h */,
+				55C68D682722E2BE00E2468C /* menu_place_litter_box.cpp */,
+				55C68D5A2722E2BE00E2468C /* menu_place_litter_box.h */,
+				55C68D862722E2BE00E2468C /* menu_place_masters_shoes.cpp */,
+				55C68D782722E2BE00E2468C /* menu_place_masters_shoes.h */,
+				55C68D6C2722E2BE00E2468C /* menu_place_neighbours.cpp */,
+				55C68D742722E2BE00E2468C /* menu_place_neighbours.h */,
+				55C68D892722E2BF00E2468C /* menu_place_sofa.cpp */,
+				55C68D592722E2BE00E2468C /* menu_place_sofa.h */,
+				55C68D582722E2BE00E2468C /* menu_place_window_sill.cpp */,
+				55C68D7A2722E2BE00E2468C /* menu_place_window_sill.h */,
+			);
+			path = menus;
+			sourceTree = "<group>";
+		};
+		55C68D8B2722E2BF00E2468C /* characters */ = {
+			isa = PBXGroup;
+			children = (
+				55C68D8E2722E2BF00E2468C /* character_cindy.cpp */,
+				55C68D922722E2BF00E2468C /* character_cindy.h */,
+				55C68D902722E2BF00E2468C /* character_jerry.cpp */,
+				55C68D912722E2BF00E2468C /* character_jerry.h */,
+				55C68D952722E2BF00E2468C /* character_sebastian.cpp */,
+				55C68D8F2722E2BF00E2468C /* character_sebastian.h */,
+				55C68D8C2722E2BF00E2468C /* character_stig.cpp */,
+				55C68D932722E2BF00E2468C /* character_stig.h */,
+				55C68D942722E2BF00E2468C /* character_ulf.cpp */,
+				55C68D8D2722E2BF00E2468C /* character_ulf.h */,
+			);
+			path = characters;
+			sourceTree = "<group>";
+		};
+		55C68D962722E2BF00E2468C /* places */ = {
+			isa = PBXGroup;
+			children = (
+				55C68D972722E2BF00E2468C /* place_window_sill.h */,
+				55C68D982722E2BF00E2468C /* place_bed.h */,
+				55C68D992722E2BF00E2468C /* place_cardboard_box.h */,
+				55C68D9A2722E2BF00E2468C /* place_litter_box.h */,
+				55C68D9B2722E2BF00E2468C /* place_masters_shoes.h */,
+				55C68D9C2722E2BF00E2468C /* place_cat_tree.h */,
+				55C68D9D2722E2BF00E2468C /* place_bed.cpp */,
+				55C68D9E2722E2BF00E2468C /* place_masters_shoes.cpp */,
+				55C68D9F2722E2BF00E2468C /* place_litter_box.cpp */,
+				55C68DA02722E2BF00E2468C /* place_window_sill.cpp */,
+				55C68DA12722E2BF00E2468C /* place_sofa.h */,
+				55C68DA22722E2BF00E2468C /* place_closet.h */,
+				55C68DA32722E2BF00E2468C /* place_cardboard_box.cpp */,
+				55C68DA42722E2BF00E2468C /* place_neighbours.cpp */,
+				55C68DA52722E2BF00E2468C /* place_backyard.cpp */,
+				55C68DA62722E2BF00E2468C /* place_neighbours.h */,
+				55C68DA72722E2BF00E2468C /* place_cat_tree.cpp */,
+				55C68DA82722E2BF00E2468C /* place_backyard.h */,
+				55C68DA92722E2BF00E2468C /* place_closet.cpp */,
+				55C68DAA2722E2BF00E2468C /* place_sofa.cpp */,
+			);
+			path = places;
+			sourceTree = "<group>";
+		};
+		55C68DAB2722E2BF00E2468C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				55C68DAE2722E2BF00E2468C /* common.cpp */,
+				55C68DB02722E2BF00E2468C /* common.h */,
+				55C68DAC2722E2BF00E2468C /* main.h */,
+				55C68DAF2722E2BF00E2468C /* snippets.h */,
+				55C68DAD2722E2BF00E2468C /* template.cpp */,
+				55C68DB12722E2BF00E2468C /* template.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		55C68DB22722E2BF00E2468C /* activities */ = {
+			isa = PBXGroup;
+			children = (
+				55C68DC12722E2BF00E2468C /* activity_climb.cpp */,
+				55C68DCE2722E2BF00E2468C /* activity_climb.h */,
+				55C68DBE2722E2BF00E2468C /* activity_eat.cpp */,
+				55C68DB92722E2BF00E2468C /* activity_eat.h */,
+				55C68DB42722E2BF00E2468C /* activity_hiss.cpp */,
+				55C68DCF2722E2BF00E2468C /* activity_hiss.h */,
+				55C68DBA2722E2BF00E2468C /* activity_jump.cpp */,
+				55C68DC32722E2BF00E2468C /* activity_jump.h */,
+				55C68DC62722E2BF00E2468C /* activity_knead.cpp */,
+				55C68DB72722E2BF00E2468C /* activity_knead.h */,
+				55C68DB32722E2BF00E2468C /* activity_pee.cpp */,
+				55C68DBD2722E2BF00E2468C /* activity_pee.h */,
+				55C68E2D2722FDB200E2468C /* activity_play.cpp */,
+				55C68E2E2722FDB200E2468C /* activity_play.h */,
+				55C68DC52722E2BF00E2468C /* activity_poop.cpp */,
+				55C68DCA2722E2BF00E2468C /* activity_poop.h */,
+				55C68DBC2722E2BF00E2468C /* activity_purr.cpp */,
+				55C68DCD2722E2BF00E2468C /* activity_purr.h */,
+				55C68DBF2722E2BF00E2468C /* activity_run.cpp */,
+				55C68DB62722E2BF00E2468C /* activity_run.h */,
+				55C68DC42722E2BF00E2468C /* activity_scratch.cpp */,
+				55C68DB52722E2BF00E2468C /* activity_scratch.h */,
+				55C68DC22722E2BF00E2468C /* activity_sit.cpp */,
+				55C68DC92722E2BF00E2468C /* activity_sit.h */,
+				55C68DCB2722E2BF00E2468C /* activity_sleep.cpp */,
+				55C68DB82722E2BF00E2468C /* activity_sleep.h */,
+				55C68DD02722E2BF00E2468C /* activity_sniff.cpp */,
+				55C68DCC2722E2BF00E2468C /* activity_sniff.h */,
+				55C68DC02722E2BF00E2468C /* activity_stretch.cpp */,
+				55C68DBB2722E2BF00E2468C /* activity_stretch.h */,
+				55C68DC72722E2BF00E2468C /* activity_walk.cpp */,
+				55C68DC82722E2BF00E2468C /* activity_walk.h */,
+			);
+			path = activities;
+			sourceTree = "<group>";
+		};
+		55C68DD12722E2BF00E2468C /* frenemies */ = {
+			isa = PBXGroup;
+			children = (
+				55C68DD22722E2BF00E2468C /* enemy_birds.cpp */,
+				55C68DDF2722E2BF00E2468C /* enemy_birds.h */,
+				55C68DDC2722E2BF00E2468C /* enemy_children.cpp */,
+				55C68DD62722E2BF00E2468C /* enemy_children.h */,
+				55C68DD42722E2BF00E2468C /* enemy_dogs.cpp */,
+				55C68DD52722E2BF00E2468C /* enemy_dogs.h */,
+				55C68DD92722E2BF00E2468C /* enemy_masters_friend_erik.cpp */,
+				55C68DDD2722E2BF00E2468C /* enemy_masters_friend_erik.h */,
+				55C68DE02722E2BF00E2468C /* enemy_other_cats.cpp */,
+				55C68DD82722E2BF00E2468C /* enemy_other_cats.h */,
+				55C68DDE2722E2BF00E2468C /* friend_adults.cpp */,
+				55C68DE12722E2BF00E2468C /* friend_adults.h */,
+				55C68DE22722E2BF00E2468C /* friend_children.cpp */,
+				55C68DDA2722E2BF00E2468C /* friend_children.h */,
+				55C68DD32722E2BF00E2468C /* friend_masters.cpp */,
+				55C68DDB2722E2BF00E2468C /* friend_masters.h */,
+				55C68DD72722E2BF00E2468C /* friend_other_cats.cpp */,
+				55C68DE32722E2BF00E2468C /* friend_other_cats.h */,
+			);
+			path = frenemies;
+			sourceTree = "<group>";
+		};
+		55DA96F826F0BBF800C431A8 = {
+			isa = PBXGroup;
+			children = (
+				55C68D462722E05600E2468C /* ReadMe.md */,
+				55C68D432722E05600E2468C /* 11_Awesome_adventures_main.cpp */,
+				55C68DB22722E2BF00E2468C /* activities */,
+				55C68D8B2722E2BF00E2468C /* characters */,
+				55C68DAB2722E2BF00E2468C /* common */,
+				55C68DD12722E2BF00E2468C /* frenemies */,
+				55C68D562722E2BE00E2468C /* menus */,
+				55C68D962722E2BF00E2468C /* places */,
+				5505964326F0CA24003CE0BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5505964126F0CA24003CE0BE /* 11_Awesome_adventures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "11_Awesome_adventures" */;
+			buildPhases = (
+				5505963E26F0CA24003CE0BE /* Sources */,
+				5505963F26F0CA24003CE0BE /* Frameworks */,
+				5505964026F0CA24003CE0BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 11_Awesome_adventures;
+			productName = HelloWorld;
+			productReference = 5505964226F0CA24003CE0BE /* 11_Awesome_adventures */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55DA96F926F0BBF800C431A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5505964126F0CA24003CE0BE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "11_Awesome_adventures" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55DA96F826F0BBF800C431A8;
+			productRefGroup = 5505964326F0CA24003CE0BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5505964126F0CA24003CE0BE /* 11_Awesome_adventures */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5505963E26F0CA24003CE0BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C68DEA2722E2BF00E2468C /* menu_activity_pee.cpp in Sources */,
+				55C68E1E2722E2BF00E2468C /* enemy_birds.cpp in Sources */,
+				55C68DF82722E2BF00E2468C /* menu_activity_jump.cpp in Sources */,
+				55C68E202722E2BF00E2468C /* enemy_dogs.cpp in Sources */,
+				55C68E242722E2BF00E2468C /* friend_adults.cpp in Sources */,
+				55C68E0C2722E2BF00E2468C /* place_sofa.cpp in Sources */,
+				55C68DED2722E2BF00E2468C /* menu_activity_walk.cpp in Sources */,
+				55C68E0E2722E2BF00E2468C /* common.cpp in Sources */,
+				55C68DE52722E2BF00E2468C /* menu_activity_eat.cpp in Sources */,
+				55C68DF02722E2BF00E2468C /* main_menu.cpp in Sources */,
+				55C68DF92722E2BF00E2468C /* menu_activity_sleep.cpp in Sources */,
+				55C68E132722E2BF00E2468C /* activity_eat.cpp in Sources */,
+				55C68DFF2722E2BF00E2468C /* character_cindy.cpp in Sources */,
+				55C68DFE2722E2BF00E2468C /* character_stig.cpp in Sources */,
+				55C68E252722E2BF00E2468C /* enemy_other_cats.cpp in Sources */,
+				55C68DF12722E2BF00E2468C /* menu_activity_poop.cpp in Sources */,
+				55C68E102722E2BF00E2468C /* activity_hiss.cpp in Sources */,
+				55C68DE82722E2BF00E2468C /* menu_place_cardboard_box.cpp in Sources */,
+				55C68E162722E2BF00E2468C /* activity_climb.cpp in Sources */,
+				55C68DE42722E2BF00E2468C /* menu_place_window_sill.cpp in Sources */,
+				55C68E032722E2BF00E2468C /* place_bed.cpp in Sources */,
+				55C68E052722E2BF00E2468C /* place_litter_box.cpp in Sources */,
+				55C68E062722E2BF00E2468C /* place_window_sill.cpp in Sources */,
+				55C68DFD2722E2BF00E2468C /* menu_activity_hiss.cpp in Sources */,
+				55C68DFC2722E2BF00E2468C /* menu_place_sofa.cpp in Sources */,
+				55C68E142722E2BF00E2468C /* activity_run.cpp in Sources */,
+				55C68DFB2722E2BF00E2468C /* menu_place_cat_tree.cpp in Sources */,
+				55C68E1C2722E2BF00E2468C /* activity_sleep.cpp in Sources */,
+				55C68E022722E2BF00E2468C /* character_sebastian.cpp in Sources */,
+				55C68DEB2722E2BF00E2468C /* menu_activity_scratch.cpp in Sources */,
+				55C68E1F2722E2BF00E2468C /* friend_masters.cpp in Sources */,
+				55C68DF42722E2BF00E2468C /* menu_place_closet.cpp in Sources */,
+				55C68D492722E05600E2468C /* 11_Awesome_adventures_main.cpp in Sources */,
+				55C68DF72722E2BF00E2468C /* menu_activity_sniff.cpp in Sources */,
+				55C68E182722E2BF00E2468C /* activity_scratch.cpp in Sources */,
+				55C68E002722E2BF00E2468C /* character_jerry.cpp in Sources */,
+				55C68E1D2722E2BF00E2468C /* activity_sniff.cpp in Sources */,
+				55C68E1B2722E2BF00E2468C /* activity_walk.cpp in Sources */,
+				55C68DEF2722E2BF00E2468C /* menu_place_neighbours.cpp in Sources */,
+				55C68DEE2722E2BF00E2468C /* menu_activity_climb.cpp in Sources */,
+				55C68E2F2722FDB200E2468C /* activity_play.cpp in Sources */,
+				55C68DF62722E2BF00E2468C /* menu_activity_purr.cpp in Sources */,
+				55C68DF22722E2BF00E2468C /* menu_activity_knead.cpp in Sources */,
+				55C68E012722E2BF00E2468C /* character_ulf.cpp in Sources */,
+				55C68E262722E2BF00E2468C /* friend_children.cpp in Sources */,
+				55C68DE62722E2BF00E2468C /* menu_activity_run.cpp in Sources */,
+				55C68E222722E2BF00E2468C /* enemy_masters_friend_erik.cpp in Sources */,
+				55C68E082722E2BF00E2468C /* place_neighbours.cpp in Sources */,
+				55C68DF52722E2BF00E2468C /* menu_activity_stretch.cpp in Sources */,
+				55C68E072722E2BF00E2468C /* place_cardboard_box.cpp in Sources */,
+				55C68DE92722E2BF00E2468C /* menu_activity_sit.cpp in Sources */,
+				55C68E092722E2BF00E2468C /* place_backyard.cpp in Sources */,
+				55C68E1A2722E2BF00E2468C /* activity_knead.cpp in Sources */,
+				55C68DF32722E2BF00E2468C /* menu_place_backyard.cpp in Sources */,
+				55C68E122722E2BF00E2468C /* activity_purr.cpp in Sources */,
+				55C68DFA2722E2BF00E2468C /* menu_place_masters_shoes.cpp in Sources */,
+				55C68E0B2722E2BF00E2468C /* place_closet.cpp in Sources */,
+				55C68E0F2722E2BF00E2468C /* activity_pee.cpp in Sources */,
+				55C68E212722E2BF00E2468C /* friend_other_cats.cpp in Sources */,
+				55C68E152722E2BF00E2468C /* activity_stretch.cpp in Sources */,
+				55C68DEC2722E2BF00E2468C /* menu_place_litter_box.cpp in Sources */,
+				55C68E112722E2BF00E2468C /* activity_jump.cpp in Sources */,
+				55C68E042722E2BF00E2468C /* place_masters_shoes.cpp in Sources */,
+				55C68E232722E2BF00E2468C /* enemy_children.cpp in Sources */,
+				55C68E192722E2BF00E2468C /* activity_poop.cpp in Sources */,
+				55C68E172722E2BF00E2468C /* activity_sit.cpp in Sources */,
+				55C68E0A2722E2BF00E2468C /* place_cat_tree.cpp in Sources */,
+				55C68DE72722E2BF00E2468C /* menu_place_bed.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5505964626F0CA24003CE0BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5505964726F0CA24003CE0BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		55DA96FD26F0BBF800C431A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+			};
+			name = Debug;
+		};
+		55DA96FE26F0BBF800C431A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5505964526F0CA24003CE0BE /* Build configuration list for PBXNativeTarget "11_Awesome_adventures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5505964626F0CA24003CE0BE /* Debug */,
+				5505964726F0CA24003CE0BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		55DA96FC26F0BBF800C431A8 /* Build configuration list for PBXProject "11_Awesome_adventures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DA96FD26F0BBF800C431A8 /* Debug */,
+				55DA96FE26F0BBF800C431A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55DA96F926F0BBF800C431A8 /* Project object */;
+}
