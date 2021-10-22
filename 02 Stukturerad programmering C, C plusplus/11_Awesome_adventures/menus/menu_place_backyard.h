@@ -8,8 +8,7 @@
 #ifndef menu_place_backyard_h
 #define menu_place_backyard_h
 
-#include "common.h"       // common code
-#include "main_menu.h"    // main menu code
+#include "../common/common.h"       // common code
 
 void menu_place_backyard(void);
 

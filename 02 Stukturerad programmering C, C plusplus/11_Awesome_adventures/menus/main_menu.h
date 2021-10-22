@@ -8,8 +8,7 @@
 #ifndef main_menu_h
 #define main_menu_h
 
-#include "common.h"            // common code
-#include "activity_play.h"     // activity play code
+#include "../activities/activity_play.h"     // activity play code
 #include "menu_place_backyard.h"    // menu code for backyard
 
 void main_menu (void);

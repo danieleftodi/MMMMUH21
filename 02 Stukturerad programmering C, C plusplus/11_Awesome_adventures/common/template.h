@@ -8,5 +8,6 @@
 #ifndef <FILE>_h
 #define <FILE>_h
 
+#include "../common/common.h"       // common code
 
 #endif /* <FILE>_h */

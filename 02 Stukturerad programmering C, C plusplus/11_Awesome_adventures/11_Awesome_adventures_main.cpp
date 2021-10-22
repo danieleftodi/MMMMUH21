@@ -5,7 +5,7 @@
 //  Created by Daniel Eftodi on 2021-10-12.
 //
 
-#include "main.h"
+#include "common/main.h"         // main code
 
 int main(int argc, char ** argv){
 

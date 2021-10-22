@@ -18,8 +18,8 @@
 #include <string>         // stoi
 #include <sstream>        // stringstream
 
-#include "common.h"       // common code
-#include "main_menu.h"    // main menu code
+#include "common.h"                // common code
+#include "../menus/main_menu.h"    // main menu code
 
 ////*/ function_enumeration_example_two
 //enum suit {

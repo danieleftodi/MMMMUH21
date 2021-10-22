@@ -8,8 +8,7 @@
 #ifndef activity_play_h
 #define activity_play_h
 
-#include "common.h"       // common code
-#include "main_menu.h"    // main menu code
+#include "../common/common.h"       // common code
 
 void guess_what_stig_it_thinking (void);
 

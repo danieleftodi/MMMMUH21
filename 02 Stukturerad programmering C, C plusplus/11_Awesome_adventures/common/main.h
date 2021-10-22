@@ -9,7 +9,6 @@
 #define main_h
 
 #include "common.h"       // common code
-#include "main_menu.h"    // common code
 
 int main (int argc, char ** argv);
 

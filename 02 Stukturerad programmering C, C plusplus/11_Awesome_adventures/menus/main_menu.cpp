@@ -5,7 +5,7 @@
 //  Created by Daniel Eftodi on 2021-10-12.
 //
 
-#include "main_menu.h"    // main menu code
+#include "../common/common.h"       // common code
 
 void main_menu (void){
     char cInput                  = '\0';
