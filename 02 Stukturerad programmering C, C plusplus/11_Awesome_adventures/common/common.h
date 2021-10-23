@@ -12,7 +12,12 @@
 #include <iostream>
 #include <climits>        // CHAR_BIT
 #include <stdlib.h>       // rand
+#ifdef _WIN32
+#include <Windows.h>
+#else
 #include <unistd.h>       // system(clear);
+                          // sleep($SECS);
+#endif
 #include <random>         // random
 #include <limits>         // This is important!
 #include <string>         // stoi
