@@ -8,6 +8,7 @@
  /\***INIT**\*/ <br>
  /\***LOOP**\*/ <br>
  /\***FUNCTIONS**\*/ <br>
+ /\***END**\*/<br>
 
 3. ✅ Updatera<p>
   ```std::cout << "\x1B[2J\x1B[H";```<p> 

@@ -75,11 +75,11 @@ void Walk_Main(void) {
         
         for (int i = 0; i < NUMBEROFTRAPS; i++)
         {
-          if ( (xPos == trapsInMap[i].position.xPosition &&
-                yPos == trapsInMap[i].position.yPosition) ||
+          if (( (xPos == trapsInMap[i].position.xPosition) &&
+                (yPos == trapsInMap[i].position.yPosition) )||
               
-               (xPos == banditsInMap[i].position.xPosition &&
-                yPos == banditsInMap[i].position.yPosition)
+               ((xPos == banditsInMap[i].position.xPosition) &&
+                (yPos == banditsInMap[i].position.yPosition))
               )
           {
             match = true;
@@ -101,26 +101,28 @@ void Walk_Main(void) {
     // 4. Bandits move.
     int maxTurnos = INT_MAX;
     
+    /*LOOP*/
     for (int i = 0; i <= maxTurnos; i++)
     {
         drawBoard(player, trapsInMap, banditsInMap, treasure);
         Direction direction;
     
-        /*LOOP*/
+        /*LOOP - NESTED*/
         do
         {
-          direction = askDirection();
-          std::cout << std::endl;
+            direction = askDirection();
+            printf("\n");
         }
         while (direction == WRONG_DIRECTION);
         
         movePlayer(player, direction);
         
-        for (int i = 0; i < NUMBEROFBANDITS; i++)
+        /*LOOP - NESTED*/
+        for (int j = 0; j < NUMBEROFBANDITS; j++)
         {
-            moveBandit(banditsInMap[i]);
+            moveBandit(banditsInMap[j]);
         }
-        
+                
         // Reset the terminal
         clearScreen();
     }
@@ -140,7 +142,7 @@ void drawBoard(Player   player,
         /*LOOP - NESTED*/
         for (int x = 0; x <= board.xDimension; x++)
         {
-            /*LOOP - NESTED */
+            /*LOOP - NESTED*/
             // Traps are drawn
             for (int z = 0; z <= NUMBEROFTRAPS; z++) {
                 Trap trapToDraw = totalTraps[z];
@@ -153,7 +155,7 @@ void drawBoard(Player   player,
                 }
             }
             
-            /*LOOP*/
+            /*LOOP - NESTED*/
             // Bandits are drawn.
             // In case of collision with a trap,
             // only the second is drawn.
@@ -161,10 +163,10 @@ void drawBoard(Player   player,
             {
                 Bandit banditToDraw = totalBandits[z];
                 if ( (banditToDraw.position.xPosition == x) &&
-                     ( (banditToDraw.position.yPosition == y) && (!squareDrawn) ))
+                     ((banditToDraw.position.yPosition == y) && (!squareDrawn)) )
                 {
-                  std::cout << banditToDraw.symbol;
-                  squareDrawn = true;
+                    std::cout << banditToDraw.symbol;
+                    squareDrawn = true;
                 }
             }
 
@@ -183,20 +185,23 @@ void drawBoard(Player   player,
                 continue;
             }
 
-          if (x == player.position.xPosition && y == player.position.yPosition) {
-            if (squareDrawn)
-              endGame(DEFEAT);
-            std::cout << "P";
-            continue;
-          }
-          // Empty square "." is drawn. It only gets printed if there is nothing
-          // on the square.
-          if (!squareDrawn)
-            std::cout << ".";
-          squareDrawn = false;
+            if ( (x == player.position.xPosition) && (y == player.position.yPosition) )
+            {
+                if (squareDrawn) { endGame(DEFEAT); }
+                
+                printf("P");
+                std::cout << "P";
+                continue;
+            }
+            
+            // Empty square "." is drawn. It only gets printed if there is nothing
+            // on the square.
+            if (!squareDrawn) { printf("."); }
+            
+            squareDrawn = false;
         }
         
-        std::cout << std::endl;
+        printf("\n");
     }
 }
 
