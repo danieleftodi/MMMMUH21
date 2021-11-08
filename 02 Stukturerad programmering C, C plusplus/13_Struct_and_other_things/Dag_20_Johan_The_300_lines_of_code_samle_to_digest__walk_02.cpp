@@ -181,7 +181,8 @@ void drawBoard(Player   player,
                     endGame(VICTORY);
                 }
 
-                std::cout << "X";
+                printf("X");
+//                std::cout << "X";
                 continue;
             }
 
@@ -190,7 +191,6 @@ void drawBoard(Player   player,
                 if (squareDrawn) { endGame(DEFEAT); }
                 
                 printf("P");
-                std::cout << "P";
                 continue;
             }
             

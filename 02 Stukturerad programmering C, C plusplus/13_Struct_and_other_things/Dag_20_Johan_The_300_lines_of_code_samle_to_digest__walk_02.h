@@ -28,6 +28,9 @@
 int NUMBEROFTRAPS   = 3;
 int NUMBEROFBANDITS = 2;
 
+/*
+ Struct info: https://stackoverflow.com/questions/11516657/c-structure-initialization
+*/
 // Represents a place in the board.
 // xPosition is the x-axis index and yPosition is the y-axis index
 struct Location {
