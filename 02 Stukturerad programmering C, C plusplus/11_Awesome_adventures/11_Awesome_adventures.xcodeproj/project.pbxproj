@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550D6F3F2727E63200117E6B /* common_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 550D6F3E2727E63200117E6B /* common_lib.cpp */; };
 		55C68D492722E05600E2468C /* 11_Awesome_adventures_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D432722E05600E2468C /* 11_Awesome_adventures_main.cpp */; };
 		55C68DE42722E2BF00E2468C /* menu_place_window_sill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D582722E2BE00E2468C /* menu_place_window_sill.cpp */; };
 		55C68DE52722E2BF00E2468C /* menu_activity_eat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C68D5C2722E2BE00E2468C /* menu_activity_eat.cpp */; };
@@ -91,6 +92,8 @@
 
 /* Begin PBXFileReference section */
 		5505964226F0CA24003CE0BE /* 11_Awesome_adventures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 11_Awesome_adventures; sourceTree = BUILT_PRODUCTS_DIR; };
+		550D6F3A2727E1C500117E6B /* common_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_lib.h; sourceTree = "<group>"; };
+		550D6F3E2727E63200117E6B /* common_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_lib.cpp; sourceTree = "<group>"; };
 		55C68D432722E05600E2468C /* 11_Awesome_adventures_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 11_Awesome_adventures_main.cpp; sourceTree = "<group>"; };
 		55C68D462722E05600E2468C /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		55C68D572722E2BE00E2468C /* menu_activity_run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_activity_run.h; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 			children = (
 				55C68DAE2722E2BF00E2468C /* common.cpp */,
 				55C68DB02722E2BF00E2468C /* common.h */,
+				550D6F3E2727E63200117E6B /* common_lib.cpp */,
+				550D6F3A2727E1C500117E6B /* common_lib.h */,
 				55C68DAC2722E2BF00E2468C /* main.h */,
 				55C68DAF2722E2BF00E2468C /* snippets.h */,
 				55C68DAD2722E2BF00E2468C /* template.cpp */,
@@ -540,6 +545,7 @@
 				55C68E182722E2BF00E2468C /* activity_scratch.cpp in Sources */,
 				55C68E002722E2BF00E2468C /* character_jerry.cpp in Sources */,
 				55C68E1D2722E2BF00E2468C /* activity_sniff.cpp in Sources */,
+				550D6F3F2727E63200117E6B /* common_lib.cpp in Sources */,
 				55C68E1B2722E2BF00E2468C /* activity_walk.cpp in Sources */,
 				55C68DEF2722E2BF00E2468C /* menu_place_neighbours.cpp in Sources */,
 				55C68DEE2722E2BF00E2468C /* menu_activity_climb.cpp in Sources */,

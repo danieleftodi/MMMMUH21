@@ -8,7 +8,7 @@
 #ifndef main_h
 #define main_h
 
-#include "common.h"       // common code
+#include "../common/common.h"           // common code
 
 int main (int argc, char ** argv);
 

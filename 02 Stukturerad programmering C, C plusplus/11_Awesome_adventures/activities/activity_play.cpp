@@ -5,7 +5,7 @@
 //  Created by Daniel Eftodi on 2021-10-12.
 //
 
-#include "activity_play.h"
+#include "../activities/activity_play.h"
 
 void guess_what_stig_it_thinking (void) {
     char           cInput                 = '\0';

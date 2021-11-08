@@ -12,19 +12,21 @@
 #include <iostream>
 #include <climits>        // CHAR_BIT
 #include <stdlib.h>       // rand
+
 #ifdef _WIN32
 #include <Windows.h>
 #else
 #include <unistd.h>       // system(clear);
                           // sleep($SECS);
 #endif
+
 #include <random>         // random
 #include <limits>         // This is important!
 #include <string>         // stoi
 #include <sstream>        // stringstream
 
-#include "common.h"                // common code
-#include "../menus/main_menu.h"    // main menu code
+#include "../menus/main_menu.h"     // main menu code
+#include "../common/common_lib.h"   // common lib
 
 ////*/ function_enumeration_example_two
 //enum suit {
