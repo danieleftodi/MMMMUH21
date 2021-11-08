@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55CE7CC02739EB6700026875 /* Dag_20_Johan_walk_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55CE7CBD2739EB6700026875 /* Dag_20_Johan_walk_02.cpp */; };
 		55F8CA2C2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F8CA292730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.cpp */; };
-		55F8CA302731041F00215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F8CA2F2731041F00215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +25,12 @@
 
 /* Begin PBXFileReference section */
 		5505964226F0CA24003CE0BE /* 13_Struct_and_other_things_in_Cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 13_Struct_and_other_things_in_Cpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		55CE7CBD2739EB6700026875 /* Dag_20_Johan_walk_02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dag_20_Johan_walk_02.cpp; sourceTree = "<group>"; };
+		55CE7CBE2739EB6700026875 /* Dag_20_Johan_walk_02.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Dag_20_Johan_walk_02.md; sourceTree = "<group>"; };
+		55CE7CBF2739EB6700026875 /* Dag_20_Johan_walk_02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dag_20_Johan_walk_02.h; sourceTree = "<group>"; };
 		55F8CA292730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 13_Struct_and_other_things_in_Cpp.cpp; sourceTree = "<group>"; };
 		55F8CA2A2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp_Snippets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 13_Struct_and_other_things_in_Cpp_Snippets.h; sourceTree = "<group>"; };
 		55F8CA2B2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 13_Struct_and_other_things_in_Cpp.h; sourceTree = "<group>"; };
-		55F8CA2F2731041F00215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp; sourceTree = "<group>"; };
-		55F8CA32273104F200215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.h; sourceTree = "<group>"; };
-		55F8CA332731050700215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 				55F8CA292730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.cpp */,
 				55F8CA2B2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.h */,
 				55F8CA2A2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp_Snippets.h */,
-				55F8CA2F2731041F00215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp */,
-				55F8CA32273104F200215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.h */,
-				55F8CA332731050700215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.md */,
+				55CE7CBD2739EB6700026875 /* Dag_20_Johan_walk_02.cpp */,
+				55CE7CBF2739EB6700026875 /* Dag_20_Johan_walk_02.h */,
+				55CE7CBE2739EB6700026875 /* Dag_20_Johan_walk_02.md */,
 				5505964326F0CA24003CE0BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F8CA302731041F00215330 /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.cpp in Sources */,
+				55CE7CC02739EB6700026875 /* Dag_20_Johan_walk_02.cpp in Sources */,
 				55F8CA2C2730FF2C00215330 /* 13_Struct_and_other_things_in_Cpp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

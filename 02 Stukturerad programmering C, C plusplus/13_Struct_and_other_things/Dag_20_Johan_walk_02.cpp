@@ -5,7 +5,7 @@
 //  Created by Daniel Eftodi on 2021-11-01.
 //
 
-#include "Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02.h"
+#include "Dag_20_Johan_walk_02.h"
 
 /* INIT */
 void Walk_Main(void) {

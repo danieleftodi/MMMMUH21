@@ -5,8 +5,8 @@
 //  Created by Daniel Eftodi on 2021-11-01.
 //
 
-#ifndef Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02_h
-#define Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02_h
+#ifndef Dag_20_Johan_walk_02_h
+#define Dag_20_Johan_walk_02_h
 
 /* INCLUDES */
 
@@ -200,4 +200,4 @@ void endGame(Result result);
 */
 void clearScreen(void);
 
-#endif /* Dag_20_Johan_The_300_lines_of_code_samle_to_digest__walk_02 */
+#endif /* Dag_20_Johan_walk_02 */
