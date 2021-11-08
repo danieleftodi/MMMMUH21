@@ -95,7 +95,7 @@ int main_AJon(void)
 int numberGenerator_AJon(int randomNumRange)
 {
     int random;
-    srand( (unsigned int) (rand() ^ time(NULL)) );
+    std::srand( (unsigned int) (std::rand() ^ std::time(NULL)) );
     return random = rand() % (randomNumRange);
     //Random number within randomNumRange.
 }
