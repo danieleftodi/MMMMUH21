@@ -115,7 +115,7 @@ void Walk_Main(void) {
         do
         {
             direction = askDirection();
-            printf("\n");
+//            printf("\n");
         }
         while (direction == WRONG_DIRECTION);
         
@@ -129,8 +129,8 @@ void Walk_Main(void) {
             moveBandit(banditsInMap[j]);
         }
                 
-        // Reset the terminal
-        clearScreen();
+//        // Reset the terminal
+//        clearScreen();
     }
     
 }
@@ -331,9 +331,16 @@ void drawBoard2(Player   player,
 
 Direction askDirection()
 {
+#if !DEBUG_LOGGING
+    printf("IN  :: %d\n", DBG_Counter++);
+    moveCharacter(worldDungeon.Player.symbol, worldDungeon, LEFT);
+    moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
+#endif
+    
     printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
     char answer;
     std::cin.get(answer);
+    printf("\n");
 
     Direction chosenDirection;
     switch (std::toupper(answer))
@@ -358,6 +365,12 @@ Direction askDirection()
             chosenDirection = WRONG_DIRECTION;
             break;
     }
+    
+#if !DEBUG_LOGGING
+    printf("OUT :: %d\n", DBG_Counter);
+    delay(3);
+#endif
+    
     return chosenDirection;
 }
 
@@ -384,6 +397,8 @@ void movePlayer(Player &player,
         case WRONG_DIRECTION:
             printf("\n**Incorrect input**\n");
             break;
+        default:
+            break;
     }
 }
 
@@ -394,19 +409,59 @@ void moveBandit(Bandit &bandit)
     switch (direction) {
         case 0:
             if (bandit.position.xPosition < board.xDimension)
-              bandit.position.xPosition += 1;
+                bandit.position.xPosition += 1;
             break;
         case 1:
             if (bandit.position.xPosition > 0)
-              bandit.position.xPosition -= 1;
+                bandit.position.xPosition -= 1;
             break;
         case 2:
             if (bandit.position.yPosition > 0)
-              bandit.position.yPosition -= 1;
+                bandit.position.yPosition -= 1;
             break;
         case 3:
             if (bandit.position.yPosition < board.yDimension)
-              bandit.position.yPosition += 1;
+                bandit.position.yPosition += 1;
+            break;
+        default:
+            break;
+    }
+}
+
+void moveCharacter(char cCharacter,
+                   World &world,
+                   Direction direction)
+{
+    
+    int iBandit_direction = std::rand() % 4;
+    
+    switch (cCharacter) {
+        case 'B':
+            switch (iBandit_direction) {
+                case 0:
+                    if (world.Bandit.position.xPosition < board.xDimension)
+                        world.Bandit.position.xPosition += 1;
+                    break;
+                case 1:
+                    if (world.Bandit.position.xPosition > 0)
+                        world.Bandit.position.xPosition -= 1;
+                    break;
+                case 2:
+                    if (world.Bandit.position.yPosition > 0)
+                        world.Bandit.position.yPosition -= 1;
+                    break;
+                case 3:
+                    if (world.Bandit.position.yPosition < board.yDimension)
+                        world.Bandit.position.yPosition += 1;
+                    break;
+                default:
+                    break;
+            }
+            printf("Bandit :: Directon: %d\n", iBandit_direction);
+            break;
+        case 'P':
+            printf("Player :: Directon: %d\n", direction);
+        default:
             break;
     }
 }
@@ -441,4 +496,13 @@ void clearScreen(void)
     #else
         system("clear");
     #endif
+}
+
+void delay(int iDelayTime)
+{
+#ifdef __WIN32__
+    Sleep(iDelayTime);
+#else
+    sleep(iDelayTime);
+#endif
 }

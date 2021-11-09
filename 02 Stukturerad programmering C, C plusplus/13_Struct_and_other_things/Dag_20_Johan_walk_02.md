@@ -28,7 +28,7 @@ Denna "*resets terminal*" med vår clearScreen(void) från vår common_lib.cpp
 	- ✅ 1st - just merge all structs into one giant struct.
 	- 🟡 2nd - later try to create a "meta structure" ...
 
-6. 🔴 Gör en generell funktion för  ```movePlayer ``` och  ```moveBandit ```. 
+6. 🟡 [50%] Gör en generell funktion för  ```movePlayer ``` och  ```moveBandit ```. 
 
 	Notera att det är exakt samma värden som sätts. **(spendera max 30 min gör sist)**
 	
