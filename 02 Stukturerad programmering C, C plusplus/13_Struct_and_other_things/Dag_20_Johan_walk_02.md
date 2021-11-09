@@ -22,11 +22,11 @@ Denna "*resets terminal*" med vår clearScreen(void) från vår common_lib.cpp
 	
 	**Tips** dvs först måste hela boarden representerad i  ```currentToRender ``` "tömmas" genom att varje plats fyllas med  ```'.' ``` som representerar att ingen bandit, spelar, skatt finns där.
 
-5. 🟡 Lägg alla  ```Location ```,  ```Player ```,  ```Trap ```,  ```Bandit ``` etc i en world struct som representerar världen.
+5. ✅ Lägg alla  ```Location ```,  ```Player ```,  ```Trap ```,  ```Bandit ``` etc i en world struct som representerar världen.
 
 	**[NOTE TO SELF]**: 
-	- 1st - just merge all structs into one giant struct.
-	- 2nd - later try to create a "meta structure" ...
+	- ✅ 1st - just merge all structs into one giant struct.
+	- 🟡 2nd - later try to create a "meta structure" ...
 
 6. 🔴 Gör en generell funktion för  ```movePlayer ``` och  ```moveBandit ```. 
 

@@ -86,14 +86,50 @@ struct {
 } board = {.xDimension = 10, .yDimension = 9};
 
 // Represents the world.
-/* NOT-COMPLETED!
-struct {
-    Location    locations;
-    Charater    characters ;    // Bandit || Player
-    Trap        traps;
-    Treasure    treasures;
-} world;
-*/
+struct World {
+    
+    // Represents Bandits moving around the map.
+    // Position is altered through funtion moveBandit.
+    struct Bandit {
+        struct Location position;
+        char symbol = 'B';
+    } Bandit;
+    
+    // Represents the board.
+    struct Board {
+        int xDimension;
+        int yDimension;
+    } Board = {.xDimension = 10, .yDimension = 9};
+    
+    struct Location {
+        int xPosition;
+        int yPosition;
+    } Location;
+    
+    // Represents the player.
+    // It is guaranteed Player position is in the board.
+    // Position is altered through function movePlayer.
+    struct Player {
+        struct Location position;
+        char symbol = 'P';
+        std::string name = "player";
+    } Player;
+    
+    // Represents traps on the board
+    // It is guarateed Trap position is in the board.
+    struct Trap {
+        struct Location position;
+        char symbol = 'T';
+    } Trap;
+
+    // Represents the treasure.
+    // The game ends as soon Player.position == Treasure.position
+    struct Treasure {
+        struct Location position;
+        char symbol = 'X';
+    };
+} worldDungeon;
+
 
 // Possible directions. WRONG_DIRECTION is used to report incorrect input
 enum Direction { RIGHT, LEFT, TOP, BOTTOM, WRONG_DIRECTION };
