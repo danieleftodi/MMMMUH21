@@ -106,7 +106,7 @@ void Walk_Main(void) {
     for (int i = 0; i <= maxTurnos; i++)
     {
         // 1. Board is drawn.
-        drawBoard(player, trapsInMap, banditsInMap, treasure);
+        drawBoard2(player, trapsInMap, banditsInMap, treasure);
         
         // 2. User is asked for movement direction.
         Direction direction;
@@ -206,6 +206,120 @@ void drawBoard(Player   player,
             squareDrawn = false;
         }
         
+        printf("\n");
+    }
+}
+
+void drawBoard2(Player   player,
+                Trap     totalTraps[],
+                Bandit   totalBandits[],
+                Treasure treasure)
+{
+    bool squareDrawn = false;
+    
+    /*LOOP*/
+    for (int y = 0; y <= board.yDimension; y++)
+    {
+        /*LOOP - NESTED*/
+        for (int x = 0; x <= board.xDimension; x++)
+        {
+            /*LOOP - NESTED*/
+            // Traps are drawn
+            for (int z = 0; z <= NUMBEROFTRAPS; z++) {
+                Trap trapToDraw = totalTraps[z];
+                
+                if ( (trapToDraw.position.xPosition == x) &&
+                    (trapToDraw.position.yPosition == y) )
+                {
+                    currentToRender[x][y] = trapToDraw.symbol;
+                    squareDrawn = true;
+                }
+            }
+            
+            /*LOOP - NESTED*/
+            // Bandits are drawn.
+            // In case of collision with a trap,
+            // only the second is drawn.
+            for (int z = 0; z <= NUMBEROFBANDITS; z++)
+            {
+                Bandit banditToDraw = totalBandits[z];
+                if ( (banditToDraw.position.xPosition == x) &&
+                    ((banditToDraw.position.yPosition == y) && (!squareDrawn)) )
+                {
+                    currentToRender[x][y] = banditToDraw.symbol;
+                    squareDrawn = true;
+                }
+            }
+            
+            // Treasure is drawn. If position of treasure == position of player
+            // game ends with victory
+            if ( (x == treasure.position.xPosition) &&
+                (y == treasure.position.yPosition) )
+            {
+                if ( (treasure.position.xPosition == player.position.xPosition) &&
+                    (treasure.position.yPosition == player.position.yPosition) )
+                {
+                    endGame(VICTORY);
+                }
+                
+                currentToRender[x][y] = 'X';
+                continue;
+            }
+            
+            if ( (x == player.position.xPosition) && (y == player.position.yPosition) )
+            {
+                if (squareDrawn) { endGame(DEFEAT); }
+                
+                currentToRender[x][y] = 'P';
+                continue;
+            }
+            
+            // Empty square "." is drawn. It only gets printed if there is nothing
+            // on the square.
+            if (!squareDrawn) { currentToRender[x][y] = '.'; }
+            
+            squareDrawn = false;
+        }
+    }
+    
+    // clear the screen before drawing
+    clearScreen();
+    
+    /*LOOP*/
+    for (int y = 0; y <= board.yDimension; y++)
+    {
+        
+        // DEBUG LOGG ARRAY NUMBERS
+        if (y < 10)
+        {
+            printf("[0%d] ", y);
+        }
+        else
+        {
+            printf("[%d] ", y);
+        }
+        
+        /*LOOP - NESTED*/
+        for (int x = 0; x <= board.xDimension; x++)
+        {
+//            // DEBUG LOGG ARRAY NUMBERS
+//            if (x < 10)
+//            {
+//                printf("[0%d]", x);
+//            }
+//            else
+//            {
+//                printf("[%d]", x);
+//            }
+
+            // print buffer
+            printf("%c", currentToRender[x][y]);
+            
+            // clear buffer
+            currentToRender[x][y] = '.';
+        }
+        
+        // new-line after each row ...
         printf("\n");
     }
 }

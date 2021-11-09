@@ -25,8 +25,13 @@
  * avoiding the traps ("T") and the bandits ("B").
  * Bandits move randomly each turn.
  * */
-int NUMBEROFTRAPS   = 3;
-int NUMBEROFBANDITS = 2;
+int  NUMBEROFTRAPS   = 3;
+int  NUMBEROFBANDITS = 2;
+
+/*
+ * Array to buffer our output
+ */
+char currentToRender[10][10];
 
 /*
  Struct info: https://stackoverflow.com/questions/11516657/c-structure-initialization
@@ -72,7 +77,7 @@ struct Treasure {
 struct {
     int xDimension;
     int yDimension;
-} board = {.xDimension = 10, .yDimension = 10};
+} board = {.xDimension = 10, .yDimension = 9};
 
 // Represents the world.
 /* NOT-COMPLETED!
@@ -124,6 +129,14 @@ void drawBoard(Player     player,
                Bandit     totalBandits[],
                Treasure   treasure);
 
+/*
+ * As drawBoard(), but draw to a buffer,
+ * currentToRender[10][10], instead.
+ */
+void drawBoard2(Player     player,
+                Trap       totalTraps[],
+                Bandit     totalBandits[],
+                Treasure   treasure);
 
 /* FUNC :: askDirection
   

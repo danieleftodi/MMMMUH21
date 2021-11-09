@@ -14,7 +14,7 @@
   ```std::cout << "\x1B[2J\x1B[H";```<p> 
 Denna "*resets terminal*" med vår clearScreen(void) från vår common_lib.cpp
 
-4. 🟡 Lägg till  ```char currentToRender[10][10] ```. 
+4. ✅ Lägg till  ```char currentToRender[10][10] ```. 
 
 	Gör en ny  ```drawBoard2 ``` som istället för att först skriva till skärmen först gör sin uppdateringslogik direkt på att skriva till  ```currentToRender ```.
 
@@ -25,8 +25,8 @@ Denna "*resets terminal*" med vår clearScreen(void) från vår common_lib.cpp
 5. 🟡 Lägg alla  ```Location ```,  ```Player ```,  ```Trap ```,  ```Bandit ``` etc i en world struct som representerar världen.
 
 	**[NOTE TO SELF]**: 
-	- 1st just merge all structs into one giant struct.
-	- 2nd 
+	- 1st - just merge all structs into one giant struct.
+	- 2nd - later try to create a "meta structure" ...
 
 6. 🔴 Gör en generell funktion för  ```movePlayer ``` och  ```moveBandit ```. 
 
