@@ -338,8 +338,7 @@ Direction askDirection()
     
     printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
     char answer;
-    std::cin.getline(char, answer); // >> answer;
-
+    std::cin >> answer;
 
     Direction chosenDirection;
     switch (std::toupper(answer))
@@ -368,10 +367,8 @@ Direction askDirection()
 #if !DEBUG_LOGGING
     printf("askDirection() :: OUT :: %d\n", DBG_Counter);
 //    moveCharacter(worldDungeon.Player.symbol, worldDungeon, chosenDirection);
-    delay(3);
+    delay(1.5);
 #endif
-    // Reset input
-//    answer = '\0';
     
     return chosenDirection;
 }
