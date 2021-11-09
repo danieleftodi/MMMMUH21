@@ -332,8 +332,7 @@ void drawBoard2(Player   player,
 Direction askDirection()
 {
 #if !DEBUG_LOGGING
-    printf("IN  :: %d\n", DBG_Counter++);
-    moveCharacter(worldDungeon.Player.symbol, worldDungeon, LEFT);
+    printf("IN     :: %d\n", DBG_Counter++);
     moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
 #endif
     
@@ -367,7 +366,8 @@ Direction askDirection()
     }
     
 #if !DEBUG_LOGGING
-    printf("OUT :: %d\n", DBG_Counter);
+    printf("OUT    :: %d\n", DBG_Counter);
+    moveCharacter(worldDungeon.Player.symbol, worldDungeon, chosenDirection);
     delay(3);
 #endif
     
@@ -460,6 +460,29 @@ void moveCharacter(char cCharacter,
             printf("Bandit :: Directon: %d\n", iBandit_direction);
             break;
         case 'P':
+            switch (direction) {
+                case RIGHT:
+                    if (world.Player.position.xPosition < board.xDimension)
+                        world.Player.position.xPosition += 1;
+                    break;
+                case LEFT:
+                    if (world.Player.position.xPosition > 0)
+                        world.Player.position.xPosition -= 1;
+                    break;
+                case TOP:
+                    if (world.Player.position.yPosition > 0)
+                        world.Player.position.yPosition -= 1;
+                    break;
+                case BOTTOM:
+                    if (world.Player.position.yPosition < board.yDimension)
+                        world.Player.position.yPosition += 1;
+                    break;
+                case WRONG_DIRECTION:
+                    printf("\n**Incorrect input**\n");
+                    break;
+                default:
+                    break;
+            }
             printf("Player :: Directon: %d\n", direction);
         default:
             break;
