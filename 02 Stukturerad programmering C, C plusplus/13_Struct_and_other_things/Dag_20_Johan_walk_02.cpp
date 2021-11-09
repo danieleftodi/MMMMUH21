@@ -332,14 +332,14 @@ void drawBoard2(Player   player,
 Direction askDirection()
 {
 #if !DEBUG_LOGGING
-    printf("IN     :: %d\n", DBG_Counter++);
-    moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
+    printf("askDirection() :: IN  :: %d\n", ++DBG_Counter);
+//    moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
 #endif
     
     printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
     char answer;
-    std::cin.get(answer);
-    printf("\n");
+    std::cin.getline(char, answer); // >> answer;
+
 
     Direction chosenDirection;
     switch (std::toupper(answer))
@@ -366,10 +366,12 @@ Direction askDirection()
     }
     
 #if !DEBUG_LOGGING
-    printf("OUT    :: %d\n", DBG_Counter);
-    moveCharacter(worldDungeon.Player.symbol, worldDungeon, chosenDirection);
+    printf("askDirection() :: OUT :: %d\n", DBG_Counter);
+//    moveCharacter(worldDungeon.Player.symbol, worldDungeon, chosenDirection);
     delay(3);
 #endif
+    // Reset input
+//    answer = '\0';
     
     return chosenDirection;
 }
@@ -395,7 +397,10 @@ void movePlayer(Player &player,
               player.position.yPosition += 1;
             break;
         case WRONG_DIRECTION:
-            printf("\n**Incorrect input**\n");
+#if !DEBUG_LOGGING
+            printf("\nmovePlayer :: **Incorrect input**\n");
+#endif
+            
             break;
         default:
             break;
@@ -478,7 +483,9 @@ void moveCharacter(char cCharacter,
                         world.Player.position.yPosition += 1;
                     break;
                 case WRONG_DIRECTION:
-                    printf("\n**Incorrect input**\n");
+#if !DEBUG_LOGGING
+                    printf("\nmoveCharacter :: **Incorrect input**\n");
+#endif
                     break;
                 default:
                     break;

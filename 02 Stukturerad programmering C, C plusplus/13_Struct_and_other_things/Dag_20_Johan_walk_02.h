@@ -92,6 +92,9 @@ struct {
     int yDimension;
 } board = {.xDimension = 10, .yDimension = 9};
 
+/*
+ * https://stackoverflow.com/questions/35869873/nested-structure-in-c
+ */
 // Represents the world.
 struct World {
     
