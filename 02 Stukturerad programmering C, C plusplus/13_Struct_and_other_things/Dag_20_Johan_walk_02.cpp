@@ -88,6 +88,7 @@ void Walk_Main(void) {
         
     } while (match);
 
+    // Player is placed on the map.
     Player player =
     {
         .position = {.xPosition = xPos, .yPosition = yPos}
@@ -104,7 +105,10 @@ void Walk_Main(void) {
     /*LOOP*/
     for (int i = 0; i <= maxTurnos; i++)
     {
+        // 1. Board is drawn.
         drawBoard(player, trapsInMap, banditsInMap, treasure);
+        
+        // 2. User is asked for movement direction.
         Direction direction;
     
         /*LOOP - NESTED*/
@@ -115,8 +119,10 @@ void Walk_Main(void) {
         }
         while (direction == WRONG_DIRECTION);
         
+        // 3. Player moves in the chosen direction.
         movePlayer(player, direction);
         
+        // 4. Bandits move.
         /*LOOP - NESTED*/
         for (int j = 0; j < NUMBEROFBANDITS; j++)
         {
@@ -150,8 +156,8 @@ void drawBoard(Player   player,
                 if ( (trapToDraw.position.xPosition == x) &&
                      (trapToDraw.position.yPosition == y) )
                 {
-                  std::cout << trapToDraw.symbol;
-                  squareDrawn = true;
+                    printf("%c", trapToDraw.symbol);
+                    squareDrawn = true;
                 }
             }
             
@@ -165,7 +171,7 @@ void drawBoard(Player   player,
                 if ( (banditToDraw.position.xPosition == x) &&
                      ((banditToDraw.position.yPosition == y) && (!squareDrawn)) )
                 {
-                    std::cout << banditToDraw.symbol;
+                    printf("%c", banditToDraw.symbol);
                     squareDrawn = true;
                 }
             }
@@ -182,7 +188,6 @@ void drawBoard(Player   player,
                 }
 
                 printf("X");
-//                std::cout << "X";
                 continue;
             }
 
@@ -205,34 +210,36 @@ void drawBoard(Player   player,
     }
 }
 
-Direction askDirection() {
+Direction askDirection()
+{
+    printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
+    char answer;
+    std::cin.get(answer);
 
-  std::cout << "Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ";
-  char answer;
-  std::cin.get(answer);
-
-  Direction chosenDirection;
-  switch (std::toupper(answer)) { // Fixa styling
-  case 'L':
-  case 'A':
-    chosenDirection = LEFT;
-    break;
-  case 'R':
-  case 'D':
-    chosenDirection = RIGHT;
-    break;
-  case 'T':
-  case 'W':
-    chosenDirection = TOP;
-    break;
-  case 'B':
-  case 'S':
-    chosenDirection = BOTTOM;
-    break;
-  default:
-    chosenDirection = WRONG_DIRECTION;
-  }
-  return chosenDirection;
+    Direction chosenDirection;
+    switch (std::toupper(answer))
+    {
+        case 'L':
+        case 'A':
+            chosenDirection = LEFT;
+            break;
+        case 'R':
+        case 'D':
+            chosenDirection = RIGHT;
+            break;
+        case 'T':
+        case 'W':
+            chosenDirection = TOP;
+            break;
+        case 'B':
+        case 'S':
+            chosenDirection = BOTTOM;
+            break;
+        default:
+            chosenDirection = WRONG_DIRECTION;
+            break;
+    }
+    return chosenDirection;
 }
 
 void movePlayer(Player &player,
@@ -294,14 +301,14 @@ void endGame(Result result)
     
     printf("\n\n");
     printf("===========================\n");
-    std::cout << "||\t\t\t ||" << std::endl;
+    printf("||\t\t\t ||\n");
     if ( result == VICTORY )
     {
-        std::cout << "||\t" << announcement << "\t\t ||" << std::endl;
+        printf("||\t%s\t\t ||\n", announcement.c_str());
     }
     else
     {
-        std::cout << "||\t" << announcement << "\t ||" << std::endl;
+        printf("||\t%s\t ||\n", announcement.c_str());
     }
     printf("||\t\t\t ||\n");
     printf("===========================\n");
