@@ -121,12 +121,14 @@ void Walk_Main(void) {
         
         // 3. Player moves in the chosen direction.
         movePlayer(player, direction);
+//        moveCharacter(worldDungeon.Player.symbol, worldDungeon, direction);
         
         // 4. Bandits move.
         /*LOOP - NESTED*/
         for (int j = 0; j < NUMBEROFBANDITS; j++)
         {
             moveBandit(banditsInMap[j]);
+//            moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
         }
                 
 //        // Reset the terminal
@@ -318,7 +320,7 @@ void drawBoard2(Player   player,
 #endif
 
             // print buffer
-            printf("%c", currentToRender[x][y]);
+            printf("%c ", currentToRender[x][y]);
             
             // clear buffer
             currentToRender[x][y] = '.';
@@ -331,9 +333,8 @@ void drawBoard2(Player   player,
 
 Direction askDirection()
 {
-#if !DEBUG_LOGGING
+#if DEBUG_LOGGING
     printf("askDirection() :: IN  :: %d\n", ++DBG_Counter);
-//    moveCharacter(worldDungeon.Bandit.symbol, worldDungeon);
 #endif
     
     printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
@@ -364,9 +365,8 @@ Direction askDirection()
             break;
     }
     
-#if !DEBUG_LOGGING
+#if DEBUG_LOGGING
     printf("askDirection() :: OUT :: %d\n", DBG_Counter);
-//    moveCharacter(worldDungeon.Player.symbol, worldDungeon, chosenDirection);
     delay(1.5);
 #endif
     

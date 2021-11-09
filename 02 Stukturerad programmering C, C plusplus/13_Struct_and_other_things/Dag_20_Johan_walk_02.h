@@ -87,7 +87,7 @@ struct Treasure {
 };
 
 // Represents the board.
-struct {
+struct Board {
     int xDimension;
     int yDimension;
 } board = {.xDimension = 10, .yDimension = 9};
@@ -139,7 +139,7 @@ struct World {
     struct Treasure {
         struct Location position;
         char symbol = 'X';
-    };
+    } Treasure;
 } worldDungeon;
 
 
