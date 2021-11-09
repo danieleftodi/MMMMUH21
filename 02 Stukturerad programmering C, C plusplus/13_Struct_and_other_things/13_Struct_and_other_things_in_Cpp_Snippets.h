@@ -33,4 +33,27 @@
 //        }
 
 
+printf("Make an input: ");
+
+char strvar[100];
+fgets (strvar, 100, stdin);
+
+printf("Input was: %c\n\n", strvar[99]);
+
+
+printf("Make an input: ");
+int i, n; float x; char name[50];
+n = scanf("%d%f%s", &i, &x, name);
+
+printf("Input was: %s\n", name);
+
+char buffer[256] = "";
+printf ("Insert your full address: \n");
+if (fgets(buffer, 256, stdin) != NULL) {
+    printf ("Your address is: %s\n", buffer);
+}
+else {
+    printf ("Error reading from stdin!\n");
+}
+
 #endif /* Functions_part_one_in_Cpp_Snippets_h */
