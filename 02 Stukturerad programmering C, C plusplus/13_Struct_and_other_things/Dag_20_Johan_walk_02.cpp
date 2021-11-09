@@ -288,8 +288,9 @@ void drawBoard2(Player   player,
     /*LOOP*/
     for (int y = 0; y <= board.yDimension; y++)
     {
-        
-        // DEBUG LOGG ARRAY NUMBERS
+   
+#if DEBUG_LOGGING
+        //  DEBUG LOGG ARRAY NUMBERS
         if (y < 10)
         {
             printf("[0%d] ", y);
@@ -298,19 +299,23 @@ void drawBoard2(Player   player,
         {
             printf("[%d] ", y);
         }
+#endif
         
         /*LOOP - NESTED*/
         for (int x = 0; x <= board.xDimension; x++)
         {
-//            // DEBUG LOGG ARRAY NUMBERS
-//            if (x < 10)
-//            {
-//                printf("[0%d]", x);
-//            }
-//            else
-//            {
-//                printf("[%d]", x);
-//            }
+
+#if DEBUG_LOGGING
+//  DEBUG LOGG ARRAY NUMBERS
+            if (x < 10)
+            {
+                printf("[0%d]", x);
+            }
+            else
+            {
+                printf("[%d]", x);
+            }
+#endif
 
             // print buffer
             printf("%c", currentToRender[x][y]);

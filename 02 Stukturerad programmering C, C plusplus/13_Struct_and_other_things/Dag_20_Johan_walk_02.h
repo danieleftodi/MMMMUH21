@@ -17,6 +17,12 @@
 #include <string>
 
 
+/* DEFINITIONS */
+
+// ENABLE-DISABLE debug logging
+#define DEBUG_LOGGING false
+
+
 /* DECLARATIONS */
 
 /**
