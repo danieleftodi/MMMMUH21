@@ -232,7 +232,7 @@ void movePlayer(Player &player,
 void moveBandit(Bandit &bandit);
 
 
-/* FUNC :: moveBandit
+/* FUNC :: endGame
 
   in    Result  result  // Result of the game.
                         // It is either VICTORY or DEFEAT
