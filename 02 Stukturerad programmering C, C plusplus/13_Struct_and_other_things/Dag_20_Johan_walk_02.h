@@ -51,7 +51,7 @@ char currentToRender[10][10];
 */
 // Represents a place in the board.
 // xPosition is the x-axis index and yPosition is the y-axis index
-struct Location {
+struct Location_t {
     int xPosition;
     int yPosition;
 };
@@ -59,88 +59,88 @@ struct Location {
 // Represents the player.
 // It is guaranteed Player position is in the board.
 // Position is altered through function movePlayer.
-struct Player {
-    Location position;
+struct Player_t {
+    struct Location_t position;
     char symbol = 'P';
     std::string name = "player";
 };
 
 // Represents traps on the board
 // It is guarateed Trap position is in the board.
-struct Trap {
-    Location position;
+struct Trap_t {
+    struct Location_t position;
     char symbol = 'T';
 };
 
 // Represents Bandits moving around the map.
 // Position is altered through funtion moveBandit.
-struct Bandit {
-    Location position;
+struct Bandit_t {
+    struct Location_t position;
     char symbol = 'B';
 };
 
 // Represents the treasure.
 // The game ends as soon Player.position == Treasure.position
-struct Treasure {
-    Location position;
+struct Treasure_t {
+    struct Location_t position;
     char symbol = 'X';
 };
 
 // Represents the board.
-struct Board {
+struct Board_t {
     int xDimension;
     int yDimension;
-} board = {.xDimension = 10, .yDimension = 9};
+} Board_t = {.xDimension = 10, .yDimension = 9};
 
 /*
  * https://stackoverflow.com/questions/35869873/nested-structure-in-c
  */
 // Represents the world.
 struct World {
+    // Represents a place in the board.
+    // xPosition is the x-axis index and yPosition is the y-axis index
+    struct tLocation {
+        int xPosition;
+        int yPosition;
+    } tLocation;
     
     // Represents Bandits moving around the map.
     // Position is altered through funtion moveBandit.
-    struct Bandit {
-        struct Location position;
+    struct tBandit {
+        struct World::tLocation position;
         char symbol = 'B';
-    } Bandit;
+        std::string name = "bandit";
+    } tBandit;
     
     // Represents the board.
-    struct Board {
+    struct tBoard {
         int xDimension;
         int yDimension;
-    } Board = {.xDimension = 10, .yDimension = 9};
-    
-    // Represents a place in the board.
-    // xPosition is the x-axis index and yPosition is the y-axis index
-    struct Location {
-        int xPosition;
-        int yPosition;
-    } Location;
-    
+    } tBoard = {.xDimension = 10, .yDimension = 9};
+        
     // Represents the player.
     // It is guaranteed Player position is in the board.
     // Position is altered through function movePlayer.
-    struct Player {
-        struct Location position;
+    struct tPlayer {
+        struct World::tLocation position;
         char symbol = 'P';
         std::string name = "player";
-    } Player;
+    } tPlayer;
     
     // Represents traps on the board
     // It is guarateed Trap position is in the board.
-    struct Trap {
-        struct Location position;
+    struct tTrap {
+        struct World::tLocation position;
         char symbol = 'T';
-    } Trap;
+    } tTrap;
 
     // Represents the treasure.
     // The game ends as soon Player.position == Treasure.position
     struct Treasure {
-        struct Location position;
+        struct World::tLocation position;
         char symbol = 'X';
-    } Treasure;
-} worldDungeon;
+    } tTreasure;
+};
 
 
 // Possible directions. WRONG_DIRECTION is used to report incorrect input
@@ -178,19 +178,19 @@ void Walk_Main(void);
       If the player is in the same square than a bandit or
       a trap, the game ends with defeat.
  */
-void drawBoard(Player     player,
-               Trap       totalTraps[],
-               Bandit     totalBandits[],
-               Treasure   treasure);
+void drawBoard(Player_t     player,
+               Trap_t       totalTraps[],
+               Bandit_t     totalBandits[],
+               Treasure_t   treasure);
 
 /*
  * As drawBoard(), but draw to a buffer,
  * currentToRender[10][10], instead.
  */
-void drawBoard2(Player     player,
-                Trap       totalTraps[],
-                Bandit     totalBandits[],
-                Treasure   treasure);
+void drawBoard2(Player_t     player,
+                Trap_t       totalTraps[],
+                Bandit_t     totalBandits[],
+                Treasure_t   treasure);
 
 /* FUNC :: askDirection
   
@@ -222,7 +222,7 @@ Direction askDirection();
  Postcondition: player coordinates have been altered &&
         player remains inside the board.
 */
-void movePlayer(Player &player,
+void movePlayer(Player_t &player,
                 Direction direction);
 
 
@@ -242,14 +242,14 @@ void movePlayer(Player &player,
  Postcondition: player coordinates have been altered &&
         player remains inside the board.
 */
-void moveBandit(Bandit &bandit);
+void moveBandit(Bandit_t &bandit);
 
 
 /* FUNC :: moveCharacter
  
  in     char        cCharacter  // (P)layer || (B)andit
                                 
- inout  World       &world      // Player of the game
+ inout  World       &world      // World-struct the characters have in common
  
  in     Direction   direction   // Direction previously chosen.
                                 // It is represented by a Direction object,
@@ -262,7 +262,7 @@ void moveBandit(Bandit &bandit);
  Precondition:
  */
 void moveCharacter(char cCharacter,
-                   World &world = worldDungeon,
+                   World &world,
                    Direction direction = WRONG_DIRECTION);
 
 

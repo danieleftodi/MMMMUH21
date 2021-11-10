@@ -17,24 +17,24 @@ void Walk_Main(void) {
     std::srand( (unsigned int) std::time(0) );
 
     // Treasure position is decided randomly.
-    Treasure treasure =
+    Treasure_t treasure =
     {
-      .position = {.xPosition = std::rand() % board.xDimension,
-                   .yPosition = std::rand() % board.yDimension}
+      .position = {.xPosition = std::rand() % Board_t.xDimension,
+                   .yPosition = std::rand() % Board_t.yDimension}
     };
 
     // Traps are placed around the map. It is not guaranteed
     // that traps position doesn't converge.
     // In that case, the second trap can be assumed to not exist.
-    Trap trapsInMap[NUMBEROFTRAPS]; //Här skulle man kunna lägga till kod som fixar detta.
+    Trap_t trapsInMap[NUMBEROFTRAPS]; //Här skulle man kunna lägga till kod som fixar detta.
     
     /*LOOP*/
     for (int i = 0; i < NUMBEROFTRAPS; i++)
     {
-        int xPos = std::rand() % board.xDimension;
-        int yPos = std::rand() % board.yDimension;
+        int xPos = std::rand() % Board_t.xDimension;
+        int yPos = std::rand() % Board_t.yDimension;
         
-        Trap trap =
+        Trap_t trap =
         {
             .position = {.xPosition = xPos, .yPosition = yPos}
         };
@@ -45,15 +45,15 @@ void Walk_Main(void) {
     // Bandits are placed around the map. It is not guaranteed
     // that bandits position doesn't converge, but they will move
     // anyway.
-    Bandit banditsInMap[NUMBEROFBANDITS];
+    Bandit_t banditsInMap[NUMBEROFBANDITS];
     
     /*LOOP*/
     for (int i = 0; i < NUMBEROFBANDITS; i++)
     {
-        int xPos = std::rand() % board.xDimension;
-        int yPos = std::rand() % board.yDimension;
+        int xPos = std::rand() % Board_t.xDimension;
+        int yPos = std::rand() % Board_t.yDimension;
         
-        Bandit bandit =
+        Bandit_t bandit =
         {
             .position = {.xPosition = xPos, .yPosition = yPos}
         };
@@ -70,8 +70,8 @@ void Walk_Main(void) {
     /*LOOP*/
     do
     {
-        xPos = std::rand() % board.xDimension;
-        yPos = std::rand() % board.yDimension;
+        xPos = std::rand() % Board_t.xDimension;
+        yPos = std::rand() % Board_t.yDimension;
         
         for (int i = 0; i < NUMBEROFTRAPS; i++)
         {
@@ -89,7 +89,7 @@ void Walk_Main(void) {
     } while (match);
 
     // Player is placed on the map.
-    Player player =
+    Player_t player =
     {
         .position = {.xPosition = xPos, .yPosition = yPos}
         
@@ -137,23 +137,23 @@ void Walk_Main(void) {
     
 }
 
-void drawBoard(Player   player,
-               Trap     totalTraps[],
-               Bandit   totalBandits[],
-               Treasure treasure)
+void drawBoard(Player_t   player,
+               Trap_t     totalTraps[],
+               Bandit_t   totalBandits[],
+               Treasure_t treasure)
 {
     bool squareDrawn = false;
 
     /*LOOP*/
-    for (int y = 0; y <= board.yDimension; y++)
+    for (int y = 0; y <= Board_t.yDimension; y++)
     {
         /*LOOP - NESTED*/
-        for (int x = 0; x <= board.xDimension; x++)
+        for (int x = 0; x <= Board_t.xDimension; x++)
         {
             /*LOOP - NESTED*/
             // Traps are drawn
             for (int z = 0; z <= NUMBEROFTRAPS; z++) {
-                Trap trapToDraw = totalTraps[z];
+                Trap_t trapToDraw = totalTraps[z];
                 
                 if ( (trapToDraw.position.xPosition == x) &&
                      (trapToDraw.position.yPosition == y) )
@@ -169,7 +169,7 @@ void drawBoard(Player   player,
             // only the second is drawn.
             for (int z = 0; z <= NUMBEROFBANDITS; z++)
             {
-                Bandit banditToDraw = totalBandits[z];
+                Bandit_t banditToDraw = totalBandits[z];
                 if ( (banditToDraw.position.xPosition == x) &&
                      ((banditToDraw.position.yPosition == y) && (!squareDrawn)) )
                 {
@@ -212,23 +212,23 @@ void drawBoard(Player   player,
     }
 }
 
-void drawBoard2(Player   player,
-                Trap     totalTraps[],
-                Bandit   totalBandits[],
-                Treasure treasure)
+void drawBoard2(Player_t   player,
+                Trap_t     totalTraps[],
+                Bandit_t   totalBandits[],
+                Treasure_t treasure)
 {
     bool squareDrawn = false;
     
     /*LOOP*/
-    for (int y = 0; y <= board.yDimension; y++)
+    for (int y = 0; y <= Board_t.yDimension; y++)
     {
         /*LOOP - NESTED*/
-        for (int x = 0; x <= board.xDimension; x++)
+        for (int x = 0; x <= Board_t.xDimension; x++)
         {
             /*LOOP - NESTED*/
             // Traps are drawn
             for (int z = 0; z <= NUMBEROFTRAPS; z++) {
-                Trap trapToDraw = totalTraps[z];
+                Trap_t trapToDraw = totalTraps[z];
                 
                 if ( (trapToDraw.position.xPosition == x) &&
                     (trapToDraw.position.yPosition == y) )
@@ -244,7 +244,7 @@ void drawBoard2(Player   player,
             // only the second is drawn.
             for (int z = 0; z <= NUMBEROFBANDITS; z++)
             {
-                Bandit banditToDraw = totalBandits[z];
+                Bandit_t banditToDraw = totalBandits[z];
                 if ( (banditToDraw.position.xPosition == x) &&
                     ((banditToDraw.position.yPosition == y) && (!squareDrawn)) )
                 {
@@ -288,7 +288,7 @@ void drawBoard2(Player   player,
     clearScreen();
     
     /*LOOP*/
-    for (int y = 0; y <= board.yDimension; y++)
+    for (int y = 0; y <= Board_t.yDimension; y++)
     {
    
 #if DEBUG_LOGGING
@@ -304,7 +304,7 @@ void drawBoard2(Player   player,
 #endif
         
         /*LOOP - NESTED*/
-        for (int x = 0; x <= board.xDimension; x++)
+        for (int x = 0; x <= Board_t.xDimension; x++)
         {
 
 #if DEBUG_LOGGING
@@ -373,12 +373,12 @@ Direction askDirection()
     return chosenDirection;
 }
 
-void movePlayer(Player &player,
+void movePlayer(Player_t &player,
                 Direction direction)
 {
     switch (direction) {
         case RIGHT:
-            if (player.position.xPosition < board.xDimension)
+            if (player.position.xPosition < Board_t.xDimension)
               player.position.xPosition += 1;
             break;
         case LEFT:
@@ -390,7 +390,7 @@ void movePlayer(Player &player,
               player.position.yPosition -= 1;
             break;
         case BOTTOM:
-            if (player.position.yPosition < board.yDimension)
+            if (player.position.yPosition < Board_t.yDimension)
               player.position.yPosition += 1;
             break;
         case WRONG_DIRECTION:
@@ -404,13 +404,13 @@ void movePlayer(Player &player,
     }
 }
 
-void moveBandit(Bandit &bandit)
+void moveBandit(Bandit_t &bandit)
 {
     int direction = std::rand() % 4;
     
     switch (direction) {
         case 0:
-            if (bandit.position.xPosition < board.xDimension)
+            if (bandit.position.xPosition < Board_t.xDimension)
                 bandit.position.xPosition += 1;
             break;
         case 1:
@@ -422,7 +422,7 @@ void moveBandit(Bandit &bandit)
                 bandit.position.yPosition -= 1;
             break;
         case 3:
-            if (bandit.position.yPosition < board.yDimension)
+            if (bandit.position.yPosition < Board_t.yDimension)
                 bandit.position.yPosition += 1;
             break;
         default:
@@ -441,20 +441,20 @@ void moveCharacter(char cCharacter,
         case 'B':
             switch (iBandit_direction) {
                 case 0:
-                    if (world.Bandit.position.xPosition < board.xDimension)
-                        world.Bandit.position.xPosition += 1;
+                    if (world.tBandit.position.xPosition < Board_t.xDimension)
+                        world.tBandit.position.xPosition += 1;
                     break;
                 case 1:
-                    if (world.Bandit.position.xPosition > 0)
-                        world.Bandit.position.xPosition -= 1;
+                    if (world.tBandit.position.xPosition > 0)
+                        world.tBandit.position.xPosition -= 1;
                     break;
                 case 2:
-                    if (world.Bandit.position.yPosition > 0)
-                        world.Bandit.position.yPosition -= 1;
+                    if (world.tBandit.position.yPosition > 0)
+                        world.tBandit.position.yPosition -= 1;
                     break;
                 case 3:
-                    if (world.Bandit.position.yPosition < board.yDimension)
-                        world.Bandit.position.yPosition += 1;
+                    if (world.tBandit.position.yPosition < Board_t.yDimension)
+                        world.tBandit.position.yPosition += 1;
                     break;
                 default:
                     break;
@@ -464,20 +464,20 @@ void moveCharacter(char cCharacter,
         case 'P':
             switch (direction) {
                 case RIGHT:
-                    if (world.Player.position.xPosition < board.xDimension)
-                        world.Player.position.xPosition += 1;
+                    if (world.tPlayer.position.xPosition < Board_t.xDimension)
+                        world.tPlayer.position.xPosition += 1;
                     break;
                 case LEFT:
-                    if (world.Player.position.xPosition > 0)
-                        world.Player.position.xPosition -= 1;
+                    if (world.tPlayer.position.xPosition > 0)
+                        world.tPlayer.position.xPosition -= 1;
                     break;
                 case TOP:
-                    if (world.Player.position.yPosition > 0)
-                        world.Player.position.yPosition -= 1;
+                    if (world.tPlayer.position.yPosition > 0)
+                        world.tPlayer.position.yPosition -= 1;
                     break;
                 case BOTTOM:
-                    if (world.Player.position.yPosition < board.yDimension)
-                        world.Player.position.yPosition += 1;
+                    if (world.tPlayer.position.yPosition < Board_t.yDimension)
+                        world.tPlayer.position.yPosition += 1;
                     break;
                 case WRONG_DIRECTION:
 #if !DEBUG_LOGGING
