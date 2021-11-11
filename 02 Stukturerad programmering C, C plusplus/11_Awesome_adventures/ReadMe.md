@@ -9,7 +9,7 @@ So I decided to make this "Awesome adventures" text based game, with a twist.
  
 **Don't fall into the trap! ... of violence and killing**
 
-That is how this game started to take shape.
+That is how this game started to take shape. 
 
 
 # Abstract

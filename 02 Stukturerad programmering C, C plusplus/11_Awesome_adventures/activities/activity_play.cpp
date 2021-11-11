@@ -25,11 +25,14 @@ void guess_what_stig_it_thinking (void) {
     std::random_device rd;                              // obtain a random number from hardware
 
     do {
+        /*
+         * Move this code to common_lib.h
+         */
         std::mt19937 gen(rd());                         // seed the generator
         std::uniform_int_distribution<> distr(0, 10);   // define the range
-        for (int n=0; n<1; ++n) {
+//        for (int n=0; n<1; ++n) {
             iVarRand = distr(gen);                      // generate numbers
-        }
+//        }
 
         system("clear");
         std::cout << "############################################\n";
