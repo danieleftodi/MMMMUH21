@@ -1,0 +1,3 @@
+[submodule "01 Inbyggda system intro/00_introduction-to-rtos"]
+	path = 01 Inbyggda system intro/00_introduction-to-rtos
+	url = git@github.com:danieleftodi/MMMMUH21_introduction-to-rtos.git
