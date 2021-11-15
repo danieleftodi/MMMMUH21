@@ -15,6 +15,28 @@ void Walk_Main(void) {
     FIXED: with casting (unsigned int)
 */  
     std::srand( (unsigned int) std::time(0) );
+    
+    // init world structure
+    tWorld world =
+    {
+        // Treasure position is decided randomly.
+        .tTreasure.position.xPosition = std::rand() % world.tBoard.xDimension,
+        .tTreasure.position.yPosition = std::rand() % world.tBoard.yDimension,
+        .banditsInMap[0] =
+        {
+            .name = "Bandit 1",
+            .symbol = 'A',
+            .position.xPosition = 0,
+            .position.yPosition = 0
+        },
+        .banditsInMap[1] =
+        {
+            .name = "Bandit 2",
+            .symbol = 'C',
+            .position.xPosition = 10,
+            .position.yPosition = 10
+        }
+    };
 
     // Treasure position is decided randomly.
     Treasure_t treasure =
@@ -109,7 +131,7 @@ void Walk_Main(void) {
         drawBoard2(player, trapsInMap, banditsInMap, treasure);
         
         // 2. User is asked for movement direction.
-        Direction direction;
+        eDirection direction;
     
         /*LOOP - NESTED*/
         do
@@ -121,7 +143,7 @@ void Walk_Main(void) {
         
         // 3. Player moves in the chosen direction.
         movePlayer(player, direction);
-//        moveCharacter(worldDungeon.Player.symbol, worldDungeon, direction);
+//        moveCharacter(player.symbol, &tWorld, direction);
         
         // 4. Bandits move.
         /*LOOP - NESTED*/
@@ -331,17 +353,17 @@ void drawBoard2(Player_t   player,
     }
 }
 
-Direction askDirection()
+eDirection askDirection()
 {
-#if DEBUG_LOGGING
-    printf("askDirection() :: IN  :: %d\n", ++DBG_Counter);
+#if !DEBUG_LOGGING
+    printf("askDirection() :: IN  :: %d\n", ++DBG_COUNT_ASKD);
 #endif
     
     printf("Select [L/A]eft, [R/D]ight, [T/W]op or [B/S]ottom: ");
     char answer;
     std::cin >> answer;
 
-    Direction chosenDirection;
+    eDirection chosenDirection;
     switch (std::toupper(answer))
     {
         case 'L':
@@ -365,8 +387,8 @@ Direction askDirection()
             break;
     }
     
-#if DEBUG_LOGGING
-    printf("askDirection() :: OUT :: %d\n", DBG_Counter);
+#if !DEBUG_LOGGING
+    printf("askDirection() :: OUT :: %d\n", DBG_COUNT_ASKD);
     delay(1.5);
 #endif
     
@@ -374,8 +396,17 @@ Direction askDirection()
 }
 
 void movePlayer(Player_t &player,
-                Direction direction)
+                eDirection direction)
 {
+#if !DEBUG_LOGGING
+    printf("movePlayer()   :: IN  :: %d\n", ++DBG_COUNT_MOVP);
+    printf("movePlayer()   :: player.name: %s\n", player.name.c_str());
+    printf("movePlayer()   :: player.posX: %d\n", player.position.xPosition);
+    printf("movePlayer()   :: player.posY: %d\n", player.position.yPosition);
+    printf("movePlayer()   :: player.symb: %c\n", player.symbol);
+    printf("movePlayer()   :: direction: %d\n", direction);
+#endif
+    
     switch (direction) {
         case RIGHT:
             if (player.position.xPosition < Board_t.xDimension)
@@ -395,18 +426,31 @@ void movePlayer(Player_t &player,
             break;
         case WRONG_DIRECTION:
 #if !DEBUG_LOGGING
-            printf("\nmovePlayer :: **Incorrect input**\n");
+            printf("\nmovePlayer() :: **Incorrect input**\n");
 #endif
             
             break;
         default:
             break;
     }
+#if !DEBUG_LOGGING
+    printf("movePlayer()   :: OUT :: %d\n", DBG_COUNT_MOVP);
+    delay(2);
+#endif
 }
 
 void moveBandit(Bandit_t &bandit)
 {
     int direction = std::rand() % 4;
+    
+#if !DEBUG_LOGGING
+    printf("moveBandit()   :: IN  :: %d\n", ++DBG_COUNT_MOVB);
+    printf("moveBandit()   :: bandit.name: %s\n", bandit.name.c_str());
+    printf("moveBandit()   :: bandit.posX: %d\n", bandit.position.xPosition);
+    printf("moveBandit()   :: bandit.posY: %d\n", bandit.position.yPosition);
+    printf("moveBandit()   :: bandit.symb: %c\n", bandit.symbol);
+    printf("moveBandit()   :: direction: %d\n", direction);
+#endif
     
     switch (direction) {
         case 0:
@@ -428,14 +472,26 @@ void moveBandit(Bandit_t &bandit)
         default:
             break;
     }
+#if !DEBUG_LOGGING
+    printf("moveBandit()   :: OUT :: %d\n", DBG_COUNT_MOVB);
+    delay(3);
+#endif
 }
 
 void moveCharacter(char cCharacter,
-                   World &world,
-                   Direction direction)
+                   tWorld &world,
+                   eDirection direction)
 {
-    
     int iBandit_direction = std::rand() % 4;
+    
+#if !DEBUG_LOGGING
+    printf("moveCharacter() :: IN  :: %d\n", ++DBG_COUNT_MOVC);
+    printf("moveCharacter() :: bandit.name: %s\n", world.tCharacter.name.c_str());
+    printf("moveCharacter() :: bandit.posX: %d\n", world.tCharacter.position.xPosition);
+    printf("moveCharacter() :: bandit.posY: %d\n", world.tCharacter.position.yPosition);
+    printf("moveCharacter() :: bandit.symb: %c\n", world.tCharacter.symbol);
+    printf("moveCharacter() :: direction: %d\n", direction);
+#endif
     
     switch (cCharacter) {
         case 'B':
@@ -491,9 +547,13 @@ void moveCharacter(char cCharacter,
         default:
             break;
     }
+#if !DEBUG_LOGGING
+    printf("moveCharacter() :: OUT :: %d\n", DBG_COUNT_MOVC);
+    delay(3);
+#endif
 }
 
-void endGame(Result result)
+void endGame(eResult result)
 {
     std::string announcement = (result == VICTORY) ? "YOU WIN" : "GAME OVER";
     

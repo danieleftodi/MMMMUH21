@@ -28,7 +28,10 @@
 // ENABLE-DISABLE debug logging
 #define DEBUG_LOGGING false
 
-int DBG_Counter = 0;
+int DBG_COUNT_ASKD = 0;
+int DBG_COUNT_MOVB = 0;
+int DBG_COUNT_MOVC = 0;
+int DBG_COUNT_MOVP = 0;
 
 /* DECLARATIONS */
 
@@ -62,7 +65,7 @@ struct Location_t {
 struct Player_t {
     struct Location_t position;
     char symbol = 'P';
-    std::string name = "player";
+    std::string name = "Player";
 };
 
 // Represents traps on the board
@@ -77,6 +80,7 @@ struct Trap_t {
 struct Bandit_t {
     struct Location_t position;
     char symbol = 'B';
+    std::string name = "Bandit";
 };
 
 // Represents the treasure.
@@ -96,20 +100,45 @@ struct Board_t {
  * https://stackoverflow.com/questions/35869873/nested-structure-in-c
  */
 // Represents the world.
-struct World {
+struct tWorld {
+
+/*
+protected:
+    static const int  iProtectedInt    = 1;
+    static const char iProtectedSymbol = 'X';
+    
+private:
+    static const int  iPrivateInt    = 2;
+    
+    // Kolla upp hur man kan ge dessa ett värden!!!
+    static char iPrivateSymbol;
+*/
+public:
+    static const int iNUMBEROFTRAPS   = 3;
+    static const int iNUMBEROFBANDITS = 2;
+    char iPublicSymbol = 'Y';
+    
     // Represents a place in the board.
     // xPosition is the x-axis index and yPosition is the y-axis index
     struct tLocation {
         int xPosition;
         int yPosition;
-    } tLocation;
+    };
+
+    // A common charater struct for both bandit and player.
+    // Position is altered through function moveCharacter.
+    struct tCharacter {
+        struct tWorld::tLocation position;
+        char symbol;
+        std::string name;
+    } tCharacter;
     
     // Represents Bandits moving around the map.
     // Position is altered through funtion moveBandit.
     struct tBandit {
-        struct World::tLocation position;
+        struct tWorld::tLocation position;
         char symbol = 'B';
-        std::string name = "bandit";
+        std::string name = "Bandit";
     } tBandit;
     
     // Represents the board.
@@ -122,30 +151,36 @@ struct World {
     // It is guaranteed Player position is in the board.
     // Position is altered through function movePlayer.
     struct tPlayer {
-        struct World::tLocation position;
+        struct tWorld::tLocation position;
         char symbol = 'P';
-        std::string name = "player";
+        std::string name = "Player";
     } tPlayer;
     
     // Represents traps on the board
     // It is guarateed Trap position is in the board.
     struct tTrap {
-        struct World::tLocation position;
+        struct tWorld::tLocation position;
         char symbol = 'T';
     } tTrap;
+    
+    struct tWorld::tTrap trapsInMap[iNUMBEROFTRAPS];
+    struct tWorld::tBandit banditsInMap[iNUMBEROFBANDITS];
 
     // Represents the treasure.
     // The game ends as soon Player.position == Treasure.position
-    struct Treasure {
-        struct World::tLocation position;
+    struct tTreasure {
+        struct tWorld::tLocation position;
         char symbol = 'X';
     } tTreasure;
+        
+//protected:
+//    int iProtected = 1;
 };
 
 
 // Possible directions. WRONG_DIRECTION is used to report incorrect input
-enum Direction { RIGHT, LEFT, TOP, BOTTOM, WRONG_DIRECTION };
-enum Result { VICTORY, DEFEAT };
+enum eDirection { RIGHT, LEFT, TOP, BOTTOM, WRONG_DIRECTION };
+enum eResult { VICTORY, DEFEAT };
 
 
 /* FUNCTIONS */
@@ -201,7 +236,7 @@ void drawBoard2(Player_t     player,
  Return: a Direction value containing the direction chosen or
  WRONG_DIRECTION.
 */
-Direction askDirection();
+eDirection askDirection();
 
 
 /* FUNC :: movePlayer
@@ -223,7 +258,7 @@ Direction askDirection();
         player remains inside the board.
 */
 void movePlayer(Player_t &player,
-                Direction direction);
+                eDirection direction);
 
 
 /* FUNC :: moveBandit
@@ -262,8 +297,8 @@ void moveBandit(Bandit_t &bandit);
  Precondition:
  */
 void moveCharacter(char cCharacter,
-                   World &world,
-                   Direction direction = WRONG_DIRECTION);
+                   tWorld &world,
+                   eDirection direction = WRONG_DIRECTION);
 
 
 /* FUNC :: endGame
@@ -279,7 +314,7 @@ void moveCharacter(char cCharacter,
               or player.position == treasure.position [VICTORY]
  Poscondition: game is ended. Greeting message is printed.
 */
-void endGame(Result result);
+void endGame(eResult result);
 
 
 /* FUNC :: clearScreen
