@@ -5,5 +5,6 @@ struct Treasure {
 
   };
 };
-  Treasure treasure; 
-  treasure.drawBoardInStuct();
+
+Treasure treasure;
+treasure.drawBoardInStuct();

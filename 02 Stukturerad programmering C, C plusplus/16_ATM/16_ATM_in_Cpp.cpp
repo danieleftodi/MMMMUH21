@@ -78,14 +78,14 @@ void tATM::AccountMenu(void)
         if (iLoggedInUserAccountID > -1)
         {
             std::cout << "  (D) - Deposite money\n";
-            std::cout << "  (W) - Withdrawl money\n";
-            std::cout << "  (R) - Request balance\n";
+            std::cout << "  (W) - Withdraw money\n";
+            std::cout << "  (V) - View balance\n";
             std::cout << "  (O) - Log out\n";
         }
         else
         {
             std::cout << "  (L) - Login\n";
-            std::cout << "  (C) - Create new user account\n";
+            std::cout << "  (C) - Create new account\n";
         }
         std::cout << "  (Q) - Quit\n";
         std::cout << "\n";
@@ -200,8 +200,8 @@ void tATM::AccountMenu(void)
                     delay(3);
                 }
                 break;
-            case 'r':
-            case 'R':
+            case 'v':
+            case 'V':
 //                printf("LOG_DBG: %c\n", cUserInput);
                 if (iLoggedInUserAccountID > -1)
                 {
@@ -361,8 +361,9 @@ void tATM::WithdrawMoney(double dWithdrawalAmount)
     else
     {
         // Human UI/UX ...
-        printf("  You don't have  : %d\n", (int) dWithdrawalAmount);
-        printf("  disposable on your account\n");
+        printf("\n  You don't have   : %d\n", (int) dWithdrawalAmount);
+        printf("  disposable on your account\n\n");
+        printf("  Maximum withdraw : %d\n", (int) vATMAccounts[iLoggedInUserAccountID].dAccountBalance);
                
         // Track Last Operation
         eATMLastOperation = WITHDRAWAL_FAILED;
