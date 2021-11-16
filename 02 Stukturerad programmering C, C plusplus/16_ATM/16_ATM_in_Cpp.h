@@ -20,7 +20,7 @@
 /* DEFINITIONS */
 
 // ENABLE-DISABLE debug logging
-#define DEBUG_LOGGING false
+#define DEBUG_LOGGING true
 
 /* DECLARATIONS */
 
@@ -30,7 +30,7 @@ struct tATM
     /* STRUCT - DECLARATIONS */
     
     // Track what User is logged in. -1 >= NO_ONE ...
-    int  iLoggedInUserAccountID = -1;
+    int  iLoggedInATMAccountsID = -1;
     
     // An enum for all the types of operations (currently) available in the ATM
     enum eOperation
@@ -152,25 +152,25 @@ struct tATM
     void SetAccountBalance(int iAccountID, double dAmount);
 
     // Defines last action made by user
-    void SetLastOperation(int iAccountID, char cUserInput);
+    void SetLastOperation(int iAccountID, eOperation eLastOperation);
 
     // Makes sure the account login is in the list
     int GetLoggedInUserAccountID(void) const;
 
     // Gets the information on most recently performed transaction
-    double GetLastMoneyMovement(int accountID) const;
+    double GetLastMoneyMovement(int iAccountID) const;
 
     // Shows the users account balance
-    double GetAccountBalance(int accountID) const;
+    double GetAccountBalance(int iAccountID) const;
 
     // Retrieves the balance before last performed action
-    double GetBeginningBalance(int accountID) const;
+    double GetBeginningBalance(int iAccountID) const;
 
     // Gets the last action, ex withdrawal or deposit
-    char GetLastOperation(int accountID) const;
+    char GetLastOperation(int iAccountID) const;
 
     // Gets the username of the logged in account
-    std::string GetUsername(int accountID) const;
+    std::string GetUsername(int iAccountID) const;
     
     // a common Debug logging function
     void DBG_LOG(std::string sText,
@@ -179,7 +179,7 @@ struct tATM
                  std::string sVarC = "",
                  std::string sVarD = "",
                  std::string sVarE = "",
-                 std::string sVarF = "");
+                 std::string sVarF = "") const;
     
     /* From our common_lib - BEGIN */
     void clearScreen(void)
