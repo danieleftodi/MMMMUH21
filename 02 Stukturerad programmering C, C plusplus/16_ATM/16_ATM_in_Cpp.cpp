@@ -95,7 +95,7 @@ void tATM::AccountMenu(void)
         switch (cUserInput) {
             case 'l':
             case 'L':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID < 0)
                 {
                     // Track Last Operation
@@ -125,10 +125,17 @@ void tATM::AccountMenu(void)
                     // Human UI/UX ...
                     delay(3);
                 }
+                else
+                {
+                    printf("  Operation is not allow, You are already logged in\n");
+                    
+                    // Human UI/UX ...
+                    delay(3);
+                }
                 break;
             case 'd':
             case 'D':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID > -1)
                 {
                     // Track Last Operation
@@ -159,12 +166,14 @@ void tATM::AccountMenu(void)
                 else
                 {
                     printf("  Operation is not allow, 1st login\n");
+                    
+                    // Human UI/UX ...
                     delay(3);
                 }
                 break;
             case 'w':
             case 'W':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID > -1)
                 {
                     // Track Last Operation
@@ -196,12 +205,14 @@ void tATM::AccountMenu(void)
                 else
                 {
                     printf("  Operation is not allow, 1st login\n");
+                    
+                    // Human UI/UX ...
                     delay(3);
                 }
                 break;
             case 'v':
             case 'V':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID > -1)
                 {
                     // Track Last Operation
@@ -245,18 +256,39 @@ void tATM::AccountMenu(void)
                 else
                 {
                     printf("  Operation is not allow, 1st login\n");
+                    
+                    // Human UI/UX ...
                     delay(3);
                 }
                 break;
             case 'c':
             case 'C':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID < 0)
                 {
                     // Track Last Operation
                     eATMLastOperation = CREATE;
                     
-                    CreateNewAccount("Test", "Test");
+                    // temp NewUser struct
+                    tATM::tLoginDefaults tNewUserTemp;
+                    
+                    // ask for inputs
+                    printf("\n  Enter Username: ");
+                    std::cin >> tNewUserTemp.sUsername;
+                    printf("  Enter Password: ");
+                    std::cin >> tNewUserTemp.sPassword;
+                    
+                    // try to CreateNewAccount --> eATMLastOperation
+                    CreateNewAccount(tNewUserTemp.sUsername, tNewUserTemp.sPassword);
+                    
+                    // Let users know if they logged in
+                    if (eATMLastOperation == CREATE_SUCCESSFULL) {
+                        printf("  Create new user succesfull\n");
+                    }
+                    else
+                    {
+                        printf("  Create new user failed, try again ...\n");
+                    }
                     
                     // Human UI/UX ...
                     delay(3);
@@ -271,7 +303,7 @@ void tATM::AccountMenu(void)
                 break;
             case 'o':
             case 'O':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 if (iLoggedInATMAccountsID > -1)
                 {
                     // Track Last Operation
@@ -293,7 +325,7 @@ void tATM::AccountMenu(void)
                 break;
             case 'q':
             case 'Q':
-//                printf("LOG_DBG: %c\n", cUserInput);
+                DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
                 bMainMenuValidSelection = true;
                 break;
             default:
@@ -450,8 +482,27 @@ double tATM::GetAccountBalance(int iAccountID) const
 
 void tATM::CreateNewAccount(std::string sNewUsername, std::string sNewPassword)
 {
-    printf("\n\nHello CreateNewAccount\n");
-    printf("Add code to CreateNewAccount for: %s:%s\n\n", sNewUsername.c_str(), sNewPassword.c_str());
+    DBG_LOG( "tATM::CreateNewAccount :: IN  ::  ", sNewUsername.c_str(), ":", sNewPassword.c_str());
+    
+    // NewUser struct
+    tATM::tAccountDefaults tNewUser =
+    {
+        .sUsername      = sNewUsername,
+        .sPassword      = sNewPassword,
+        .eLastOperation = NEW_ACCOUNT_SUCCESSFULL
+    };
+    
+    // Ask for Users name
+    printf("  What is your name: ");
+    std::cin >> tNewUser.sName;
+
+    // Append new user to the vATMAccounts vector
+    vATMAccounts.push_back(tNewUser);
+    
+    // Track Last Operation
+    eATMLastOperation = CREATE_SUCCESSFULL;
+    
+    DBG_LOG("\ntATM::CreateNewAccount :: OUT  :: ", eOperation_str[eATMLastOperation]);
 }
 
 void tATM::SetLastOperation(int iAccountID, eOperation eLastOperation)

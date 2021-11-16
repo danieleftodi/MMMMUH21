@@ -5,21 +5,21 @@
 
 1. ✅ För att komma åt denna information måste personen ange sitt användarnamn samt sitt lösenord.
 
-2. 🔴 Om personen inte har ett konto måste personen istället välja alternativet “Create New Account” där användaren då får ange användarnamn samt lösenord och då mera blir registrerad användare. Efter detta skall användaren nu kunna logga in och nyttja nämnda funktioner ovan.
+2. ✅ Om personen inte har ett konto måste personen istället välja alternativet “Create New Account” där användaren då får ange användarnamn samt lösenord och då mera blir registrerad användare. Efter detta skall användaren nu kunna logga in och nyttja nämnda funktioner ovan.
 
-3. 🟡 Ni skall koda ett program som agerar bankomat.
+3. ✅ Ni skall koda ett program som agerar bankomat.
 
 4. ✅ I denna bankomat skall användaren kunna sätta in pengar.
 
 5. ✅ Samt ta ut pengar.
 
-6. 🔴 och även se sitt saldo. 
+6. ✅ och även se sitt saldo. 
 
 7. ✅ Saldot skall även alltid uppvisas efter en handling som har förändrat det, exempelvis uttag eller insättning. 
 
 8. ✅ Till en början byggs detta med runtime memory så att användarens saldo bara sparas under användningen.
 
-9. 🔶 men vi kommer sedan bygga vidare med exempelvis databasfunktion för lagring och flertalet andra funktioner. <p>
+9. ⚠️🚸🚧 men vi kommer sedan bygga vidare med exempelvis databasfunktion för lagring och flertalet andra funktioner. <p>
 **[NOTE]: I have defined a few standard users that get initialiazed by default at runtime. To not have to always begin with creating new user(s)**
 
 ### Moment 1
