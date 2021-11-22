@@ -30,7 +30,7 @@ struct tATM
     /* STRUCT - DECLARATIONS */
     
     // Track what User is logged in. -1 >= NO_ONE ...
-    int  iLoggedInATMAccountsID = -1;
+    int  loggedInAccountLocation = -1;
     
     // An enum for all the types of operations (currently) available in the ATM
     enum eOperation
@@ -89,7 +89,8 @@ struct tATM
     // Defaults for Login screen
     struct tLoginDefaults
     {
-        std::string           sName = "Default User Account";
+        std::string           sFirstName = "Default";
+        std::string           sLastName = "User";
         std::string           sUsername;
         std::string           sPassword;
     };
@@ -107,8 +108,11 @@ struct tATM
     // Defaults for a new User Account
     struct tAccountDefaults
     {
-        int                   iAccountID;
-        std::string           sName = "Default User Account";
+        // iAccountID = Swedish Social Security Number
+        // In one 'long int' number: YYYYMMDDNNNN
+        unsigned long int     uliAccountID;
+        std::string           sFirstName = "Default";
+        std::string           sLastName = "User";
         std::string           sUsername;
         std::string           sPassword;
         
@@ -145,32 +149,32 @@ struct tATM
     void SetAccountLogin(int iSetAccountLocation);
 
     // Sets what the last action was for that account (dep or withdr)
-    void SetLastMoneyMovement(int iAccountID, double dAmount);
+    void SetLastMoneyMovement(unsigned long int uliAccountID, double dAmount);
 
     // Func that ensures the users account starts as 0 as well as
     // that it updates when performing withdrawal or deposit
-    void SetAccountBalance(int iAccountID, double dAmount);
+    void SetAccountBalance(unsigned long int uliAccountID, double dAmount);
 
     // Defines last action made by user
-    void SetLastOperation(int iAccountID, eOperation eLastOperation);
+    void SetLastOperation(unsigned long int uliAccountID, eOperation eLastOperation);
 
     // Makes sure the account login is in the list
-    int GetLoggedInUserAccountID(void) const;
+    unsigned long int GetLoggedInUserAccountID(void) const;
 
     // Gets the information on most recently performed transaction
-    double GetLastMoneyMovement(int iAccountID) const;
+    double GetLastMoneyMovement(unsigned long int uliAccountID) const;
 
     // Shows the users account balance
-    double GetAccountBalance(int iAccountID) const;
+    double GetAccountBalance(unsigned long int uliAccountID) const;
 
     // Retrieves the balance before last performed action
-    double GetBeginningBalance(int iAccountID) const;
+    double GetBeginningBalance(unsigned long int uliAccountID) const;
 
     // Gets the last action, ex withdrawal or deposit
-    char GetLastOperation(int iAccountID) const;
+    char GetLastOperation(unsigned long int uliAccountID) const;
 
     // Gets the username of the logged in account
-    std::string GetUsername(int iAccountID) const;
+    std::string GetUsername(unsigned long int uliAccountID) const;
     
     // a common Debug logging function
     void DBG_LOG(std::string sText,

@@ -16,24 +16,27 @@ int main(int argc, char ** argv){
         .vATMAccounts =
         {
             {
-                .iAccountID = 0,
-                .sName = "Root",
+                .uliAccountID = 198104011122,
+                .sFirstName = "Root",
+                .sLastName = "Admin",
                 .sUsername = "root",
                 .sPassword = "root",
                 .dAccountBalance = 10000,
                 .eLastOperation = tATM::NEW_ACCOUNT_SUCCESSFULL
             },
             {
-                .iAccountID = 1,
-                .sName = "Daniel",
+                .uliAccountID = 198107222233,
+                .sFirstName = "Daniel",
+                .sLastName = "Eftodi",
                 .sUsername = "deft",
                 .sPassword = "test",
                 .dAccountBalance = 0,
                 .eLastOperation = tATM::NEW_ACCOUNT_SUCCESSFULL
             },
             {
-                .iAccountID = 2,
-                .sName = "Felicia",
+                .uliAccountID = 199502113344,
+                .sFirstName = "Felicia",
+                .sLastName = "Bornudd",
                 .sUsername = "fbor",
                 .sPassword = "test",
                 .dAccountBalance = 0,
@@ -41,6 +44,14 @@ int main(int argc, char ** argv){
             },
         }
     };
+    
+    printf("INT_MAX : %u\n", INT_MAX);
+    printf("UINT_MAX: %u\n", UINT_MAX);
+    printf("LONG_MAX: %ld\n", LONG_MAX);
+    printf("ULONG_MAX: %lu\n", ULONG_MAX);
+    printf("LONG_MAX: %lld\n", LONG_LONG_MAX);
+    printf("ULONG_MAX: %llu\n", ULONG_LONG_MAX);
+    printf("MAXFLOAT: %f\n", MAXFLOAT);
     
     // Start ATM
     tFirstATM.AccountMenu();
@@ -64,9 +75,9 @@ void tATM::AccountMenu(void)
         std::cout << "############################################\n";
         std::cout << "## Auto Teller Machine                    ##\n";
         std::cout << "##                                        ##\n";
-        if (iLoggedInATMAccountsID > -1)
+        if (loggedInAccountLocation > -1)
         {
-            printf("## Main Menu  ::  %s                    ##\n", vATMAccounts[iLoggedInATMAccountsID].sUsername.c_str());
+            printf("## Main Menu  ::  %s                    ##\n", vATMAccounts[loggedInAccountLocation].sUsername.c_str());
         }
         else
         {
@@ -75,7 +86,7 @@ void tATM::AccountMenu(void)
         
         std::cout << "############################################\n";
         std::cout << "\n";
-        if (iLoggedInATMAccountsID > -1)
+        if (loggedInAccountLocation > -1)
         {
             std::cout << "  (D) - Deposite money\n";
             std::cout << "  (W) - Withdraw money\n";
@@ -96,7 +107,7 @@ void tATM::AccountMenu(void)
             case 'l':
             case 'L':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID < 0)
+                if (loggedInAccountLocation < 0)
                 {
                     // Track Last Operation
                     eATMLastOperation = LOGIN;
@@ -136,10 +147,10 @@ void tATM::AccountMenu(void)
             case 'd':
             case 'D':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID > -1)
+                if (loggedInAccountLocation > -1)
                 {
                     // Track Last Operation
-                    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID, DEPOSIT);
+                    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID, DEPOSIT);
                     
                     // temp accounting struct
                     tATM::tAccountingDefaults tAccountingTemp;
@@ -174,10 +185,10 @@ void tATM::AccountMenu(void)
             case 'w':
             case 'W':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID > -1)
+                if (loggedInAccountLocation > -1)
                 {
                     // Track Last Operation
-                    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+                    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                                      WITHDRAWAL);
                     
                     // temp accounting struct
@@ -213,17 +224,17 @@ void tATM::AccountMenu(void)
             case 'v':
             case 'V':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID > -1)
+                if (loggedInAccountLocation > -1)
                 {
                     // Track Last Operation
-                    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+                    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                                      GET_BALANCE);
                                                    
                     // temp accounting struct
                     tATM::tAccountingDefaults tAccountingTemp;
                     
                     // try to GetAccountBalance
-                    tAccountingTemp.dAccountBalance = GetAccountBalance(vATMAccounts[iLoggedInATMAccountsID].iAccountID);
+                    GetAccountBalance(vATMAccounts[loggedInAccountLocation].uliAccountID);
                     
                     if ( (int) tAccountingTemp.dAccountBalance != -12341337)
                     {
@@ -231,13 +242,13 @@ void tATM::AccountMenu(void)
                         printf("\n  Account Balance : %d\n", (int) tAccountingTemp.dAccountBalance);
                         
                         // Track Last Operation
-                        SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+                        SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                                          GET_BALANCE_SUCCESSFULL);
                     }
                     else
                     {
                         // Track Last Operation
-                        SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+                        SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                                          GET_BALANCE_FAILED);
                     }
                     
@@ -264,7 +275,7 @@ void tATM::AccountMenu(void)
             case 'c':
             case 'C':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID < 0)
+                if (loggedInAccountLocation < 0)
                 {
                     // Track Last Operation
                     eATMLastOperation = CREATE;
@@ -304,10 +315,10 @@ void tATM::AccountMenu(void)
             case 'o':
             case 'O':
                 DBG_LOG("LOG_DBG: ",  std::to_string(cUserInput));
-                if (iLoggedInATMAccountsID > -1)
+                if (loggedInAccountLocation > -1)
                 {
                     // Track Last Operation
-                    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID, LOGOUT);
+                    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID, LOGOUT);
                     
                     // Log out the user
                     AccountLogOut();
@@ -354,11 +365,11 @@ void tATM::AccountLogin(std::string sLoginUsername, std::string sLoginPassword)
         if ((vATMAccounts[i].sUsername == sLoginUsername) &&
             (vATMAccounts[i].sPassword == sLoginPassword))
         {
-            // Set iAccountID --> iLoggedInATMAccountsID
-            iLoggedInATMAccountsID = vATMAccounts[i].iAccountID;
+            // Set i --> loggedInAccountLocation
+            loggedInAccountLocation = i;
 
             // Track Last Operation
-            SetLastOperation(vATMAccounts[i].iAccountID, LOGIN_SUCCESSFULL);
+            SetLastOperation(vATMAccounts[i].uliAccountID, LOGIN_SUCCESSFULL);
             
             DBG_LOG("tATM::AccountLogin :: ", eOperation_str[eATMLastOperation]);
             
@@ -379,8 +390,8 @@ void tATM::AccountLogin(std::string sLoginUsername, std::string sLoginPassword)
 
 void tATM::AccountLogOut(void)
 {
-    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID, LOGOUT_SUCCESSFULL);
-    iLoggedInATMAccountsID = -1;
+    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID, LOGOUT_SUCCESSFULL);
+    loggedInAccountLocation = -1;
 }
 
 void tATM::DepositMoney(double dDepositAmount)
@@ -388,21 +399,21 @@ void tATM::DepositMoney(double dDepositAmount)
     DBG_LOG( "tATM::DepositMoney :: IN  :: ", std::to_string( (int) dDepositAmount) );
     
     // Update dAccountBalance --> dBeginningBalance
-    vATMAccounts[iLoggedInATMAccountsID].dBeginningBalance = vATMAccounts[iLoggedInATMAccountsID].dAccountBalance;
+    vATMAccounts[loggedInAccountLocation].dBeginningBalance = vATMAccounts[loggedInAccountLocation].dAccountBalance;
     
     // Add dDepositAmount --> dAccountBalance
-    vATMAccounts[iLoggedInATMAccountsID].dAccountBalance += dDepositAmount;
+    vATMAccounts[loggedInAccountLocation].dAccountBalance += dDepositAmount;
     
     // Set dLastMoneyMovement = dDepositAmount
-    vATMAccounts[iLoggedInATMAccountsID].dLastMoneyMovement = dDepositAmount;
+    vATMAccounts[loggedInAccountLocation].dLastMoneyMovement = dDepositAmount;
 
     // Human UI/UX ...
-    printf("  Opening Balance  : %d\n", (int) vATMAccounts[iLoggedInATMAccountsID].dBeginningBalance);
+    printf("  Opening Balance  : %d\n", (int) vATMAccounts[loggedInAccountLocation].dBeginningBalance);
     printf("  Deposited Amount : %d\n", (int) dDepositAmount);
-    printf("  Ending Balance   : %d\n", (int) vATMAccounts[iLoggedInATMAccountsID].dAccountBalance);
+    printf("  Ending Balance   : %d\n", (int) vATMAccounts[loggedInAccountLocation].dAccountBalance);
     
     // Track Last Operation
-    SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID, DEPOSIT_SUCCESSFULL);
+    SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID, DEPOSIT_SUCCESSFULL);
     
     DBG_LOG("tATM::DepositMoney :: OUT  :: ", eOperation_str[eATMLastOperation]);
 }
@@ -412,24 +423,24 @@ void tATM::WithdrawMoney(double dWithdrawalAmount)
     DBG_LOG( "tATM::WithdrawMoney :: IN  :: ", std::to_string( (int) -dWithdrawalAmount) );
     
     // Update dAccountBalance --> dBeginningBalance
-    vATMAccounts[iLoggedInATMAccountsID].dBeginningBalance = vATMAccounts[iLoggedInATMAccountsID].dAccountBalance;
+    vATMAccounts[loggedInAccountLocation].dBeginningBalance = vATMAccounts[loggedInAccountLocation].dAccountBalance;
     
     // Check if User has deposited clearance on the account, before doing a withdrawal
-    if ( vATMAccounts[iLoggedInATMAccountsID].dAccountBalance >= dWithdrawalAmount)
+    if ( vATMAccounts[loggedInAccountLocation].dAccountBalance >= dWithdrawalAmount)
     {
         // Remove -dWithdrawalAmount --> dAccountBalance
-        vATMAccounts[iLoggedInATMAccountsID].dAccountBalance -= dWithdrawalAmount;
+        vATMAccounts[loggedInAccountLocation].dAccountBalance -= dWithdrawalAmount;
         
         // Set dLastMoneyMovement = -dWithdrawalAmount
-        vATMAccounts[iLoggedInATMAccountsID].dLastMoneyMovement = -dWithdrawalAmount;
+        vATMAccounts[loggedInAccountLocation].dLastMoneyMovement = -dWithdrawalAmount;
         
         // Human UI/UX ...
-        printf("  Opening Balance  : %d\n", (int) vATMAccounts[iLoggedInATMAccountsID].dBeginningBalance);
+        printf("  Opening Balance  : %d\n", (int) vATMAccounts[loggedInAccountLocation].dBeginningBalance);
         printf("  Deposited Amount : %d\n", (int) -dWithdrawalAmount);
-        printf("  Ending Balance   : %d\n", (int) vATMAccounts[iLoggedInATMAccountsID].dAccountBalance);
+        printf("  Ending Balance   : %d\n", (int) vATMAccounts[loggedInAccountLocation].dAccountBalance);
         
         // Track Last Operation
-        SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+        SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                          WITHDRAWAL_SUCCESSFULL);
     }
     else
@@ -437,37 +448,36 @@ void tATM::WithdrawMoney(double dWithdrawalAmount)
         // Human UI/UX ...
         printf("\n  You don't have   : %d\n", (int) dWithdrawalAmount);
         printf("  disposable on your account\n\n");
-        printf("  Maximum withdraw : %d\n", (int) vATMAccounts[iLoggedInATMAccountsID].dAccountBalance);
+        printf("  Maximum withdraw : %d\n", (int) vATMAccounts[loggedInAccountLocation].dAccountBalance);
                
         // Track Last Operation
-        SetLastOperation(vATMAccounts[iLoggedInATMAccountsID].iAccountID,
+        SetLastOperation(vATMAccounts[loggedInAccountLocation].uliAccountID,
                          WITHDRAWAL_FAILED);
     }
     
     DBG_LOG("tATM::WithdrawMoney :: OUT  :: ", eOperation_str[eATMLastOperation]);
 }
 
-int tATM::GetLoggedInUserAccountID(void) const
+unsigned long int tATM::GetLoggedInUserAccountID(void) const
 {
-    return vATMAccounts[iLoggedInATMAccountsID].iAccountID;
+    return vATMAccounts[loggedInAccountLocation].uliAccountID;
 }
 
-double tATM::GetAccountBalance(int iAccountID) const
+double tATM::GetAccountBalance(unsigned long int uliAccountID) const
 {
-    DBG_LOG("tATM::GetAccountBalance :: IN   ::  accoundID: ", std::to_string(iAccountID) );
+    DBG_LOG("tATM::GetAccountBalance :: IN   ::  accoundID: ", std::to_string(uliAccountID) );
     
     /* FOR-LOOP - BEGIN */
     for (int i = 0; i < vATMAccounts.size(); i++)
     {
         
         DBG_LOG("tATM::GetAccountBalance :: ","[", std::to_string(i),"]  ::  accoundID: ",
-                std::to_string(vATMAccounts[i].iAccountID));
+                std::to_string(vATMAccounts[i].uliAccountID));
         
-        if (vATMAccounts[i].iAccountID == iAccountID)
+        if (vATMAccounts[i].uliAccountID == uliAccountID)
         {
-            
-            return (double) vATMAccounts[i].dAccountBalance;
             // when match is found, break the for-loop
+            return (double) vATMAccounts[i].dAccountBalance;
         }
         else
         {
@@ -494,7 +504,7 @@ void tATM::CreateNewAccount(std::string sNewUsername, std::string sNewPassword)
     
     // Ask for Users name
     printf("  What is your name: ");
-    std::cin >> tNewUser.sName;
+    std::cin >> tNewUser.sFirstName;
 
     // Append new user to the vATMAccounts vector
     vATMAccounts.push_back(tNewUser);
@@ -505,17 +515,16 @@ void tATM::CreateNewAccount(std::string sNewUsername, std::string sNewPassword)
     DBG_LOG("\ntATM::CreateNewAccount :: OUT  :: ", eOperation_str[eATMLastOperation]);
 }
 
-void tATM::SetLastOperation(int iAccountID, eOperation eLastOperation)
+void tATM::SetLastOperation(unsigned long int uliAccountID, eOperation eLastOperation)
 {
     /* FOR-LOOP - BEGIN */
     for (int i = 0; i < vATMAccounts.size(); i++)
     {
         DBG_LOG("tATM::SetLastOperation :: ","[", std::to_string(i),"]  ::  accoundID: ",
-                std::to_string(vATMAccounts[i].iAccountID));
+                std::to_string(vATMAccounts[i].uliAccountID));
         
-        if (vATMAccounts[i].iAccountID == iAccountID)
+        if (vATMAccounts[i].uliAccountID == uliAccountID)
         {
-            
             // Track Last Operation
             eATMLastOperation = eLastOperation;
             vATMAccounts[i].eLastOperation = eATMLastOperation;
@@ -525,7 +534,7 @@ void tATM::SetLastOperation(int iAccountID, eOperation eLastOperation)
         }
         else
         {
-            DBG_LOG("tATM::SetLastOperation :: ","[", std::to_string(i),"]  ::  No Match: iAccountID != iAlccountID");
+            DBG_LOG("tATM::SetLastOperation :: ","[", std::to_string(i),"]  ::  No Match: uliAccountID != uliAccountID");
         }
     }
     /* FOR-LOOP - END */
