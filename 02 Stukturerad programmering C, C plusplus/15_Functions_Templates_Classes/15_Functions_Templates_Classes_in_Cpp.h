@@ -91,6 +91,8 @@ void function_class_example_two_public_private_declaration (void);
 
 void function_ludwig_week_two_check_that_we_can (void);
 
+void function_max_values_for_data_types (void);
+
 int main (int argc, char ** argv);
 
 #endif /* Functions_Templates_Classes_in_Cpp_h */

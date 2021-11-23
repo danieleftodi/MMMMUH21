@@ -45,14 +45,6 @@ int main(int argc, char ** argv){
         }
     };
     
-    printf("INT_MAX : %u\n", INT_MAX);
-    printf("UINT_MAX: %u\n", UINT_MAX);
-    printf("LONG_MAX: %ld\n", LONG_MAX);
-    printf("ULONG_MAX: %lu\n", ULONG_MAX);
-    printf("LONG_MAX: %lld\n", LONG_LONG_MAX);
-    printf("ULONG_MAX: %llu\n", ULONG_LONG_MAX);
-    printf("MAXFLOAT: %f\n", MAXFLOAT);
-    
     // Start ATM
     tFirstATM.AccountMenu();
     

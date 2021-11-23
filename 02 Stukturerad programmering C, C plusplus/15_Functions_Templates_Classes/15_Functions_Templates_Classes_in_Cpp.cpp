@@ -1161,6 +1161,16 @@ void function_ludwig_week_two_check_that_we_can (void) {
     
 }
 
+void function_max_values_for_data_types (void) {
+    printf("INT_MAX : %u\n", INT_MAX);
+    printf("UINT_MAX: %u\n", UINT_MAX);
+    printf("LONG_MAX: %ld\n", LONG_MAX);
+    printf("ULONG_MAX: %lu\n", ULONG_MAX);
+    printf("LONG_MAX: %lld\n", LONG_LONG_MAX);
+    printf("ULONG_MAX: %llu\n", ULONG_LONG_MAX);
+    printf("MAXFLOAT: %f\n", MAXFLOAT);
+}
+
 // Function :: Returns "Hearts", "Spades" etc
 const char* get_suit2  (enum suit a_suit){
     const char *suit_strs[] = {"Hearts", "Spades", "Clubs", "Diamonds", "Unknown" };
@@ -1228,7 +1238,7 @@ int main(int argc, char ** argv){
 //    function_template_example_two_going_static ();
     
     // Call :: function_template_example_three_find_element_in_array ()
-    function_template_example_three_find_element_in_array ();
+//    function_template_example_three_find_element_in_array ();
     
     // Call :: function_class_example_one_basic_declaration ()
 //    function_class_example_one_basic_declaration ();
@@ -1239,6 +1249,8 @@ int main(int argc, char ** argv){
     // Call :: function_ludwig_week_two_check_that_we_can ()
 //    function_ludwig_week_two_check_that_we_can ();
     
+    // Call :: function_max_values_for_data_types ()
+    function_max_values_for_data_types ();
     //Endnig with an extra new line
     std::cout << "\n";
     
