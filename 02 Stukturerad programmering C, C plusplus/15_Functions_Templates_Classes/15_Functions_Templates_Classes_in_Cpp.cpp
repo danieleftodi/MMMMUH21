@@ -1251,6 +1251,7 @@ int main(int argc, char ** argv){
     
     // Call :: function_max_values_for_data_types ()
     function_max_values_for_data_types ();
+    
     //Endnig with an extra new line
     std::cout << "\n";
     
