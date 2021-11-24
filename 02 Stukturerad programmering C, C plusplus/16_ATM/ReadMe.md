@@ -1,7 +1,7 @@
-# Uppgiftsbeskrivning av kompetenskontroll, moment 1
-#### Bankomat med signup och signin funktioner + interaktion med saldo
+# Exercise description of competency check, moment 1
+#### ATM with signup and signin functions + interaction with balance
 
-### Uppgiftsbeskrivning;
+### Exercise description;
 
 1. ✅ För att komma åt denna information måste personen ange sitt användarnamn samt sitt lösenord.
 
