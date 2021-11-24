@@ -127,3 +127,16 @@ int main(void)
   Test7();
   return 0;
 }
+
+
+/*
+ printf("Test4 :: Input a character: ");
+ cInput = c_getche();
+ 
+ if (cInput)
+ {
+ printf("\nYou input a %i, '%c'\n", cInput, cInput);
+ }
+ 
+ delay(2);
+ */
