@@ -45,6 +45,10 @@ int main(int argc, char ** argv){
         }
     };
     
+    // https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
+    // Remove the third (2) element with the vector-struct-array
+    tFirstATM.vATMAccounts.erase(tFirstATM.vATMAccounts.begin() + 2);
+
     // Start ATM
     tFirstATM.AccountMenu();
     
