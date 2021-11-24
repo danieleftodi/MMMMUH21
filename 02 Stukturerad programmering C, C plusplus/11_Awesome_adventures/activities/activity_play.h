@@ -9,7 +9,8 @@
 #define activity_play_h
 
 #include "../common/common.h"       // common code
+#include "../menus/main_menu.h"     // main menu code
 
-void guess_what_stig_it_thinking (void);
+void guess_what_stig_it_thinking (int iCharacterChoice);
 
 #endif /* activity_play_h */

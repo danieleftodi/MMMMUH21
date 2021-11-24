@@ -3,6 +3,7 @@
 //  MMMMUH21_COMMON_LIB
 
 #include "../common/common_lib.h"
+#include <termios.h>
 
 /*
  *  Every common function code that is shared in the classrom, goes here
@@ -35,6 +36,25 @@ void delay(int iDelayTime)
 	#else
 	    sleep(iDelayTime);
 	#endif
+}
+
+/* Read 1 character with echo */
+int c_getche(void)
+{
+    struct termios old, char_new;
+    int ch;
+    
+    tcgetattr(0, &old);
+    
+    char_new = old;
+    char_new.c_lflag &= ~ICANON;
+    //new.c_lflag &= ~ECHO;
+    tcsetattr(0, TCSANOW, &char_new);
+    
+    ch = getchar();
+    
+    tcsetattr(0, TCSANOW, &old);
+    return ch;
 }
 
 int is_in_GBro_main(void)

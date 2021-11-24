@@ -7,8 +7,18 @@
 
 #include "../activities/activity_play.h"
 
-void guess_what_stig_it_thinking (void) {
-    char           cInput                 = '\0';
+
+#ifndef menu_place_activity_opt_h
+#define menu_place_activity_opt_h
+#include <string>
+#include <iomanip>
+//                                  0       1        2            3      4
+std::string sCharacterArrayActivity [5] = {"Stig", "Cindy", "Sebastian", "Ulf", "Jerry" };
+
+#endif /* menu_place_activity_opt_h */
+
+void guess_what_stig_it_thinking (int iCharacterChoice) {
+    int            cInput;
     int            iVarRand               = 0;
     std::string    sVarRandString         = "";
     int            iUserGuessHasGuessed   = 0;
@@ -29,32 +39,31 @@ void guess_what_stig_it_thinking (void) {
          * Move this code to common_lib.h
          */
         std::mt19937 gen(rd());                         // seed the generator
-        std::uniform_int_distribution<> distr(0, 10);   // define the range
+        std::uniform_int_distribution<> distr(0, 9);    // define the range
 //        for (int n=0; n<1; ++n) {
             iVarRand = distr(gen);                      // generate numbers
 //        }
 
-        system("clear");
+        clearScreen();
         std::cout << "############################################\n";
         std::cout << "## Awesome adventures                     ##\n";
-        std::cout << "## of Stig, Cindy, Sebastian, Ulf & Jerry ##\n";
+        std::cout << "## of " << std::left << std::setfill(' ') << std::setw(35) << sCharacterArrayActivity[iCharacterChoice] << " ##\n";
         std::cout << "##                                        ##\n";
-        std::cout << "## Guess what Stig is thinking            ##\n";
+        std::cout << "## Guess what " << sCharacterArrayActivity[iCharacterChoice] << std::left << std::setfill(' ') << std::setw(27 - (int) sCharacterArrayActivity[iCharacterChoice].length()) << " is thinking" << " ##\n";
         std::cout << "############################################\n";
         std::cout << "\n";
-        std::cout << "  ( 1) - Food\n";
-        std::cout << "  ( 2) - Have to pee\n";
-        std::cout << "  ( 3) - Pats are the greatest, human *wink*!\n";
-        std::cout << "  ( 4) - That looks comfy!\n";
-        std::cout << "  ( 5) - Oh, what was that?\n";
-        std::cout << "  ( 6) - Is someone behind me?\n";
-        std::cout << "  ( 7) - Run quick as lightning!\n";
-        std::cout << "  ( 8) - Curiousity tickled my wiskers\n";
-        std::cout << "  ( 9) - I see a ball of yarn, playtime!\n";
-        std::cout << "  (10) - I want to sleep\n";
-        std::cout << "\n";
-        std::cout << "\nWhat is your guess: ";
-        std::cin >> iUserGuess;
+        std::cout << "  (0) - Food\n";
+        std::cout << "  (1) - Have to pee\n";
+        std::cout << "  (2) - Pats are the greatest, human *wink*!\n";
+        std::cout << "  (3) - That looks comfy!\n";
+        std::cout << "  (4) - Oh, what was that?\n";
+        std::cout << "  (5) - Is someone behind me?\n";
+        std::cout << "  (6) - Run quick as lightning!\n";
+        std::cout << "  (7) - Curiousity tickled my wiskers\n";
+        std::cout << "  (8) - I see a ball of yarn, playtime!\n";
+        std::cout << "  (9) - I want to sleep\n";
+        std::cout << "\n  What is your guess: ";
+        iUserGuess = c_getche();
 //        std::cin.ignore( std::numeric_limits<std::streamsize>::max() ) >> iUserGuess;
 
         // We have to try to convert string input with stoi, and catch if it cannot convort it. Ergo it's not a number.
@@ -81,34 +90,34 @@ void guess_what_stig_it_thinking (void) {
 //            printf("\nYou guessed the number %s, and the computer guesseed the number: %d\n", iUserGuess.c_str(), iVarRand );
             
             switch (iUserGuessNumber) {
-                case 1:
+                case 0:
                     sUserGuessNumberString = "Food";
                     break;
-                case 2:
+                case 1:
                     sUserGuessNumberString = "Have to pee";
                     break;
-                case 3:
+                case 2:
                     sUserGuessNumberString = "Pats are the greatest, human *wink*!";
                     break;
-                case 4:
+                case 3:
                     sUserGuessNumberString = "That looks comfy!";
                     break;
-                case 5:
+                case 4:
                     sUserGuessNumberString = "Oh, what was that?";
                     break;
-                case 6:
+                case 5:
                     sUserGuessNumberString = "Is someone behind me?";
                     break;
-                case 7:
+                case 6:
                     sUserGuessNumberString = "Run quick as lightning!";
                     break;
-                case 8:
+                case 7:
                     sUserGuessNumberString = "Curiousity tickled my wiskers";
                     break;
-                case 9:
+                case 8:
                     sUserGuessNumberString = "I see a ball of yarn, playtime!";
                     break;
-                case 10:
+                case 9:
                     sUserGuessNumberString = "I want to sleep";
                     break;
                 default:
@@ -116,49 +125,49 @@ void guess_what_stig_it_thinking (void) {
             }
 
             switch (iVarRand) {
-                case 1:
+                case 0:
                     sVarRandString = "Food";
                     break;
-                case 2:
+                case 1:
                     sVarRandString = "Have to pee";
                     break;
-                case 3:
+                case 2:
                     sVarRandString = "Pats are the greatest, human *wink*!";
                     break;
-                case 4:
+                case 3:
                     sVarRandString = "That looks comfy!";
                     break;
-                case 5:
+                case 4:
                     sVarRandString = "Oh, what was that?";
                     break;
-                case 6:
+                case 5:
                     sVarRandString = "Is someone behind me?";
                     break;
-                case 7:
+                case 6:
                     sVarRandString = "Run quick as lightning!";
                     break;
-                case 8:
+                case 7:
                     sVarRandString = "Curiousity tickled my wiskers";
                     break;
-                case 9:
+                case 8:
                     sVarRandString = "I see a ball of yarn, playtime!";
                     break;
-                case 10:
+                case 9:
                     sVarRandString = "I want to sleep";
                     break;
                 default:
                     break;
             }
             
-            printf("\nYou guessed the number (%d) %s,\n\and Stig was thinking of (%d) %s\n", iUserGuessNumber, sUserGuessNumberString.c_str(), iVarRand, sVarRandString.c_str() );
+            printf("\n\n  You guessed the number (%d) %s,\n  and %s was thinking of (%d) %s\n", iUserGuessNumber, sUserGuessNumberString.c_str(), sCharacterArrayActivity[iCharacterChoice].c_str(), iVarRand, sVarRandString.c_str() );
 
             if ( iUserGuessNumber == iVarRand ) {
-                printf("\nCongratulations!\n");
-                printf("*Whoop *Whoop*!\n");
+                printf("\n  Congratulations!\n");
+                printf("  *Whoop *Whoop*!\n");
                 bGameOneValidGuess = true;
-                sleep (5);
+                delay(3);
             } else {
-                printf("\nSorry, wrong guess. Try again.\n");
+                printf("\n  Sorry, wrong guess. Try again.\n");
                 bGameOneValidGuess = false;
             }
         }
@@ -170,16 +179,16 @@ void guess_what_stig_it_thinking (void) {
         if ( iUserGuessHasGuessed >= 5 ) {
             printf("\n...noticed that you have tried: %d times ... want to give up? *wink*  (y/n): ", iUserGuessHasGuessed);
 
-            std::cin >> cInput;
+            cInput = c_getche();
 
             switch (cInput) {
                 case 'y':
-                    printf("\n(Stig) Thanks for playing with me .\n");
+                    printf("\n  (%s) Thanks for playing with me .\n", sCharacterArrayActivity[iCharacterChoice].c_str());
                     bGameOneValidGuess = true;
                     iUserGuessHasGuessed = 0;
                     break;
                 case 'n':
-                    printf("\nOkelidokelli\n");
+                    printf("\n  Okelidokelli\n");
                     bGameOneValidGuess = false;
                     iUserGuessHasGuessed = 0;
                 default:
@@ -188,7 +197,7 @@ void guess_what_stig_it_thinking (void) {
         }
 
         // wait for a few seconds
-        sleep (3);
+        delay(3);
 
         // Reset varibales ...
         iVarRand    = 0;

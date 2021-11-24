@@ -10,6 +10,6 @@
 
 #include "../common/common.h"       // common code
 
-void menu_place_backyard(void);
+void menu_place_backyard(int iCharacterChoice);
 
 #endif /* menu_place_backyard_h */

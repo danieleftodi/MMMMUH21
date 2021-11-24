@@ -1,0 +1,79 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/gcc"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc-11 build active file",
+			"command": "/usr/local/bin/gcc-11",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/local/bin/gcc-11"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang build active file - Awesome",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-g",
+				"-std=gnu++17",
+				"${file}",
+				"${workspaceFolder}/activities/activity_play.cpp",
+				"${workspaceFolder}/common/common.cpp",
+				"${workspaceFolder}/common/common_lib.cpp",
+				"${workspaceFolder}/menus/main_menu.cpp",
+				"${workspaceFolder}/menus/menu_place_backyard.cpp",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"presentation": {   //Explained in detail below
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": true
+            },
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/clang++"
+		}
+	]
+}

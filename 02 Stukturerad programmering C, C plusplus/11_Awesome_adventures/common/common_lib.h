@@ -54,6 +54,8 @@ void pauseScreen(void);
 
 void delay(int iDelayTime);
 
+int c_getche(void);
+
 
 /*
  Source: Daniel Eftodi
@@ -166,64 +168,5 @@ void printmatrix_RBen(int matrix[5][3]);
 int omkrets_RBen_main(void);
 
 bool omkrets_RBen(int omk[], int size, int serchitm);
-
-
-/*
- Source: Alexander Jönsson, Gustav Brolin, Adam Kusnier
- Bulk coder:
- Assister:
- Syfte:
- C++ Concept som utforskas: Short commands(windows/visual studio community)
- */
-/*
- Indentation: Mark several lines and TAB to move to right, SHIFT+TAB to move to left.
- Comment multiple lines. Mark, CTRL+K then CTRL+C.
- */
-
-/*
- Q: Finns bracket colorizer integrerat i VS Code from någon av de senaste versionerna, kan vara bra när det blir mycket parenteser. Har inte provat själv men den ska vara snabb och bra
- A: ctrl + shift + P på windows, sök på json och öppna settings. efter varje rad vill den ha ett , tecken, det får man lägga till själv. sen kan man göra en ny rad och klistra in "editor.bracketPairColorization.enabled": true
- */
-
-
-/*
- Source: Johan Ranefors, , klassen
- Bulk coder:
- Assister:
- Syfte: Kodstandard
- C++ Concept som utforskas:
- */
-
-// Skriv {} på nya rader (så indenteringen är samma) för generella block som hör ihop med if, while mm
-/*if () // rätt
- {
- 
- }
- 
- if () { // fel
- 
- }
- */
-
-//Använd mellanrum så hör var int x = 10; istället för int x=10; Använd tilldelning: = även om det går att inte använda.
-
-
-/*
-Source: 
-Bulk coder:
-Assister: 
-Syfte:
-C++ Concept som utforskas: 
-*/
-
-
-/*
-Source: 
-Bulk coder:
-Assister: 
-Syfte:
-C++ Concept som utforskas: 
-*/
-
 
 #endif /* common_lib_h */
