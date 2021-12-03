@@ -21,13 +21,13 @@ bool writeRecordToFile (string file_name, string field_one, string field_two, st
     }
     else
     {
-        file.open(file_name, ios::trunc); 		 // over-write file
+        file.open(file_name, ios_base::trunc); 		 // over-write file
         bWriteRecordToFileBegin = true;
     }
 	file << field_one << ";" << field_two << ";" << field_three << endl;
 	file.close();
 
-	return 0;	
+	return 0;
 }
 
 // Step 2: Read from a .txt file
