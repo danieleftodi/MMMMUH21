@@ -87,7 +87,7 @@ int five_main()
     p->length=10;
     p-> breadth=5;
     
-    five_Rectangle *p = &r;
+//    five_Rectangle *p = &r;
     
     std::cout << p->length << std::endl;
     std::cout << p->breadth << std::endl;
@@ -135,9 +135,9 @@ int seven_main()
 
 
 //8.Enligt koden ni ser, vad blir resultatet? och varför?
-void eight_fun(int A[ ], int n)
+void eight_fun(int *A, int n=0)
 {
-    std::cout << sizeof(A)/sizeof(int) << std::endl;
+    std::cout << "Size of A: " << sizeof(*A)/sizeof(int) << std::endl;
 }
 
 int eight_main()
@@ -145,7 +145,7 @@ int eight_main()
     int A[] = {2,4,6,8,10};
     int n=5;
     
-    eight_fun(A, n);
+    eight_fun(A);
     
     for (int x:A)
         std::cout << x << std::endl;
@@ -219,48 +219,144 @@ int ten_main()
     return 0;
 }
 
+struct eleven_Rectangle
+{
+    int lenght;
+    int breadth;
+    
+};
+
+void eleven_initialize(struct eleven_Rectangle *r, int l, int b)
+{
+    r->lenght = l;
+    r->breadth = b;
+}
+
+int eleven_area(struct eleven_Rectangle r)
+{
+    return r.lenght * r.breadth;
+}
+
+void eleven_change_lenght(struct eleven_Rectangle *r, int l)
+{
+    r->lenght = l;
+}
+
+int eleven_main()
+{
+    struct eleven_Rectangle r;
+    eleven_initialize(&r, 10, 5);
+    eleven_area(r);
+    eleven_change_lenght(&r, 20);
+    return 0;
+}
+
+class twelve_Rectangle
+{
+private:
+    int lenght;
+    int breadth;
+    
+public:
+    void initialize(int l, int b)
+    {
+        lenght = l;
+        breadth = b;
+    }
+    
+    int area()
+    {
+        return lenght * breadth;
+    }
+    
+    void change_lenght(int l)
+    {
+        lenght = l;
+    }
+};
+
+int twelve_main()
+{
+    class twelve_Rectangle r;
+    r.initialize(10, 5);
+    r.area();
+    r.change_lenght(20);
+    return 0;
+}
+
+int thirteen_main()
+{
+    int lenght = 0, breadth = 0;
+    printf("Enter lenght: ");
+    std::cin >> lenght;
+    printf("Enter breadth: ");
+    std::cin >> breadth;
+    
+    int area = lenght * breadth;
+    int peri = 2 * (lenght + breadth);
+    
+    printf("Area: %d\n", area);
+    printf("Perimeter: %d\n", peri);
+    
+    return 0;
+}
+
 /* INIT - BEGIN */
 int main(int argc, char ** argv){
     
-    // 1. Enligt koden ni ser, vad blir resultatet? och varför?
-    one_main();
-    printf("Press any key\n"); c_getche();
+    int key_pressed = '\0';
     
-    //2.Enligt koden ni ser, vad blir resultatet? och varför?
-    two_main();
-    printf("Press any key\n"); c_getche();
+//    // 1. Enligt koden ni ser, vad blir resultatet? och varför?
+//    one_main();
+//    printf("[01] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //2.Enligt koden ni ser, vad blir resultatet? och varför?
+//    two_main();
+//    printf("[02] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //3.Enligt koden ni ser, vad blir resultatet? och varför?
+//    three_main();
+//    printf("[03] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //4.Enligt koden ni ser, vad blir resultatet? och varför?
+//    four_main();
+//    printf("[04] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //5.Enligt koden ni ser, vad blir resultatet? och varför?
+//    five_main();
+//    printf("[05] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //6.Enligt koden ni ser, vad blir resultatet? och varför?
+//    six_main();
+//    printf("[06] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //7.Enligt koden ni ser, vad blir resultatet? och varför?
+//    seven_main();
+//    printf("[07] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //8.Enligt koden ni ser, vad blir resultatet? och varför?
+//    eight_main();
+//    printf("[08] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //9.Enligt koden ni ser, vad blir resultatet? och varför?
+//    nine_main();
+//    printf("[09] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+//
+//    //10.Enligt koden ni ser, vad blir resultatet? och varför?
+//    ten_main();
+//    printf("[10] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
     
-    //3.Enligt koden ni ser, vad blir resultatet? och varför?
-    three_main();
-    printf("Press any key\n"); c_getche();
+    //11. Re-write to C code --> C++ code
+    eleven_main();
+    printf("[11] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
     
-    //4.Enligt koden ni ser, vad blir resultatet? och varför?
-    four_main();
-    printf("Press any key\n"); c_getche();
+    //12. Re-written code in C++
+    twelve_main();
+    printf("[12] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
     
-    //5.Enligt koden ni ser, vad blir resultatet? och varför?
-    five_main();
-    printf("Press any key\n"); c_getche();
-    
-    //6.Enligt koden ni ser, vad blir resultatet? och varför?
-    six_main();
-    printf("Press any key\n"); c_getche();
-    
-    //7.Enligt koden ni ser, vad blir resultatet? och varför?
-    seven_main();
-    printf("Press any key\n"); c_getche();
-    
-    //8.Enligt koden ni ser, vad blir resultatet? och varför?
-    eight_main();
-    printf("Press any key\n"); c_getche();
-    
-    //9.Enligt koden ni ser, vad blir resultatet? och varför?
-    nine_main();
-    printf("Press any key\n"); c_getche();
-    
-    //10.Enligt koden ni ser, vad blir resultatet? och varför?
-    ten_main();
-    printf("Press any key\n"); c_getche();
+    //13. Re-written code in C++
+    thirteen_main();
+    printf("[13] Press any key: "); key_pressed = c_getche(); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
     
     //Endnig with an extra new line
     std::cout << "\n";
@@ -301,12 +397,12 @@ int c_getche(void)
     
     char_new = old;
     char_new.c_lflag &= ~ICANON;
-    //new.c_lflag &= ~ECHO;
-    tcsetattr(0, TCSANOW, &char_new);
+
+    tcsetattr(0, TCSADRAIN, &char_new);
     
     ch = getchar();
     
-    tcsetattr(0, TCSANOW, &old);
+    tcsetattr(0, TCSADRAIN, &old);
     return ch;
 }
 

@@ -13,6 +13,10 @@
 
 5. For more lecture notes, please watch the video recording of the lecture .... (it's better to do that ...).
 
-7. Added code from [C/C++ Recap](https://forms.office.com/pages/responsepage.aspx?id=IBDLdVpiw0eFwrRe3UBrB8VGr8XpnWFArLTzBE-2ncJUMUxYTlhJWk1GN1NHT0ZGQlo5NllPUUExNC4u)
+6. Added code from [C/C++ Recap](https://forms.office.com/pages/responsepage.aspx?id=IBDLdVpiw0eFwrRe3UBrB8VGr8XpnWFArLTzBE-2ncJUMUxYTlhJWk1GN1NHT0ZGQlo5NllPUUExNC4u)
 
+7. [Pointers in C / C++ [Full Video Course]](https://www.youtube.com/watch?v=zuegQmMdy8M)
 
+8. [https://www.freecodecamp.org](https://www.freecodecamp.org)
+
+9. 
