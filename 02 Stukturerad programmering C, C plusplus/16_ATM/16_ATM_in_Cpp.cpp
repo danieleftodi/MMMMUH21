@@ -42,12 +42,22 @@ int main(int argc, char ** argv){
                 .dAccountBalance = 0,
                 .eLastOperation = tATM::NEW_ACCOUNT_SUCCESSFULL
             },
+            {
+                .uliAccountID = 199704015566,
+                .sFirstName = "Ludwig",
+                .sLastName = "Simonsson",
+                .sUsername = "lsim",
+                .sPassword = "test",
+                .dAccountBalance = 10000,
+                .eLastOperation = tATM::NEW_ACCOUNT_SUCCESSFULL
+            },
         }
     };
     
-    // https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
-    // Remove the third (2) element with the vector-struct-array
-    tFirstATM.vATMAccounts.erase(tFirstATM.vATMAccounts.begin() + 2);
+    // RTFM       :: https://iq.opengenus.org/ways-to-remove-elements-from-vector-cpp/
+    // DEBUG_CODE :: Remove the third (2) element with the vector-struct-array
+    // PURPOSE    :: To test and see that we can delete from our vector-struct-array
+//    tFirstATM.vATMAccounts.erase(tFirstATM.vATMAccounts.begin() + 2);
 
     // Start ATM
     tFirstATM.AccountMenu();
@@ -73,7 +83,7 @@ void tATM::AccountMenu(void)
         std::cout << "##                                        ##\n";
         if (loggedInAccountLocation > -1)
         {
-            printf("## Main Menu  ::  %s                    ##\n", vATMAccounts[loggedInAccountLocation].sUsername.c_str());
+            std::cout << "## Main Menu  ::  " << std::left << std::setfill(' ') << std::setw(23) << vATMAccounts[loggedInAccountLocation].sFullname.c_str() << " ##\n";
         }
         else
         {
@@ -97,7 +107,7 @@ void tATM::AccountMenu(void)
         std::cout << "  (Q) - Quit\n";
         std::cout << "\n";
         std::cout << "  Press a key: ";
-        std::cin >> cUserInput;
+u        std::cin >> cUserInput;
         
         switch (cUserInput) {
             case 'l':
@@ -160,7 +170,7 @@ void tATM::AccountMenu(void)
                     
                     // Let users know if they logged in
                     if (eATMLastOperation == DEPOSIT_SUCCESSFULL) {
-                        printf("  Deposit succesfull\n");
+                        DBG_LOG("tATM::DepositMoney :: ", "Deposit succesfull");
                     }
                     else
                     {
@@ -199,7 +209,7 @@ void tATM::AccountMenu(void)
                     
                     // Let users know if they logged in
                     if (eATMLastOperation == WITHDRAWAL_SUCCESSFULL) {
-                        printf("  Withdrawal succesfull\n");
+                        DBG_LOG("tATM::DepositMoney :: ", "Withdrawal succesfull");
                     }
                     else
                     {
@@ -230,7 +240,7 @@ void tATM::AccountMenu(void)
                     tATM::tAccountingDefaults tAccountingTemp;
                     
                     // try to GetAccountBalance
-                    GetAccountBalance(vATMAccounts[loggedInAccountLocation].uliAccountID);
+                    tAccountingTemp.dAccountBalance = GetAccountBalance(vATMAccounts[loggedInAccountLocation].uliAccountID);
                     
                     if ( (int) tAccountingTemp.dAccountBalance != -12341337)
                     {
@@ -250,7 +260,7 @@ void tATM::AccountMenu(void)
                     
                     // Let users know if they logged in
                     if (eATMLastOperation == GET_BALANCE_SUCCESSFULL) {
-                        printf("  View balance succesfull\n");
+                        DBG_LOG("tATM::GetAccountBalance :: ", std::to_string(tAccountingTemp.dAccountBalance));
                     }
                     else
                     {
@@ -472,6 +482,7 @@ double tATM::GetAccountBalance(unsigned long int uliAccountID) const
         
         if (vATMAccounts[i].uliAccountID == uliAccountID)
         {
+            DBG_LOG("tATM::GetAccountBalance :: ","[", std::to_string(i),"]  ::  Account Match");
             // when match is found, break the for-loop
             return (double) vATMAccounts[i].dAccountBalance;
         }
@@ -554,6 +565,25 @@ void tATM::DBG_LOG(std::string sText,
            sVarE.c_str(),
            sVarF.c_str());
 #endif
+}
+
+/* Read 1 character with echo */
+int tATM::c_getche(void)
+{
+    struct termios old, char_new;
+    int ch;
+    
+    tcgetattr(0, &old);
+    
+    char_new = old;
+    char_new.c_lflag &= ~ICANON;
+    //new.c_lflag &= ~ECHO;
+    tcsetattr(0, TCSANOW, &char_new);
+    
+    ch = getchar();
+    
+    tcsetattr(0, TCSANOW, &old);
+    return ch;
 }
 
 /* IMPLEMENTATION OF ALL FUNCTIONS - END */

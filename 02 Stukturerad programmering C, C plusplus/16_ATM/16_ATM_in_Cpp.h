@@ -11,16 +11,18 @@
 /* INCLUDES */
 
 #include <stdio.h>
-#include <iostream>         //includes I/O
-#include <iomanip>          //includes manipulating the I/O
-#include <string>           //include working with strings
-#include <vector>           //includes dynamic array functionalities
+#include <iostream>         // include I/O
+#include <iomanip>          // include manipulating the I/O
+#include <string>           // include working with strings
+#include <vector>           // include dynamic array functionalities
 #include <unistd.h>         // system(clear);
+#include <iomanip>          // include to manipulate std::cout outputs
+#include <termios.h>        // include for c_getche()
 
 /* DEFINITIONS */
 
 // ENABLE-DISABLE debug logging
-#define DEBUG_LOGGING true
+#define DEBUG_LOGGING false
 
 /* DECLARATIONS */
 
@@ -113,6 +115,7 @@ struct tATM
         unsigned long int     uliAccountID;
         std::string           sFirstName = "Default";
         std::string           sLastName = "User";
+        std::string           sFullname = sFirstName + " " + sLastName;
         std::string           sUsername;
         std::string           sPassword;
         
@@ -203,6 +206,8 @@ struct tATM
         sleep(iDelayTime);
 #endif
     }
+    
+    int c_getche(void);
     /* From our common_lib - END */
 };
 

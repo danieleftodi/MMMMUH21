@@ -1,41 +1,43 @@
-# Exercise description of competency check, moment 1
-#### ATM with signup and signin functions + interaction with balance
+# ATM
+#### ATM med "signup" and "signin" funktionen + interaktiton med kontobalans
 
-### Exercise description;
+### Funktionsbeskrivning:
 
-1. ✅ För att komma åt denna information måste personen ange sitt användarnamn samt sitt lösenord.
+1. ✅ En header som välkomnar användaren till automaten
 
-2. ✅ Om personen inte har ett konto måste personen istället välja alternativet “Create New Account” där användaren då får ange användarnamn samt lösenord och då mera blir registrerad användare. Efter detta skall användaren nu kunna logga in och nyttja nämnda funktioner ovan.
+2. ✅ En interface för logga in
 
-3. ✅ Ni skall koda ett program som agerar bankomat.
+3. ✅ Ett alternativ att avsluta applikationen
 
-4. ✅ I denna bankomat skall användaren kunna sätta in pengar.
 
-5. ✅ Samt ta ut pengar.
+### Om användaren väljer logga in skall ert program be om följande:
 
-6. ✅ och även se sitt saldo. 
+1. ✅ Namn
 
-7. ✅ Saldot skall även alltid uppvisas efter en handling som har förändrat det, exempelvis uttag eller insättning. 
+2. 🔶 Kontonummer [medvetet valde inte fråga användanen här, ty i vanliga fall så gör man detta valet efter man har loggot in ...]
 
-8. ✅ Till en början byggs detta med runtime memory så att användarens saldo bara sparas under användningen.
+3. ✅ Pin 
 
-9. ⚠️🚸🚧 men vi kommer sedan bygga vidare med exempelvis databasfunktion för lagring och flertalet andra funktioner. <p>
-**[NOTE]: I have defined a few standard users that get initialiazed by default at runtime. To not have to always begin with creating new user(s)**
+4. ✅ Ps. glöm inte att flera individer skall kunna logga ininsättning.
 
-### Moment 1
-I skapandet av programmets första del kommer vi nyttja en enda .cpp fil för att hålla koden. 
 
-Vi kommer att nyttja:<br>
-✅ * structs<br>
-✅ * strings<br>
-✅ * functions<br>
-✅ * vectors<br>
-✅ * och user input för att uppnå funktionerna som nämndes ovan.
+### Efter användaren loggat in skall saldot presenteras och användaren skall kunna: 
 
-I stort sett allt vi vidrört hittills. 
+1. ✅ Genomföra insättningar.
 
-Ni får även ett [exempel på grundstrukturen](Dag_27_Ludwig_ATM_Uppgifts_beskrivning_with_comments.pdf) på nästkommande sida.
+2. ✅ Genomföra uttag
 
-Detta är delmoment 1 som sedan kommer utökas med funktionaliteter såsom lokal databas, mer grafiskt bemötande och liknande.
+3. ✅ Och därefter se uppdaterat saldo och göra ytterliga agering eller logga ut.
 
-**Syftet med detta är att förbereda er inför kursens slutuppgift.**
+
+### Implementering
+
+1. 🔴 För våra ändamål använder vi en CSV (comma separated values) som vår provisoriska databas. 
+
+
+### Obligatoriskt innehåll funktionsmässigt för samtliga är (Men begränsas inte till):
+
+1. ✅ Godkänd / Fungerande / Lämplig syntax
+2. ✅ Nyttjandet av user created headers
+3. ✅ Nyttjandet av iomanip
+4. 🔴 Nyttjande av f/sstream
