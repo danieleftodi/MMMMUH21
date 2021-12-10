@@ -54,8 +54,13 @@ void delay(int iDelayTime)
         sleep(iDelayTime);
 #endif
     }
-    
+
+/* Read 1 character without echo */
+int c_getch(void);
+
+/* Read 1 character with echo */
 int c_getche(void);
+
 /* From our common_lib - END */
 
 /* FUNCTIONS */

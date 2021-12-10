@@ -348,15 +348,15 @@ int main(int argc, char ** argv){
     
     //11. Re-write to C code --> C++ code
     eleven_main();
-    printf("[11] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+    printf("[11] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
     
     //12. Re-written code in C++
     twelve_main();
-    printf("[12] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+    printf("[12] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
     
     //13. Re-written code in C++
     thirteen_main();
-    printf("[13] Press any key: "); key_pressed = c_getche(); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+    printf("[13] Press any key: "); key_pressed = c_getch(); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
     
     //Endnig with an extra new line
     std::cout << "\n";
@@ -387,6 +387,27 @@ void DBG_LOG(std::string sText,
 #endif
 }
 
+/* Read 1 character without echo */
+int c_getch(void)
+{
+    struct termios old, char_new;
+    int ch;
+    
+    tcgetattr(0, &old);
+    
+    char_new = old;
+    char_new.c_lflag &= ~ICANON;
+    char_new.c_lflag &= ~ECHO;
+    
+    tcsetattr(0, TCSANOW, &char_new);
+    
+    ch = getchar();
+    
+    tcsetattr(0, TCSANOW, &old);
+    
+    return ch;
+}
+
 /* Read 1 character with echo */
 int c_getche(void)
 {
@@ -397,6 +418,7 @@ int c_getche(void)
     
     char_new = old;
     char_new.c_lflag &= ~ICANON;
+//    char_new.c_lflag &= ~ECHO;
 
     tcsetattr(0, TCSADRAIN, &char_new);
     
