@@ -499,7 +499,7 @@ int c_getche(void)
 
   new = old;
   new.c_lflag &= ~ICANON;
-  //new.c_lflag &= ~ECHO;
+//  new.c_lflag &= ~ECHO;
   tcsetattr(0, TCSANOW, &new);
 
   ch = getchar();
