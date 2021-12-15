@@ -107,7 +107,7 @@ void tATM::AccountMenu(void)
         std::cout << "  (Q) - Quit\n";
         std::cout << "\n";
         std::cout << "  Press a key: ";
-u        std::cin >> cUserInput;
+        std::cin >> cUserInput;
         
         switch (cUserInput) {
             case 'l':
