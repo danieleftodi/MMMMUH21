@@ -122,12 +122,13 @@ struct sStructFour {
         
         if ( (index >= 0) && (index <= arr->length) )
         {
+            arr->length++;
             for (i=arr->length; i>index; i--)
             {
                 arr->A[i] = arr->A[i-1];
-                arr->A[index] = x;
-                arr->length++;
+                
             }
+            arr->A[index] = x;
         }
     };
     
@@ -192,14 +193,17 @@ int four_main()
     };
     
     //Intial
+    std::cout << "Initial: ";
     sArr0.Display(sArr0);
     
     //Append
     sArr0.Append(&sArr0, 9);
+    std::cout << "Append: ";
     sArr0.Display(sArr0);
     
     //Insert
     sArr0.Insert(&sArr0, 0, 1);
+    std::cout << "Insert: ";
     sArr0.Display(sArr0);
     
     
