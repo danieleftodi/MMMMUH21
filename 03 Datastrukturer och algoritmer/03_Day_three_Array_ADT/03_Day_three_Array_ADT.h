@@ -34,7 +34,15 @@ void DBG_LOG(std::string sText,
              std::string sVarC = "",
              std::string sVarD = "",
              std::string sVarE = "",
-             std::string sVarF = "");
+             std::string sVarF = "",
+             std::string sVarG = "",
+             std::string sVarH = "",
+             std::string sVarI = "",
+             std::string sVarJ = "",
+             std::string sVarK = "",
+             std::string sVarL = "",
+             std::string sVarM = ""
+             );
     
 /* From our common_lib - BEGIN */
 void clearScreen(void)

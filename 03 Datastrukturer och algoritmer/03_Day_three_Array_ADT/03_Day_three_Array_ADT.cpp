@@ -95,13 +95,13 @@ struct sStructFour {
     int size;
     int length;
     
-    void Display(struct sStructFour arr)
+    void Display(struct sStructFour *arr)
     {
         int i;
         printf("Elements are\n");
-        for (i=0; i < arr.length; i++)
+        for (i=0; i < arr->length; i++)
         {
-            printf("%d ", arr.A[i]);
+            printf("%d ", arr->A[i]);
         }
         
         // End with a new-line
@@ -113,23 +113,50 @@ struct sStructFour {
         if(arr->length < arr->size)
         {
             arr->A[arr->length++] = x;
+        } else {
+            printf("ERROR: Can not append (%d) to the array, array is allready filled to the max\n", x);
         }
     };
     
     void Insert(struct sStructFour *arr, int index, int x)
     {
-        int i;
+        DBG_LOG("\nDBG:: RealSize: ", std::to_string((sizeof(arr->A)/sizeof(int))),
+                "  ::  FakeSize: ", std::to_string(arr->size),
+                "  ::  Length: ", std::to_string(arr->length),
+                "  ::  First: ", std::to_string(arr->A[0]),
+                "  ::  Last: ", std::to_string(arr->A[ ((int) (sizeof(arr->A)/sizeof(int)) ) - 1 ]),
+                "  ::  INT");
         
-        if ( (index >= 0) && (index <= arr->length) )
+        int i;
+                
+        if ( (index >= 0) && (index < arr->size) && (arr->length < arr->size) )
         {
-            arr->length++;
-            for (i=arr->length; i>index; i--)
+            for (i=arr->length++; i > index; i--)
             {
                 arr->A[i] = arr->A[i-1];
-                
+                                
+                DBG_LOG("DBG:: RealSize: ", std::to_string((sizeof(arr->A)/sizeof(int))),
+                        "  ::  FakeSize: ", std::to_string(arr->size),
+                        "  ::  Length: ", std::to_string(arr->length),
+                        "  ::  First: ", std::to_string(arr->A[0]),
+                        "  ::  Last: ", std::to_string(arr->A[ ((int) (sizeof(arr->A)/sizeof(int)) ) - 1 ]),
+                        "  ::  for-loop  :: i: ", std::to_string(i),
+                        " arr->A[i-1]: ", std::to_string(arr->A[i-1]));
             }
+            
             arr->A[index] = x;
         }
+        else
+        {
+            printf("ERROR: Can not insert (%d) into array, array is allready filled to the max\n", x);
+        }
+        
+        DBG_LOG("DBG:: RealSize: ", std::to_string((sizeof(arr->A)/sizeof(int))),
+                "  ::  FakeSize: ", std::to_string(arr->size),
+                "  ::  Length: ", std::to_string(arr->length),
+                "  ::  First: ", std::to_string(arr->A[0]),
+                "  ::  Last: ", std::to_string(arr->A[ ((int) (sizeof(arr->A)/sizeof(int)) ) - 1 ]),
+                "  ::  END");
     };
     
     void Delete(struct sStructFour *arr, int index)
@@ -185,27 +212,46 @@ struct sStructFour {
 
 int four_main()
 {
-//    struct sStructFour sArr0 = {{2,3,4},10,9};
     struct sStructFour sArr0 = {
-        .A = {2,3,4},
+        //    1 2 3 4 5 6 7 8  9  10
+        .A = {2,3,4,5,6,7},
         .size = 10,
-        .length = 9,
+        .length = 6,
     };
     
     //Intial
     std::cout << "Initial: ";
-    sArr0.Display(sArr0);
+    sArr0.Display(&sArr0);
     
     //Append
+    std::cout << "\nAppend: ";
     sArr0.Append(&sArr0, 9);
-    std::cout << "Append: ";
-    sArr0.Display(sArr0);
+    sArr0.Display(&sArr0);
     
     //Insert
+    std::cout << "\nInsert: ";
     sArr0.Insert(&sArr0, 0, 1);
-    std::cout << "Insert: ";
-    sArr0.Display(sArr0);
+    sArr0.Display(&sArr0);
     
+    //Insert
+    std::cout << "\nInsert: ";
+    sArr0.Insert(&sArr0, 4, 2);
+    sArr0.Display(&sArr0);
+    
+    //Insert
+    std::cout << "\nInsert: ";
+    sArr0.Insert(&sArr0, 0, 3);
+    sArr0.Display(&sArr0);
+    
+    //Insert
+    std::cout << "\nInsert: ";
+    sArr0.Insert(&sArr0, 0, 4);
+    sArr0.Display(&sArr0);
+    
+    //Append
+    std::cout << "\nAppend: ";
+    sArr0.Append(&sArr0, 9);
+    sArr0.Display(&sArr0);
     
 //    printf("\nsArr0.A: %d\n", sArr0.A[1]);;
     return 0;
@@ -322,7 +368,13 @@ struct sStructFive {
         
         return 0;
     }
+    
+// Om du är klar med alla sju kan du titta på följande med hjälp av lite egen kunskap eller research;
+// 1. Implementera en Merge funktion som sammansvetsar två arrays till en ny.
+// 2. Implementera en reverse-funktion som vänder på arrayens innehåll.
+    
 };
+
 int five_main()
 {
     
@@ -357,7 +409,7 @@ int main(int argc, char ** argv){
 //    printf("[03] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
     
     // 4. Array ADT:
-    printf("[04] Array ADT 101: \n");
+    printf("[04] Array ADT: Struct and Arrays\n");
     four_main();
     printf("[04] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
     
@@ -381,22 +433,36 @@ int main(int argc, char ** argv){
 /* IMPLEMENTATION OF ALL FUNCTIONS - BEGIN */
 
 void DBG_LOG(std::string sText,
-                   std::string sVarA,
-                   std::string sVarB,
-                   std::string sVarC,
-                   std::string sVarD,
-                   std::string sVarE,
-                   std::string sVarF)
+             std::string sVarA,
+             std::string sVarB,
+             std::string sVarC,
+             std::string sVarD,
+             std::string sVarE,
+             std::string sVarF,
+             std::string sVarG,
+             std::string sVarH,
+             std::string sVarI,
+             std::string sVarJ,
+             std::string sVarK,
+             std::string sVarL,
+             std::string sVarM)
 {
 #if DEBUG_LOGGING
-    printf("%s%s%s%s%s%s%s\n",
+    printf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s\n",
            sText.c_str(),
            sVarA.c_str(),
            sVarB.c_str(),
            sVarC.c_str(),
            sVarD.c_str(),
            sVarE.c_str(),
-           sVarF.c_str());
+           sVarF.c_str(),
+           sVarG.c_str(),
+           sVarH.c_str(),
+           sVarI.c_str(),
+           sVarJ.c_str(),
+           sVarK.c_str(),
+           sVarL.c_str(),
+           sVarM.c_str());
 #endif
 }
 
