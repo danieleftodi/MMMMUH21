@@ -10,7 +10,7 @@
 // 1. Recursions 101: Introduction
 void one_fun(int n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
         printf("n: %d\n", n);
         one_fun(n-1);
@@ -28,7 +28,7 @@ int one_main()
 // 2. Recursions 101: Head Recursion
 void two_fun(int n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
         two_fun(n-1);       // Recursive Head
         printf("n: %d\n", n);
@@ -46,7 +46,7 @@ int two_main()
 // 3. Recursions 101: Tail Recursion
 void three_fun(int n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
         printf("n: %d\n", n);
         three_fun(n-1);     // Tail Recursive
@@ -67,7 +67,7 @@ int four_fun(int n)
     // 'static int' is what makes this to work!
     static int x = 0;
     
-    if ( n > 0)
+    if (n > 0)
     {
         x++;
         printf("n: %d  x: %d\n", n, x);
@@ -97,7 +97,7 @@ int five_x = 0;
 
 int five_fun(int n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
         five_x++;
         printf("n: %d  x: %d\n", n, five_x);
@@ -134,7 +134,7 @@ void six_fun(int id, int n)
         printf("--------------------------\n");
     };
     
-    if ( n > 0)
+    if (n > 0)
     {
         if (id == 1) {
             printf("id: %d  trkB: %d  n: %d  ##\n", id, trkB++, n);
@@ -155,22 +155,28 @@ int six_main()
     return 0;
 }
 
-// 7. Recursions 101:
-int seven_fun(int n)
+// 7. Recursions 101: Indirect Recursion
+void seven_funA(float n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
-        printf("n: %d\n", n);
-        return five_fun(n-1)+n;
+        printf("[A] n: %6.3f\n", n);
+        seven_funB(n - 1);
     }
-    
-    return 0;
+}
+
+void seven_funB(float n)
+{
+    if (n > 1)
+    {
+        printf("[B] n: %6.3f\n", n);
+        seven_funA(n / 2);
+    }
 }
 
 int seven_main()
 {
-    int a = 5;
-    printf("r: %d\n", five_fun(a) );
+    seven_funA(20);
     
     return 0;
 }
@@ -179,7 +185,7 @@ int seven_main()
 // 8. Recursions 101:
 int eight_fun(int n)
 {
-    if ( n > 0)
+    if (n > 0)
     {
         printf("n: %d\n", n);
         return five_fun(n-1)+n;
@@ -218,7 +224,7 @@ int main(int argc, char ** argv){
         std::cout << "  (4) - Static Variables in Recursion\n";
         std::cout << "  (5) - Global Variabels in Recursion\n";
         std::cout << "  (6) - Tree Recursion\n";
-        std::cout << "  (7) - \n";
+        std::cout << "  (7) - Indirect Recursion\n";
         std::cout << "  (8) - \n";
         std::cout << "  (9) - \n";
         std::cout << "  (A) - \n";
@@ -286,7 +292,7 @@ int main(int argc, char ** argv){
             case '7':
                 clearScreen();
                 
-                printf("[07] Recursions 101: \n");
+                printf("[07] Recursions 101: Indirect Recursion\n");
                 seven_main();
                 printf("[07] Press any key: "); key_pressed = c_getch();
                 

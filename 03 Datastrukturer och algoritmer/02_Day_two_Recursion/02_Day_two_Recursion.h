@@ -26,6 +26,9 @@
 
 /* DECLARATIONS */
 
+void seven_funA(float n);
+void seven_funB(float n);
+int  seven_main();
 
 // a common Debug logging function
 void DBG_LOG(std::string sText,
