@@ -1,10 +1,10 @@
 
 #./compile_macOS.sh
 
-pushd "_BUILD/01_Day_one_intro_to_data_structures/Build/Products/Debug/"
+pushd "_BUILD/02_Day_two_Recursion/Build/Products/Debug/"
 
 clear
 
-./01_Day_one_intro_to_data_structures
+./02_Day_two_Recursion
 
 popd
