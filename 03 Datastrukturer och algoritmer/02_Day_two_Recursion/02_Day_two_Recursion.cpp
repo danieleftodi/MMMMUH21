@@ -182,8 +182,31 @@ int seven_main()
 }
 
 
-// 8. Recursions 101:
+// 8. Recursions 101: Nested Recursion
 int eight_fun(int n)
+{
+    if (n > 100)
+    {
+        printf("[A] n: %d\n", n);
+        return n-10;
+    }
+    
+    printf("[B] n: %d\n", n);
+    return eight_fun( eight_fun(n + 11) );
+}
+
+int eight_main()
+{
+    int r;
+    r = eight_fun(95);
+    printf("r: %d\n", r);
+    
+    return 0;
+}
+
+
+// 9. Recursions 101:
+int nine_fun(int n)
 {
     if (n > 0)
     {
@@ -194,7 +217,69 @@ int eight_fun(int n)
     return 0;
 }
 
-int eight_main()
+int nine_main()
+{
+    int a = 5;
+    printf("r: %d\n", five_fun(a) );
+    
+    return 0;
+}
+
+// 10. Recursions 101:
+int ten_fun(int n)
+{
+    if (n > 0)
+    {
+        printf("n: %d\n", n);
+        return five_fun(n-1)+n;
+    }
+    
+    return 0;
+}
+
+int ten_main()
+{
+    int a = 5;
+    printf("r: %d\n", five_fun(a) );
+    
+    return 0;
+}
+
+
+// 11. Recursions 101:
+int eleven_fun(int n)
+{
+    if (n > 0)
+    {
+        printf("n: %d\n", n);
+        return five_fun(n-1)+n;
+    }
+    
+    return 0;
+}
+
+int eleven_main()
+{
+    int a = 5;
+    printf("r: %d\n", five_fun(a) );
+    
+    return 0;
+}
+
+
+// 12. Recursions 101:
+int twelve_fun(int n)
+{
+    if (n > 0)
+    {
+        printf("n: %d\n", n);
+        return five_fun(n-1)+n;
+    }
+    
+    return 0;
+}
+
+int twelve_main()
 {
     int a = 5;
     printf("r: %d\n", five_fun(a) );
@@ -212,26 +297,27 @@ int main(int argc, char ** argv){
     do
     {
         clearScreen();
-        std::cout << "############################################\n";
-        std::cout << "## Recursions 101                         ##\n";
-        std::cout << "##                                        ##\n";
-        std::cout << "## Main Menu                              ##\n";
-        std::cout << "############################################\n";
-        std::cout << "\n";
-        std::cout << "  (1) - Introduction\n";
-        std::cout << "  (2) - Head Recursion\n";
-        std::cout << "  (3) - Tail Recursion\n";
-        std::cout << "  (4) - Static Variables in Recursion\n";
-        std::cout << "  (5) - Global Variabels in Recursion\n";
-        std::cout << "  (6) - Tree Recursion\n";
-        std::cout << "  (7) - Indirect Recursion\n";
-        std::cout << "  (8) - \n";
-        std::cout << "  (9) - \n";
-        std::cout << "  (A) - \n";
-        std::cout << "  (B) - \n";
-        std::cout << "  (Q) - Quit\n";
-        std::cout << "\n";
-        std::cout << "  Press a key: ";
+        printf("############################################\n");
+        printf("## Recursions 101                         ##\n");
+        printf("##                                        ##\n");
+        printf("## Main Menu                              ##\n");
+        printf("############################################\n");
+        printf("\n");
+        printf("  (1) - Introduction\n");
+        printf("  (2) - Head Recursion\n");
+        printf("  (3) - Tail Recursion\n");
+        printf("  (4) - Static Variables in Recursion\n");
+        printf("  (5) - Global Variabels in Recursion\n");
+        printf("  (6) - Tree Recursion\n");
+        printf("  (7) - Indirect Recursion\n");
+        printf("  (8) - Nested Recursion\n");
+        printf("  (9) - \n");
+        printf("  (A) - \n");
+        printf("  (B) - \n");
+        printf("  (C) - \n");
+        printf("  (Q) - Quit\n");
+        printf("\n");
+        printf("  Press a key: ");
         cUserInput = c_getche();
         
         switch (cUserInput) {
@@ -300,6 +386,41 @@ int main(int argc, char ** argv){
             case '8':
                 clearScreen();
                 
+                printf("[08] Recursions 101: Nested Recursion\n");
+                eight_main();
+                printf("[08] Press any key: "); key_pressed = c_getch();
+                
+                break;
+            case '9':
+                clearScreen();
+                
+                printf("[08] Recursions 101: \n");
+                eight_main();
+                printf("[08] Press any key: "); key_pressed = c_getch();
+                
+                break;
+            case 'a':
+            case 'A':
+                clearScreen();
+                
+                printf("[08] Recursions 101: \n");
+                eight_main();
+                printf("[08] Press any key: "); key_pressed = c_getch();
+                
+                break;
+            case 'b':
+            case 'B':
+                clearScreen();
+                
+                printf("[08] Recursions 101: \n");
+                eight_main();
+                printf("[08] Press any key: "); key_pressed = c_getch();
+                
+                break;
+            case 'c':
+            case 'C':
+                clearScreen();
+                
                 printf("[08] Recursions 101: \n");
                 eight_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
@@ -310,7 +431,7 @@ int main(int argc, char ** argv){
                 bMainMenuValidSelection = true;
                 break;
             default:
-                printf("\nWrong input, not a menu option: %c\n\nPlease try again\n", cUserInput);
+                printf("\n\n  Wrong input, not a menu option: %c\n\n  Please try again", cUserInput);
                 
                 // Human UI/UX ...
                 delay(3);
@@ -319,7 +440,7 @@ int main(int argc, char ** argv){
     } while (!bMainMenuValidSelection);
     
     //Endnig with an extra new line
-    std::cout << "\n";
+    printf("\n");
     
     return 0;
 }
