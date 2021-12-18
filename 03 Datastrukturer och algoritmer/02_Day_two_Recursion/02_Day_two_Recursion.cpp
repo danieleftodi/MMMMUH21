@@ -218,9 +218,9 @@ int nine_sum(int n)
 }
 
 int nine_iSum(int n) {
-    int s=0,i;
+    int s = 0,i;
     
-    for(i=1; i <= n; i++)
+    for (i=1; i <= n; i++)
     {
         s = (s + i);
         printf("[iSum] s: %d\n", s);
@@ -240,22 +240,38 @@ int nine_main()
     return 0;
 }
 
-// 10. Recursions 101:
-int ten_fun(int n)
+// 10. Recursions 101: Factorials
+int ten_fact(int n)
 {
-    if (n > 0)
+    if (n == 0)
     {
-        printf("n: %d\n", n);
-        return five_fun(n-1)+n;
+        return 1;
     }
     
-    return 0;
+    printf("[fact] n: %d\n", n);
+    return (ten_fact(n - 1) * n);
+}
+
+int ten_iFact(int n)
+{
+    int f = 1,i;
+    
+    for (i=1; i <= n; i++)
+    {
+        f = (f * i);
+        printf("[iFact] f: %d\n", f);
+    }
+    
+    return f;
 }
 
 int ten_main()
 {
-    int a = 5;
-    printf("r: %d\n", five_fun(a) );
+    int r = ten_fact(5);
+    printf("r: %d\n", r );
+    
+    r = ten_iFact(5);
+    printf("r: %d\n", r );
     
     return 0;
 }
@@ -327,7 +343,7 @@ int main(int argc, char ** argv){
         printf("  (7) - Indirect Recursion\n");
         printf("  (8) - Nested Recursion\n");
         printf("  (9) - Sum of n\n");
-        printf("  (A) - \n");
+        printf("  (A) - Factorials\n");
         printf("  (B) - \n");
         printf("  (C) - \n");
         printf("  (Q) - Quit\n");
@@ -418,7 +434,7 @@ int main(int argc, char ** argv){
             case 'A':
                 clearScreen();
                 
-                printf("[08] Recursions 101: \n");
+                printf("[08] Recursions 101: Factorials\n");
                 ten_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
