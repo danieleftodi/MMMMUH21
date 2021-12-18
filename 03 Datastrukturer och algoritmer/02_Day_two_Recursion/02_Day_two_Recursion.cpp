@@ -277,22 +277,39 @@ int ten_main()
 }
 
 
-// 11. Recursions 101:
-int eleven_fun(int n)
-{
-    if (n > 0)
+// 11. Recursions 101: Power of
+int eleven_power(int m,int n) {
+    if(n == 0)
     {
-        printf("n: %d\n", n);
-        return five_fun(n-1)+n;
+        return 1;
     }
     
-    return 0;
+    printf("[power] m: %d  n: %d\n", m, n);
+    return (eleven_power(m,n - 1) * m);
+}
+int eleven_power1(int m,int n) {
+    if(n == 0)
+    {
+        return 1;
+    }
+    
+    if(n%2 == 0)
+    {
+        printf("[power1] m: %d  n: %d\n", m, n);
+        return eleven_power1(m * m,n / 2);
+    }
+    
+    printf("[power1] m: %d  n: %d\n", m, n);
+    return (m * eleven_power1((m * m), (n - 1) / 2) );
 }
 
 int eleven_main()
 {
-    int a = 5;
-    printf("r: %d\n", five_fun(a) );
+    int r = eleven_power(9,3);
+    printf("r: %d\n", r );
+    
+    r = eleven_power1(9,3);
+    printf("r: %d\n", r );
     
     return 0;
 }
@@ -344,7 +361,7 @@ int main(int argc, char ** argv){
         printf("  (8) - Nested Recursion\n");
         printf("  (9) - Sum of n\n");
         printf("  (A) - Factorials\n");
-        printf("  (B) - \n");
+        printf("  (B) - Power of\n");
         printf("  (C) - \n");
         printf("  (Q) - Quit\n");
         printf("\n");
@@ -443,7 +460,7 @@ int main(int argc, char ** argv){
             case 'B':
                 clearScreen();
                 
-                printf("[08] Recursions 101: \n");
+                printf("[08] Recursions 101: Power of\n");
                 eleven_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
