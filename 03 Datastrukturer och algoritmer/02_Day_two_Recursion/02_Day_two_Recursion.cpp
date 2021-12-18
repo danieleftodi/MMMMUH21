@@ -205,22 +205,37 @@ int eight_main()
 }
 
 
-// 9. Recursions 101:
-int nine_fun(int n)
+// 9. Recursions 101: Sum of n
+int nine_sum(int n)
 {
-    if (n > 0)
+    if (n == 0)
     {
-        printf("n: %d\n", n);
-        return five_fun(n-1)+n;
+        return 0;
     }
     
-    return 0;
+    printf("[sum] n: %d\n", n);
+    return (nine_sum(n - 1) + n);
+}
+
+int nine_iSum(int n) {
+    int s=0,i;
+    
+    for(i=1; i <= n; i++)
+    {
+        s = (s + i);
+        printf("[iSum] s: %d\n", s);
+    }
+    
+    return s;
 }
 
 int nine_main()
 {
-    int a = 5;
-    printf("r: %d\n", five_fun(a) );
+    int r = nine_sum(6);
+    printf("r: %d\n", r );
+    
+    r = nine_iSum(6);
+    printf("r: %d\n", r );
     
     return 0;
 }
@@ -311,7 +326,7 @@ int main(int argc, char ** argv){
         printf("  (6) - Tree Recursion\n");
         printf("  (7) - Indirect Recursion\n");
         printf("  (8) - Nested Recursion\n");
-        printf("  (9) - \n");
+        printf("  (9) - Sum of n\n");
         printf("  (A) - \n");
         printf("  (B) - \n");
         printf("  (C) - \n");
@@ -394,8 +409,8 @@ int main(int argc, char ** argv){
             case '9':
                 clearScreen();
                 
-                printf("[08] Recursions 101: \n");
-                eight_main();
+                printf("[08] Recursions 101: Sum of n\n");
+                nine_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
                 break;
@@ -404,7 +419,7 @@ int main(int argc, char ** argv){
                 clearScreen();
                 
                 printf("[08] Recursions 101: \n");
-                eight_main();
+                ten_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
                 break;
@@ -413,7 +428,7 @@ int main(int argc, char ** argv){
                 clearScreen();
                 
                 printf("[08] Recursions 101: \n");
-                eight_main();
+                eleven_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
                 break;
@@ -422,7 +437,7 @@ int main(int argc, char ** argv){
                 clearScreen();
                 
                 printf("[08] Recursions 101: \n");
-                eight_main();
+                twelve_main();
                 printf("[08] Press any key: "); key_pressed = c_getch();
                 
                 break;
