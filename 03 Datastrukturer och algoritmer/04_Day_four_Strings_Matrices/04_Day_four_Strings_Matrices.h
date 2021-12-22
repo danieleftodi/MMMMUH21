@@ -5,8 +5,8 @@
 //  Created by Daniel Eftodi on 2021-12-17.
 //
 
-#ifndef Day_three_Array_ADT_h
-#define Day_three_Array_ADT_h
+#ifndef Day_four_Strings_Matrices_h
+#define Day_four_Strings_Matrices_h
 
 /* INCLUDES */
 
@@ -75,4 +75,4 @@ int c_getche(void);
 
 int main(int argc, char ** argv);
 
-#endif /* Day_three_Array_ADT_h */
+#endif /* Day_five_Sparse_Matrix_Polymonial_Functions_h */

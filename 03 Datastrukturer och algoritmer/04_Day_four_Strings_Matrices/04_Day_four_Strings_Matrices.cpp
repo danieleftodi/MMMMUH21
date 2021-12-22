@@ -292,10 +292,14 @@ int one_main()
 
 
 // 2. Strings & Matrices:
+int two_main()
+{
+    
+    return 0;
+}
 
-
-// 6. Array ADT:
-int six_main()
+// 3. Strings & Matrices:
+int three_main()
 {
     
     return 0;
@@ -307,24 +311,20 @@ int main(int argc, char ** argv){
     int key_pressed = '\0';
     
     // 1. Strings & Matrices: Introduction
-    printf("[01] Strings & Matrices: Introduction\n");
+    printf("[01] Sparse Matrix & Polymonial Functions: Introduction\n");
     one_main();
     printf("[01] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
 
     // 2. Strings & Matrices:
-//    printf("[02] Strings & Matrices: \n");
-//    two_main();
-//    printf("[02] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
+    printf("[02] Strings & Matrices: \n");
+    two_main();
+    printf("[02] Press any key: "); key_pressed = c_getche(); printf(" [%d] \n\n", key_pressed);
     
-    // 3. Strings & Matrices:
-//    printf("[03] Array ADT 101: \n");
-//    three_main();
-//    printf("[03] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
-    
-    // 4. Strings & Matrices:
-//    printf("[04] Strings & Matrices: \n");
-//    four_main();
-//    printf("[04] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
+    // 3. Sparse Matrix & Polymonial Functions:
+    printf("[03] Strings & Matrices: \n");
+    three_main();
+    printf("[03] Press any key: "); key_pressed = c_getch(); printf(" [%d] \n\n", key_pressed);
+
     
     //Endnig with an extra new line
     std::cout << "\n";
