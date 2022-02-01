@@ -5,7 +5,7 @@ def ret_hyp(cat_oposite, cat_closest):
 	print('Catheter oposite: ' + str(cat_oposite))
 	print('catheter closest: ' + str(cat_closest))
 
-	output = str(math.sqrt((cat_closest^2) + (cat_closest^2)))
+	output = str(math.sqrt(pow(cat_closest,2) + pow(cat_closest,2)))
 	
 	print('Output: ' + output)
 
