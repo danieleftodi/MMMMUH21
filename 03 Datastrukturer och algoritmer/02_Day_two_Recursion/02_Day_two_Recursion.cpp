@@ -305,10 +305,10 @@ int eleven_power1(int m,int n) {
 
 int eleven_main()
 {
-    int r = eleven_power(9,3);
+    int r = eleven_power(2,3);
     printf("r: %d\n", r );
     
-    r = eleven_power1(9,3);
+    r = eleven_power1(2,3);
     printf("r: %d\n", r );
     
     return 0;
