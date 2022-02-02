@@ -25,10 +25,17 @@ def ret_std_deviation(list):
 
 	return str(output)
 
-list = [10, 20, 30, 1, 2, 9]
+listA = [10, 20, 30, 1, 2, 9]
+listB = [10,  8, 10, 8, 8, 4]
 
 
 
-print("The std deviation is: " + str(statistics.pstdev(list)))
+print("The std deviation is: " + str(statistics.pstdev(listA)))
 
-print("The std deviation is: " + ret_std_deviation(list))
+print("The std deviation is: " + ret_std_deviation(listA))
+
+
+
+print("\nThe std deviation is: " + str(statistics.pstdev(listB)))
+
+print("The std deviation is: " + ret_std_deviation(listB))
